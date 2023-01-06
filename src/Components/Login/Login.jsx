@@ -50,7 +50,6 @@ function Login() {
           sx={{
             display: { xs: "none", md: "flex" },
             flexDirection: "column",
-            justifyContent: "center",
             alignItems: "center",
             backgroundImage: `url(${loginBg})`,
             backgroundSize: "cover",
@@ -64,17 +63,13 @@ function Login() {
             style={{
               height: "150px",
               width: "60%",
-              marginTop: "-100px",
-              backgroundColor: "white",
-              padding: "25px",
-              borderRadius: "50%",
+              marginTop: "250px",
             }}
           />
           <Typography
             sx={{
               alignSelf: "flex-start",
-              mb: -50,
-              mt: 20,
+              mt: 29.2,
               fontSize: "13px",
               fontWeight: "600",
               color: "white",
@@ -118,16 +113,16 @@ function Login() {
                     <Box sx={{ mb: 2.5 }}>
                       <Typography
                         sx={{
-                          color: "grey",
-                          fontSize: "13px",
-                          fontWeight: "700",
+                          color: "#234e8e",
+                          fontSize: "15px",
+                          fontWeight: "600",
                         }}
                       >
-                        Email Address
+                        Your Email
                       </Typography>
                       <Field
                         type="text"
-                        placeholder="Enter your Email"
+                        placeholder="jimmy@gmail.com"
                         className={
                           errors.email && touched.email
                             ? "is-invalid login-fields form-control"
@@ -146,12 +141,12 @@ function Login() {
                     <Box sx={{ mb: 2.5 }}>
                       <Typography
                         sx={{
-                          color: "grey",
-                          fontSize: "13px",
-                          fontWeight: "700",
+                          color: "#234e8e",
+                          fontSize: "15px",
+                          fontWeight: "600",
                         }}
                       >
-                        Password
+                        Your Password
                       </Typography>
                       <Box
                         sx={{
@@ -161,7 +156,7 @@ function Login() {
                         <Box sx={{ display: "flex", alignItems: "center" }}>
                           <Field
                             type={showPassword ? "text" : "password"}
-                            placeholder="Enter your Password"
+                            placeholder="JimmyWalen@10"
                             className={
                               errors.password && touched.password
                                 ? "form-control is-invalid login-fields"
@@ -194,38 +189,14 @@ function Login() {
                       </Box>
                     </Box>
                   </div>
-                  <div className="form-group">
-                    <Button
-                      type="submit"
-                      sx={{
-                        backgroundColor: "rgb(124 112 255 / 1)",
-                        lineHeight: "2.2",
-                        color: "white",
-                        width: "100%",
-                        mb: 2.5,
-                        fontWeight: "800",
-                        "&:hover": {
-                          backgroundColor: "primary.light",
-                          color: "white",
-                        },
-                      }}
-                    >
+                  <div className="hoverParent">
+                    <button type="submit" className="primary-button">
                       Login
-                    </Button>
+                    </button>
+                    <button className="register-button" type="button">
+                      Register
+                    </button>
                   </div>
-                  <Button
-                    sx={{
-                      backgroundColor: "#AA4A44",
-                      color: "white",
-                      lineHeight: "2.2",
-                      width: "100%",
-                      fontWeight: "800",
-                      "&:hover": { backgroundColor: "#ef5350", color: "white" },
-                    }}
-                    type="button"
-                  >
-                    Register
-                  </Button>
                 </Form>
               )}
             </Formik>
