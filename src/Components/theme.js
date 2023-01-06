@@ -4,9 +4,9 @@ import { colors } from "@mui/material";
 const theme = createTheme({
   palette: {
     primary: {
-      dark: colors.indigo[900],
+      dark: colors.indigo[800],
       main: colors.indigo[500],
-      light: colors.indigo[100],
+      light: colors.indigo[400],
       bg: colors.indigo[50],
     },
     secondary: {

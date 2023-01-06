@@ -6,7 +6,7 @@ import loginBg from "../../Assets/loginBg.jpg";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 function Login() {
-  const formValues = useState({
+  const [formValues] = useState({
     email: "",
     password: "",
   });
@@ -18,25 +18,12 @@ function Login() {
   };
 
   const validate = (values) => {
-    const errors = {};
+    let errors = {};
     if (!values.email) {
       errors.email = "Email is required";
-    } else if (isNaN(values.email)) {
-      if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)) {
-        //eslint-disable-line
-        errors.email = "Email is invalid";
-      }
     }
     if (!values.password) {
       errors.password = "Password is required";
-    } else if (
-      !/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#%&])(?=.{8,})/.test(
-        //eslint-disable-line
-        values.password
-      )
-    ) {
-      errors.password =
-        "Password must contain 8 characters along with at least one Capital letter, one number and one special character";
     }
     return errors;
   };
@@ -62,6 +49,7 @@ function Login() {
         <Box
           sx={{
             display: { xs: "none", md: "flex" },
+            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
             backgroundImage: `url(${loginBg})`,
@@ -74,10 +62,26 @@ function Login() {
             src={saveTree}
             alt="brand"
             style={{
-              height: "160px",
-              width: "70%",
+              height: "150px",
+              width: "60%",
+              marginTop: "-100px",
+              backgroundColor: "white",
+              padding: "25px",
+              borderRadius: "50%",
             }}
           />
+          <Typography
+            sx={{
+              alignSelf: "flex-start",
+              mb: -50,
+              mt: 20,
+              fontSize: "13px",
+              fontWeight: "600",
+              color: "white",
+            }}
+          >
+            Designed And Developed By | Teknotrait Solutions PVT LTD
+          </Typography>
         </Box>
         {/* right part */}
         <Box
@@ -93,111 +97,139 @@ function Login() {
         >
           <Typography
             sx={{
-              color: "secondary.dark",
-              fontSize: { xs: "21px", md: "25px" },
-              fontWeight: "900",
+              color: "#234e8e",
+              fontSize: { xs: "25px", md: "1.875rem" },
+              lineHeight: "2.25rem",
+              fontWeight: "1000",
+              letterSpacing: "-1px",
             }}
           >
             Sign In
           </Typography>
-          <Formik
-            initialValues={formValues}
-            validate={(values) => validate(values)}
-            onSubmit={(values) => callLoginApi(values)}
-          >
-            {({ errors, touched }) => (
-              <Form>
-                <Box sx={{ mb: 2.5 }}>
-                  <Typography
-                    sx={{ color: "grey", fontSize: "13px", fontWeight: "700" }}
-                  >
-                    Email Address
-                  </Typography>
-                  <Field
-                    type="email"
-                    placeholder="Enter your Email"
-                    className={
-                      errors.email && touched.email
-                        ? "is-invalid login-fields"
-                        : "login-fields"
-                    }
-                    name="email"
-                  />
-                  {errors.email && touched.email && (
-                    <Typography sx={{ color: "red", fontSize: "13px" }}>
-                      {errors.email}
-                    </Typography>
-                  )}
-                </Box>
-                <Box sx={{ mb: 2.5 }}>
-                  <Typography
-                    sx={{ color: "grey", fontSize: "13px", fontWeight: "700" }}
-                  >
-                    Password
-                  </Typography>
-                  <Box
-                    sx={{
-                      maxWidth: { xs: "200px", md: "350px" },
-                    }}
-                  >
-                    <Box sx={{ display: "flex", alignItems: "center" }}>
+          <div className="form-section">
+            <Formik
+              initialValues={formValues}
+              validate={(values) => validate(values)}
+              onSubmit={(values) => callLoginApi(values)}
+            >
+              {({ errors, touched }) => (
+                <Form>
+                  <div className="form-group">
+                    <Box sx={{ mb: 2.5 }}>
+                      <Typography
+                        sx={{
+                          color: "grey",
+                          fontSize: "13px",
+                          fontWeight: "700",
+                        }}
+                      >
+                        Email Address
+                      </Typography>
                       <Field
-                        type={showPassword ? "text" : "password"}
-                        placeholder="Enter your Password"
+                        type="text"
+                        placeholder="Enter your Email"
                         className={
-                          errors.password && touched.password
-                            ? "is-invalid login-p-fields"
-                            : "login-p-fields"
+                          errors.email && touched.email
+                            ? "is-invalid login-fields form-control"
+                            : "login-fields form-control"
                         }
-                        name="password"
+                        name="email"
                       />
-                      {showPassword ? (
-                        <VisibilityOff
-                          sx={{ cursor: "pointer" }}
-                          onClick={toggleShowPassword}
-                        />
-                      ) : (
-                        <Visibility
-                          sx={{ cursor: "pointer" }}
-                          onClick={toggleShowPassword}
-                        />
+                      {errors.email && touched.email && (
+                        <Typography sx={{ color: "red", fontSize: "13px" }}>
+                          {errors.email}
+                        </Typography>
                       )}
                     </Box>
-                    {errors.password && touched.password && (
-                      <Typography sx={{ color: "red", fontSize: "13px" }}>
-                        {errors.password}
+                  </div>
+                  <div className="form-group">
+                    <Box sx={{ mb: 2.5 }}>
+                      <Typography
+                        sx={{
+                          color: "grey",
+                          fontSize: "13px",
+                          fontWeight: "700",
+                        }}
+                      >
+                        Password
                       </Typography>
-                    )}
-                  </Box>
-                </Box>
-                <Button
-                  sx={{
-                    backgroundColor: "#4169e1",
-                    color: "white",
-                    width: "100%",
-                    mb: 2.5,
-                    "&:hover": {
-                      backgroundColor: "primary.main",
+                      <Box
+                        sx={{
+                          maxWidth: { xs: "200px", md: "350px" },
+                        }}
+                      >
+                        <Box sx={{ display: "flex", alignItems: "center" }}>
+                          <Field
+                            type={showPassword ? "text" : "password"}
+                            placeholder="Enter your Password"
+                            className={
+                              errors.password && touched.password
+                                ? "form-control is-invalid login-fields"
+                                : "form-control login-fields"
+                            }
+                            name="password"
+                            style={{ borderRight: "none" }}
+                          />
+                          {showPassword ? (
+                            <div className="eye">
+                              <VisibilityOff
+                                sx={{ cursor: "pointer" }}
+                                onClick={toggleShowPassword}
+                              />
+                            </div>
+                          ) : (
+                            <div className="eye">
+                              <Visibility
+                                sx={{ cursor: "pointer" }}
+                                onClick={toggleShowPassword}
+                              />
+                            </div>
+                          )}
+                        </Box>
+                        {errors.password && touched.password && (
+                          <Typography sx={{ color: "red", fontSize: "13px" }}>
+                            {errors.password}
+                          </Typography>
+                        )}
+                      </Box>
+                    </Box>
+                  </div>
+                  <div className="form-group">
+                    <Button
+                      type="submit"
+                      sx={{
+                        backgroundColor: "rgb(124 112 255 / 1)",
+                        lineHeight: "2.2",
+                        color: "white",
+                        width: "100%",
+                        mb: 2.5,
+                        fontWeight: "800",
+                        "&:hover": {
+                          backgroundColor: "primary.light",
+                          color: "white",
+                        },
+                      }}
+                    >
+                      Login
+                    </Button>
+                  </div>
+                  <Button
+                    sx={{
+                      backgroundColor: "#AA4A44",
                       color: "white",
-                    },
-                  }}
-                  type="submit"
-                >
-                  Login
-                </Button>
-                <Button
-                  sx={{
-                    backgroundColor: "#AA4A44",
-                    color: "white",
-                    width: "100%",
-                    "&:hover": { backgroundColor: "red", color: "white" },
-                  }}
-                >
-                  Register
-                </Button>
-              </Form>
-            )}
-          </Formik>
+                      lineHeight: "2.2",
+                      width: "100%",
+                      fontWeight: "800",
+                      "&:hover": { backgroundColor: "#ef5350", color: "white" },
+                    }}
+                    type="button"
+                  >
+                    Register
+                  </Button>
+                </Form>
+              )}
+            </Formik>
+          </div>
         </Box>
       </Box>
     </Fragment>
