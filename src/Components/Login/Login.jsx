@@ -3,7 +3,6 @@ import { Box, Button, Typography } from "@mui/material";
 import { Formik, Form, Field } from "formik";
 import saveTree from "../../Assets/saveTree.png";
 import loginBg from "../../Assets/loginBg.jpg";
-import loginMobileBg from "../../Assets/loginMobileBg.webp";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 function Login() {
