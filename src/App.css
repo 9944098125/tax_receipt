@@ -1,5 +1,5 @@
 .login-fields {
-  width:380px;
+  min-width:380px;
   line-height: 1.75rem;
   outline: none !important;
   border-radius: 4px;
@@ -7,19 +7,30 @@
   font-weight: 500;
   color: rgb(102, 114, 139) !important;
   border: 0.2px solid rgb(92, 113, 141);
-  padding: 6px 18px;
+  padding: 6px 6px;
   background-color: #ffffff;
 }
 
-@media screen and (max-width:768px) {
-  .login-fields  {
-    width: 300px;
-  }
+.login-p-fields {
+  min-width:350px;
+  line-height: 1.75rem;
+  outline: none !important;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: rgb(102, 114, 139) !important;
+  border: 0.2px solid rgb(92, 113, 141);
+  border-right: none;
+  padding: 6px 6px;
+  background-color: #ffffff;
 }
 
 @media screen and (max-width:320px) {
   .login-fields  {
-    width: 250px;
+    width: 250px !important;
+  }
+  .login-p-fields {
+    width: 200px;
   }
 }
 
@@ -27,7 +38,16 @@
   padding: 7px;
   border: 0.2px solid rgb(121, 148, 179);
   border-left: none;
-  margin-right: -27px;
+  margin-left: -5px;
+}
+
+@media screen and (max-width:768px) {
+  .login-fields  {
+    width: 300px;
+  }
+  .login-p-fields {
+    width: 250px;
+  }
 }
 
 .login-fields::placeholder {
@@ -36,7 +56,14 @@
   font-weight: 500;
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
-  transform: scaleX(1.1);
+}
+
+.login-p-fields {
+  color: #768eaf;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
 }
 
 .form-control:active,

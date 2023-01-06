@@ -24,6 +24,9 @@ function Login() {
     }
     if (!values.password) {
       errors.password = "Password is required";
+    } else if (values.password.length <= 2) {
+      errors.password =
+        "Password must contain 8 characters along with at least one capital letter, one number and one special character";
     }
     return errors;
   };
@@ -121,7 +124,7 @@ function Login() {
                         Your Email
                       </Typography>
                       <Field
-                        type="text"
+                        type="email"
                         placeholder="jimmy@gmail.com"
                         className={
                           errors.email && touched.email
@@ -159,8 +162,8 @@ function Login() {
                             placeholder="JimmyWalen@10"
                             className={
                               errors.password && touched.password
-                                ? "form-control is-invalid login-fields"
-                                : "form-control login-fields"
+                                ? "form-control is-invalid login-p-fields"
+                                : "form-control login-p-fields"
                             }
                             name="password"
                             style={{ borderRight: "none" }}
