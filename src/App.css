@@ -1,5 +1,5 @@
 .login-fields {
-  min-width:380px;
+  width:380px;
   line-height: 1.75rem;
   outline: none !important;
   border-radius: 4px;
@@ -12,7 +12,7 @@
 }
 
 .login-p-fields {
-  min-width:350px;
+  min-width:345px !important;
   line-height: 1.75rem;
   outline: none !important;
   border-radius: 4px;
@@ -25,12 +25,12 @@
   background-color: #ffffff;
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:325px) {
   .login-fields  {
-    width: 250px !important;
+    width: 200px;
   }
   .login-p-fields {
-    width: 200px;
+    min-width: 270px !important;
   }
 }
 
@@ -39,6 +39,7 @@
   border: 0.2px solid rgb(121, 148, 179);
   border-left: none;
   margin-left: -5px;
+  border-radius: 4px;
 }
 
 @media screen and (max-width:768px) {
@@ -46,7 +47,7 @@
     width: 300px;
   }
   .login-p-fields {
-    width: 250px;
+    min-width: 270px !important;
   }
 }
 
