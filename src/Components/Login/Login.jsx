@@ -125,7 +125,7 @@ function Login() {
                       </Typography>
                       <Field
                         type="email"
-                        placeholder="jimmy@gmail.com"
+                        placeholder="Jimmy@gmail.com"
                         className={
                           errors.email && touched.email
                             ? "is-invalid login-fields form-control"
