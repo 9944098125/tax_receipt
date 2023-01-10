@@ -11,7 +11,7 @@
 }
 
 .login-fields {
-  width:380px !important;
+  width:380px;
   line-height: 1.75rem;
   outline: none !important;
   border-radius: 4px;
@@ -24,9 +24,15 @@
   --tw-bg-opacity:1;
 }
 
-@media screen and (max-width:325px) and (min-width:768px) {
+@media screen and (max-width:768px) {
   .login-fields  {
-    width: 250px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width:425px) {
+  .login-fields  {
+    width: 280px;
   }
 }
 
@@ -40,12 +46,6 @@
   margin-left: -60px;
   background-color: white;
   border: none;
-}
-
-@media screen and (max-width:768px) {
-  .login-fields  {
-    width: 400px;
-  }
 }
 
 .login-fields::placeholder {
@@ -69,7 +69,7 @@
   font-weight: 700;
   margin-bottom: 20px;
   border: none;
-  font-size: 1.125rem;
+  font-size: 1rem;
   width: 100%;
   transform:translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
 }
@@ -81,7 +81,7 @@
   font-weight: 700;
   border: none;
   line-height: 2.5rem;
-  font-size: 1.125rem;
+  font-size: 1rem;
   border-radius: 4px;
 
 }
@@ -104,4 +104,5 @@
 .logo {
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }

@@ -157,7 +157,7 @@ function Login() {
                         <Box sx={{ display: "flex", alignItems: "center" }}>
                           <Field
                             type={showPassword ? "text" : "password"}
-                            placeholder="Secure password"
+                            placeholder="Secure password..."
                             className={
                               errors.password && touched.password
                                 ? "form-control is-invalid login-fields"
