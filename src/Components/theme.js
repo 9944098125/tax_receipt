@@ -17,7 +17,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "ProximaNova, sans-serif",
+    fontFamily: "Proxima Nova, sans-serif",
   },
 });
 

@@ -92,6 +92,7 @@ function Login() {
             justifyContent: "center",
             alignItems: "center",
             gap: "30px",
+            p: 9,
           }}
         >
           <Typography
@@ -99,7 +100,7 @@ function Login() {
               color: "#234e8e",
               fontSize: { xs: "25px", md: "1.875rem" },
               lineHeight: "2.25rem",
-              fontWeight: "1000",
+              fontWeight: "700",
               letterSpacing: "-1px",
             }}
           >
@@ -118,11 +119,11 @@ function Login() {
                       <Typography
                         sx={{
                           color: "#234e8e",
-                          fontSize: "15px",
+                          fontSize: "1.1rem",
                           fontWeight: "600",
                         }}
                       >
-                        Your Email
+                        Your email
                       </Typography>
                       <Field
                         type="email"
@@ -146,38 +147,45 @@ function Login() {
                       <Typography
                         sx={{
                           color: "#234e8e",
-                          fontSize: "15px",
+                          fontSize: "1.1rem",
                           fontWeight: "600",
                         }}
                       >
-                        Your Password
+                        Your password
                       </Typography>
-                      <Box
-                        sx={{
-                          maxWidth: { xs: "200px", md: "350px" },
-                        }}
-                      >
+                      <Box>
                         <Box sx={{ display: "flex", alignItems: "center" }}>
                           <Field
                             type={showPassword ? "text" : "password"}
                             placeholder="Secure password"
                             className={
                               errors.password && touched.password
-                                ? "form-control is-invalid login-p-fields"
-                                : "form-control login-p-fields"
+                                ? "form-control is-invalid login-fields"
+                                : "form-control login-fields"
                             }
                             name="password"
-                            style={{ borderRight: "none" }}
                           />
                           {showPassword ? (
-                            <div className="eye">
+                            <div
+                              className={
+                                errors.password && touched.password
+                                  ? "eyeToTheLeft"
+                                  : "eye"
+                              }
+                            >
                               <VisibilityOff
                                 sx={{ cursor: "pointer" }}
                                 onClick={toggleShowPassword}
                               />
                             </div>
                           ) : (
-                            <div className="eye">
+                            <div
+                              className={
+                                errors.password && touched.password
+                                  ? "eyeToTheLeft"
+                                  : "eye"
+                              }
+                            >
                               <Visibility
                                 sx={{ cursor: "pointer" }}
                                 onClick={toggleShowPassword}

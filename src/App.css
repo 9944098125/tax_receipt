@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Poppins-Black";
-  src: local("ProximaNova") url("./Assets/Font/ProximaNova-Regular.otf")
+  font-family: "ProximaNova";
+  src: local("ProximaNova") url("./Assets/Font/Proxima Nova Bold.otf")
     format(truetype);
 }
 
@@ -11,67 +11,47 @@
 }
 
 .login-fields {
-  width:380px;
+  width:380px !important;
   line-height: 1.75rem;
   outline: none !important;
   border-radius: 4px;
   font-size: 1.125rem;
-  font-weight: 500;
-  color: rgb(102, 114, 139) !important;
-  border: 0.2px solid rgb(155, 175, 201);
+  color: #536f94 !important;
+  border-width: 1px;
   padding: 6px 6px;
   background-color: #ffffff;
+  --tw-border-opacity: 0;
+  --tw-bg-opacity:1;
 }
 
-.login-p-fields {
-  min-width:345px !important;
-  line-height: 1.75rem;
-  outline: none !important;
-  border-radius: 4px;
-  font-size: 1.125rem;
-  font-weight: 500;
-  color: rgb(102, 114, 139) !important;
-  border: 0.2px solid rgb(158, 179, 207);
-  border-right: none;
-  padding: 6px 6px;
-  background-color: #ffffff;
-  color: #768eaf;
-}
-
-@media screen and (max-width:325px) {
+@media screen and (max-width:325px) and (min-width:768px) {
   .login-fields  {
-    width: 200px;
-  }
-  .login-p-fields {
-    min-width: 270px !important;
+    width: 250px;
   }
 }
 
 .eye {
-  padding: 7px;
-  border: 0.2px solid rgb(121, 148, 179);
-  border-left: none;
-  margin-left: -5px;
-  border-radius: 4px;
+  border: none;
+  margin-left: -35px;
+  background-color: transparent !important;
+}
+
+.eyeToTheLeft {
+  margin-left: -60px;
+  background-color: white;
+  border: none;
 }
 
 @media screen and (max-width:768px) {
   .login-fields  {
-    width: 300px;
-  }
-  .login-p-fields {
-    min-width: 270px !important;
+    width: 400px;
   }
 }
 
 .login-fields::placeholder {
   color: #768eaf;
   font-size: 1rem;
-}
-
-.login-p-fields::placeholder {
-  color: #768eaf;
-  font-size: 1rem;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .form-control:active,
