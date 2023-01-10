@@ -1,9 +1,10 @@
 import React, { Fragment, useState } from "react";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { Formik, Form, Field } from "formik";
 import saveTree from "../../Assets/saveTree.png";
 import loginBg from "../../Assets/loginBg.jpg";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [formValues] = useState({
@@ -125,7 +126,7 @@ function Login() {
                       </Typography>
                       <Field
                         type="email"
-                        placeholder="Jimmy@gmail.com"
+                        placeholder="jim@agency.com"
                         className={
                           errors.email && touched.email
                             ? "is-invalid login-fields form-control"
@@ -159,7 +160,7 @@ function Login() {
                         <Box sx={{ display: "flex", alignItems: "center" }}>
                           <Field
                             type={showPassword ? "text" : "password"}
-                            placeholder="JimmyWalen@10"
+                            placeholder="Secure password"
                             className={
                               errors.password && touched.password
                                 ? "form-control is-invalid login-p-fields"
@@ -196,9 +197,14 @@ function Login() {
                     <button type="submit" className="primary-button">
                       Login
                     </button>
-                    <button className="register-button" type="button">
-                      Register
-                    </button>
+                    <Link
+                      to="/register"
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <button className="register-button" type="button">
+                        Register
+                      </button>
+                    </Link>
                   </div>
                 </Form>
               )}
