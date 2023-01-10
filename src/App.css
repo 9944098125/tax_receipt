@@ -106,3 +106,23 @@
   width: 100%;
   cursor: pointer;
 }
+
+.label {
+  font-size: small;
+  color: #234e8e;
+  margin-left: 5px;
+}
+
+.register-fields {
+  width:100%;
+  line-height: 1.75rem;
+  outline: none !important;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  color: #536f94 !important;
+  border-width: 1px;
+  padding: 6px 6px;
+  background-color: #ffffff;
+  --tw-border-opacity: 0;
+  --tw-bg-opacity:1;
+}

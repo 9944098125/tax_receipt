@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import React, { Fragment } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { Fragment, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import saveTree from "../../Assets/saveTree.png";
 import { Formik, Form, Field } from "formik";
 
@@ -18,7 +18,12 @@ function Registration() {
     password: "",
     confirmPassword: "",
     org: "",
-    terms: false,
+  };
+
+  const [terms, setTerms] = useState(false);
+
+  const onCheckingInput = (e) => {
+    setTerms(!terms);
   };
 
   function validate(values) {
@@ -42,8 +47,9 @@ function Registration() {
     if (!values.org) {
       errors.org = "Your Organization name is required";
     }
-    if (!values.terms) {
-      errors.terms = "You must accept the Terms and Privacy Policy to continue";
+
+    if (terms === false) {
+      return;
     }
 
     return errors;
@@ -119,20 +125,166 @@ function Registration() {
       </Box>
       <Box
         sx={{
-          backgroundColor: "white",
+          backgroundColor: "black",
           p: 4,
-          maxHeight: "50vh",
-          maxWidth: { xs: "95vw", md: "45vw" },
+          minHeight: "50vh",
+          width: { xs: "90vw", md: "35vw" },
           minWidth: { xs: "90vw", md: "30vw" },
           mt: { xs: "none", md: -5 },
           ml: { xs: "none", md: 12 },
         }}
       >
-        <Formik
-          initialValues={initialValues}
-          validate={(values) => validate(values)}
-          onSubmit={(values) => submitRegisterForm(values)}
-        ></Formik>
+        <div className="form-section">
+          <Formik
+            initialValues={initialValues}
+            validate={(values) => validate(values)}
+            onSubmit={(values) => submitRegisterForm(values)}
+          >
+            {({ errors, touched }) => (
+              <Form>
+                <div className="form-group">
+                  <Box sx={{ mb: 2 }}>
+                    <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
+                      Your name
+                    </Typography>
+                    <Field
+                      name="name"
+                      type="text"
+                      placeholder="Enter Your Name"
+                      className={
+                        errors.name && touched.name
+                          ? "register-fields is-invalid form-control"
+                          : "form-control register-fields"
+                      }
+                    />
+                    {errors.name && touched.name && (
+                      <Typography sx={{ color: "red", fontSize: "13px" }}>
+                        {errors.name}
+                      </Typography>
+                    )}
+                  </Box>
+                  <Box sx={{ mb: 2 }}>
+                    <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
+                      Your email
+                    </Typography>
+                    <Field
+                      name="email"
+                      type="email"
+                      placeholder="Enter Your Email Address"
+                      className={
+                        errors.email && touched.email
+                          ? "register-fields is-invalid form-control"
+                          : "form-control register-fields"
+                      }
+                    />
+                    {errors.email && touched.email && (
+                      <Typography sx={{ color: "red", fontSize: "13px" }}>
+                        {errors.email}
+                      </Typography>
+                    )}
+                  </Box>
+                  <Box sx={{ mb: 2 }}>
+                    <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
+                      Mobile Number
+                    </Typography>
+                    <Field
+                      name="mobile"
+                      type="number"
+                      placeholder="Enter Your Phone Number"
+                      className={
+                        errors.mobile && touched.mobile
+                          ? "register-fields is-invalid form-control"
+                          : "form-control register-fields"
+                      }
+                    />
+                    {errors.mobile && touched.mobile && (
+                      <Typography sx={{ color: "red", fontSize: "13px" }}>
+                        {errors.mobile}
+                      </Typography>
+                    )}
+                  </Box>
+                  <Box sx={{ mb: 2 }}>
+                    <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
+                      Choose a password
+                    </Typography>
+                    <Field
+                      name="password"
+                      type="password"
+                      placeholder="Enter Your Password"
+                      className={
+                        errors.password && touched.password
+                          ? "register-fields is-invalid form-control"
+                          : "form-control register-fields"
+                      }
+                    />
+                    {errors.password && touched.password && (
+                      <Typography sx={{ color: "red", fontSize: "13px" }}>
+                        {errors.password}
+                      </Typography>
+                    )}
+                  </Box>
+                  <Box sx={{ mb: 2 }}>
+                    <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
+                      Confirm Your password
+                    </Typography>
+                    <Field
+                      name="confirmPassword"
+                      type="password"
+                      placeholder="Enter Your Password again"
+                      className={
+                        errors.confirmPassword && touched.confirmPassword
+                          ? "register-fields is-invalid form-control"
+                          : "form-control register-fields"
+                      }
+                    />
+                    {errors.confirmPassword && touched.confirmPassword && (
+                      <Typography sx={{ color: "red", fontSize: "13px" }}>
+                        {errors.confirmPassword}
+                      </Typography>
+                    )}
+                  </Box>
+                  <Box sx={{ mb: 2 }}>
+                    <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
+                      Organization Name
+                    </Typography>
+                    <Field
+                      name="org"
+                      type="text"
+                      placeholder="Enter Your Organization Name"
+                      className={
+                        errors.org && touched.org
+                          ? "register-fields is-invalid form-control"
+                          : "form-control register-fields"
+                      }
+                    />
+                    {errors.org && touched.org && (
+                      <Typography sx={{ color: "red", fontSize: "13px" }}>
+                        {errors.org}
+                      </Typography>
+                    )}
+                  </Box>
+                  <Box sx={{ mb: 2 }}>
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                      <input
+                        type="checkbox"
+                        value={terms}
+                        onChange={onCheckingInput}
+                      />
+                      <label htmlFor="check" className="label">
+                        By clicking "Sign Up", you agree to our{" "}
+                        <Link to="/terms">Terms of Service</Link> and{" "}
+                        <Link to="/privacy">Privacy Plicy</Link>.*
+                      </label>
+                    </Box>
+                  </Box>
+                  <button className="primary-button" type="submit">
+                    Create My Workspace
+                  </button>
+                </div>
+              </Form>
+            )}
+          </Formik>
+        </div>
       </Box>
     </Fragment>
   );
