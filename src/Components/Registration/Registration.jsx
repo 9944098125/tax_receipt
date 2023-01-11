@@ -119,31 +119,25 @@ function Registration() {
         </Box>
         <Box
           sx={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
             alignSelf: "flex-end",
-            gap: "5px",
           }}
         >
           <Typography sx={{ color: "white", fontSize: "13px" }}>
-            Already have an account ? Then
-          </Typography>
-          <Link
-            to="/"
-            style={{
-              textDecoration: "none",
-              color: "inherit",
-              width: "inherit",
-            }}
-          >
-            <button
-              style={{ padding: "0 10px 0 10px" }}
-              className="register-button"
+            Already have an account ? Then{" "}
+            <Link
+              to="/"
+              style={{
+                color: "inherit",
+                textDecoration: "none",
+                padding: "4px 10px 4px 10px",
+                border: "1px solid white",
+                borderRadius: "2px",
+                marginLeft: "5px",
+              }}
             >
               Sign In
-            </button>
-          </Link>
+            </Link>
+          </Typography>
         </Box>
       </Box>
       <div className="registrationFormContainer">
@@ -368,17 +362,18 @@ function Registration() {
         </div>
         <Box
           sx={{
-            p: { xs: 2.5, md: 1 },
+            p: { xs: 2.5, sm: 3.8, md: 1 },
             pt: { xs: 3, md: 7 },
             display: "flex",
             flexDirection: { xs: "column", sm: "row", md: "column" },
             alignItems: "center",
+            gap: "25px",
           }}
         >
           <Box sx={{}}>
             <Typography
               sx={{
-                fontSize: "30px",
+                fontSize: { xs: "23px", sm: "25px", md: "30px" },
                 backgroundImage: "linear-gradient(to right, #00e0ff, #00069a)",
                 WebkitBackgroundClip: "text",
                 color: "transparent",
@@ -427,7 +422,7 @@ function Registration() {
           <Box sx={{}}>
             <Typography
               sx={{
-                fontSize: "30px",
+                fontSize: { xs: "23px", sm: "25px", md: "30px" },
                 backgroundImage: "linear-gradient(to right, #00e0ff, #00069a)",
                 WebkitBackgroundClip: "text",
                 color: "transparent",
