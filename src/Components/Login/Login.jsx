@@ -75,7 +75,7 @@ function Login() {
           <Typography
             sx={{
               alignSelf: "flex-start",
-              mt: 29.2,
+              mt: 26,
               fontSize: "13px",
               fontWeight: "600",
               color: "white",
