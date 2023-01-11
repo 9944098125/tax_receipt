@@ -5,8 +5,10 @@ import saveTree from "../../Assets/saveTree.png";
 import loginBg from "../../Assets/loginBg.jpg";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { Link } from "react-router-dom";
+import DocumentTitle from "../DocumentTitle";
 
 function Login() {
+  DocumentTitle("Sign In | Tax Receit");
   const [formValues] = useState({
     email: "",
     password: "",
@@ -65,8 +67,8 @@ function Login() {
             src={saveTree}
             alt="brand"
             style={{
-              height: "150px",
-              width: "60%",
+              height: "170px",
+              width: "50%",
               marginTop: "250px",
             }}
           />

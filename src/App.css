@@ -28,6 +28,17 @@
   .login-fields  {
     width: 400px;
   }
+  .registrationFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .label {
+    font-size: 10px;
+    color: #5183ce;
+    margin-left: 5px;
+    font-family: "Poppins", sans-serif !important;
+  }
 }
 
 @media screen and (max-width:425px) {
@@ -63,13 +74,13 @@
 
 .primary-button {
   background-color: rgb(124 112 255 / 1);
-  line-height: 2.5rem;
+  line-height: 2.75rem;
   border-radius: 4px;
   color: white;
   font-weight: 700;
   margin-bottom: 20px;
   border: none;
-  font-size: 1rem;
+  font-size: 1.125rem;
   width: 100%;
   transform:translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
 }
@@ -80,8 +91,8 @@
   width: 100%;
   font-weight: 700;
   border: none;
-  line-height: 2.5rem;
-  font-size: 1rem;
+  line-height: 2.75rem;
+  font-size: 1.125rem;
   border-radius: 4px;
 
 }
@@ -108,9 +119,10 @@
 }
 
 .label {
-  font-size: small;
-  color: #234e8e;
+  font-size: 16px;
+  color: #5183ce;
   margin-left: 5px;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .register-fields {
@@ -125,4 +137,29 @@
   background-color: #ffffff;
   --tw-border-opacity: 0;
   --tw-bg-opacity:1;
+}
+
+.register-fields::placeholder {
+  color: #768eaf;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif !important;
+}
+
+.registrationFormContainer {
+  background-color: transparent;
+  display: flex;
+  gap:20px;
+  padding-bottom: 50px;
+}
+
+.tick {
+  height:1.125rem;
+  width: 1.125rem;
+  margin-right: 0.5rem;
+}
+
+.checkbox:focus {
+  box-shadow: 1px 1px 1px rgba(blue);
+  outline: 2px solid transparent;
+  outline-offset: 2px;
 }
