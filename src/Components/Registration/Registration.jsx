@@ -100,7 +100,7 @@ function Registration() {
         >
           <Typography
             sx={{
-              fontSize: { xs: "42px", md: "65px" },
+              fontSize: "4.75rem",
               color: "white",
               fontWeight: "700",
             }}
@@ -109,7 +109,7 @@ function Registration() {
           </Typography>
           <Typography
             sx={{
-              fontSize: { xs: "18px", md: "21px" },
+              fontSize: "1.5rem",
               color: "#bbdefb",
               fontWeight: "500",
             }}
@@ -179,7 +179,7 @@ function Registration() {
                         <Field
                           name="name"
                           type="text"
-                          placeholder="Jim smith"
+                          placeholder="Jim Smith"
                           className={
                             errors.name && touched.name
                               ? "register-fields is-invalid form-control"
@@ -201,7 +201,7 @@ function Registration() {
                         <Field
                           name="email"
                           type="email"
-                          placeholder="jim@gmail.com"
+                          placeholder="jim@agency.com"
                           className={
                             errors.email && touched.email
                               ? "register-fields is-invalid form-control"
@@ -384,37 +384,37 @@ function Registration() {
             </Typography>
             <Box sx={{ display: "flex", alignItems: "center", mt: 2, pt: 0.5 }}>
               <img src={tick} alt="ticks" className="tick" />
-              <Typography sx={{ fontSize: "18px", color: "#234e8e" }}>
+              <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
                 Manage Report
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", pt: 0.5 }}>
               <img src={tick} alt="ticks" className="tick" />
-              <Typography sx={{ fontSize: "18px", color: "#234e8e" }}>
+              <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
                 Manage Customer
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", pt: 0.5 }}>
               <img src={tick} alt="ticks" className="tick" />
-              <Typography sx={{ fontSize: "18px", color: "#234e8e" }}>
+              <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
                 80G Tax Report {"<"} 250
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", pt: 0.5 }}>
               <img src={tick} alt="ticks" className="tick" />
-              <Typography sx={{ fontSize: "18px", color: "#234e8e" }}>
+              <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
                 Automated email {"<"} 250
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", pt: 0.5 }}>
               <img src={tick} alt="ticks" className="tick" />
-              <Typography sx={{ fontSize: "18px", color: "#234e8e" }}>
+              <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
                 Collect online payment
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", pt: 0.5, mb: 3 }}>
               <img src={tick} alt="ticks" className="tick" />
-              <Typography sx={{ fontSize: "18px", color: "#234e8e" }}>
+              <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
                 Transaction fee {"<"} 2%
               </Typography>
             </Box>
@@ -433,37 +433,37 @@ function Registration() {
             </Typography>
             <Box sx={{ display: "flex", alignItems: "center", mt: 2, pt: 0.5 }}>
               <img src={tick} alt="ticks" className="tick" />
-              <Typography sx={{ fontSize: "18px", color: "#234e8e" }}>
+              <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
                 Manage Report
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", pt: 0.5 }}>
               <img src={tick} alt="ticks" className="tick" />
-              <Typography sx={{ fontSize: "18px", color: "#234e8e" }}>
+              <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
                 Manage Customer
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", pt: 0.5 }}>
               <img src={tick} alt="ticks" className="tick" />
-              <Typography sx={{ fontSize: "18px", color: "#234e8e" }}>
+              <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
                 80G Tax Report {"<"} 250
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", pt: 0.5 }}>
               <img src={tick} alt="ticks" className="tick" />
-              <Typography sx={{ fontSize: "18px", color: "#234e8e" }}>
+              <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
                 Automated email {"<"} 250
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", pt: 0.5 }}>
               <img src={tick} alt="ticks" className="tick" />
-              <Typography sx={{ fontSize: "18px", color: "#234e8e" }}>
+              <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
                 Collect online payment
               </Typography>
             </Box>
             <Box sx={{ display: "flex", alignItems: "center", pt: 0.5, mb: 3 }}>
               <img src={tick} alt="ticks" className="tick" />
-              <Typography sx={{ fontSize: "18px", color: "#234e8e" }}>
+              <Typography sx={{ fontSize: "1.125rem", color: "#234e8e" }}>
                 Transaction fee {"<"} 2%
               </Typography>
             </Box>

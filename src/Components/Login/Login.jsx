@@ -100,7 +100,7 @@ function Login() {
           <Typography
             sx={{
               color: "#234e8e",
-              fontSize: { xs: "25px", md: "1.875rem" },
+              fontSize: "1.875rem",
               lineHeight: "2.25rem",
               fontWeight: "700",
               letterSpacing: "-1px",
@@ -121,7 +121,7 @@ function Login() {
                       <Typography
                         sx={{
                           color: "#234e8e",
-                          fontSize: "1.1rem",
+                          fontSize: "1.125rem",
                           fontWeight: "600",
                         }}
                       >
@@ -149,7 +149,7 @@ function Login() {
                       <Typography
                         sx={{
                           color: "#234e8e",
-                          fontSize: "1.1rem",
+                          fontSize: "1.125rem",
                           fontWeight: "600",
                         }}
                       >
