@@ -368,10 +368,10 @@ function Registration() {
             display: "flex",
             flexDirection: { xs: "column", sm: "row", md: "column" },
             alignItems: "center",
-            gap: "25px",
+            gap: 0,
           }}
         >
-          <Box sx={{}}>
+          <Box sx={{ pl: 0 }}>
             <Typography
               sx={{
                 fontSize: { xs: "23px", sm: "25px", md: "30px" },
@@ -420,7 +420,7 @@ function Registration() {
               </Typography>
             </Box>
           </Box>
-          <Box sx={{}}>
+          <Box sx={{ ml: { xs: "none", md: -3 } }}>
             <Typography
               sx={{
                 fontSize: { xs: "23px", sm: "25px", md: "30px" },
@@ -430,7 +430,7 @@ function Registration() {
                 fontWeight: "600",
               }}
             >
-              Enterprise Plan Includes
+              EnterPrise Plan Includes
             </Typography>
             <Box sx={{ display: "flex", alignItems: "center", mt: 2, pt: 0.5 }}>
               <img src={tick} alt="ticks" className="tick" />
