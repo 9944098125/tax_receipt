@@ -60,7 +60,7 @@
 }
 
 .login-fields::placeholder {
-  color: #5a6f8d;
+  color: #8399b8;
   font-size: 1.125rem;
   font-family: "Poppins", sans-serif !important;
 }
@@ -118,11 +118,12 @@
 }
 
 .label {
-  font-size: 16px;
-  color: #5183ce;
-  margin-left: 5px;
-  font-weight: 600;
-  /* font-family: "Poppins", sans-serif !important; */
+  font-size: 1.125rem;
+  color: #234e8e;
+  margin-left: 10px;
+  opacity: 80;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .register-fields {
@@ -140,7 +141,7 @@
 }
 
 .register-fields::placeholder {
-  color: #5b7394;
+  color: #7891b4;
   font-size: 1rem;
   font-family: "Poppins", sans-serif !important;
   transform: scale(1, 1.1);

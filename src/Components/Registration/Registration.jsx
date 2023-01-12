@@ -315,8 +315,8 @@ function Registration() {
                             I agree to
                             <Link
                               style={{
-                                fontFamily: "Poppins, sans-serif",
-                                fontSize: "17px",
+                                color: "inherit",
+                                fontWeight: "600",
                               }}
                               to="/terms"
                             >
@@ -326,8 +326,8 @@ function Registration() {
                             and{" "}
                             <Link
                               style={{
-                                fontFamily: "Poppins, sans-serif",
-                                fontSize: "17px",
+                                color: "inherit",
+                                fontWeight: "600",
                               }}
                               to="/privacy"
                             >
