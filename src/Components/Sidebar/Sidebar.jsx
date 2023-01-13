@@ -93,6 +93,7 @@ function Sidebar() {
                   gap: 2,
                   cursor: "pointer",
                   p: 2,
+                  py: 1,
                   "&:hover": {
                     backgroundColor: "primary.light",
                     borderRadius: "4px",
@@ -132,6 +133,7 @@ function Sidebar() {
                   gap: 2,
                   cursor: "pointer",
                   p: 2,
+                  py: 1,
                   "&:hover": {
                     backgroundColor: "primary.light",
                     borderRadius: "4px",
@@ -171,6 +173,7 @@ function Sidebar() {
                   gap: 2,
                   cursor: "pointer",
                   p: 2,
+                  py: 1,
                   "&:hover": {
                     backgroundColor: "primary.light",
                     borderRadius: "4px",
@@ -210,6 +213,7 @@ function Sidebar() {
                   gap: 2,
                   cursor: "pointer",
                   p: 2,
+                  py: 1,
                   "&:hover": {
                     backgroundColor: "primary.light",
                     borderRadius: "4px",
@@ -249,6 +253,7 @@ function Sidebar() {
                   gap: 2,
                   cursor: "pointer",
                   p: 2,
+                  py: 1,
                   "&:hover": {
                     backgroundColor: "primary.light",
                     borderRadius: "4px",
@@ -284,6 +289,7 @@ function Sidebar() {
                 gap: 2,
                 cursor: "pointer",
                 p: 2,
+                py: 1,
                 "&:hover": {
                   backgroundColor: "primary.light",
                   borderRadius: "4px",

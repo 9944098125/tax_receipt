@@ -138,17 +138,17 @@ function Dashboard() {
             <Typography
               sx={{ fontSize: "17px", fontWeight: "600", color: "white" }}
             >
-              46
+              30
             </Typography>
             <Typography
               sx={{ fontSize: "14px", fontWeight: "500", color: "white" }}
             >
-              Donations
+              Orders
             </Typography>
             <Typography
               sx={{ fontSize: "12px", fontWeight: "400", color: "white" }}
             >
-              This is transaction status
+              This is orders status
             </Typography>
           </Box>
           <PaidIcon
@@ -173,17 +173,17 @@ function Dashboard() {
             <Typography
               sx={{ fontSize: "17px", fontWeight: "600", color: "white" }}
             >
-              46
+              29
             </Typography>
             <Typography
               sx={{ fontSize: "14px", fontWeight: "500", color: "white" }}
             >
-              Donations
+              Clients
             </Typography>
             <Typography
               sx={{ fontSize: "12px", fontWeight: "400", color: "white" }}
             >
-              This is transaction status
+              This is client status
             </Typography>
           </Box>
           <Person2Icon
@@ -209,17 +209,17 @@ function Dashboard() {
             <Typography
               sx={{ fontSize: "17px", fontWeight: "600", color: "white" }}
             >
-              46
+              1
             </Typography>
             <Typography
               sx={{ fontSize: "14px", fontWeight: "500", color: "white" }}
             >
-              Donations
+              PDF
             </Typography>
             <Typography
               sx={{ fontSize: "12px", fontWeight: "400", color: "white" }}
             >
-              This is transaction status
+              This is pdf status
             </Typography>
           </Box>
           <PictureAsPdfIcon
@@ -245,17 +245,17 @@ function Dashboard() {
             <Typography
               sx={{ fontSize: "17px", fontWeight: "600", color: "white" }}
             >
-              46
+              12
             </Typography>
             <Typography
               sx={{ fontSize: "14px", fontWeight: "500", color: "white" }}
             >
-              Donations
+              Emails
             </Typography>
             <Typography
               sx={{ fontSize: "12px", fontWeight: "400", color: "white" }}
             >
-              This is transaction status
+              This is emails status
             </Typography>
           </Box>
           <EmailIcon
@@ -281,17 +281,17 @@ function Dashboard() {
             <Typography
               sx={{ fontSize: "17px", fontWeight: "600", color: "white" }}
             >
-              46
+              55
             </Typography>
             <Typography
               sx={{ fontSize: "14px", fontWeight: "500", color: "white" }}
             >
-              Donations
+              Revenue
             </Typography>
             <Typography
               sx={{ fontSize: "12px", fontWeight: "400", color: "white" }}
             >
-              This is transaction status
+              This is revenue status
             </Typography>
           </Box>
           <EmailIcon
