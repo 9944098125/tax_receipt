@@ -165,3 +165,33 @@
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
+
+.date {
+  width: 50% !important;
+}
+
+@media screen and (max-width: 768px) {
+  .login-fields {
+    width: 400px;
+  }
+  .registrationFormContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .label {
+    font-size: 10px;
+    color: #5183ce;
+    margin-left: 5px;
+    font-family: "Poppins", sans-serif !important;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .login-fields {
+    width: 280px;
+  }
+  .date {
+    width: 100% !important;
+  }
+}

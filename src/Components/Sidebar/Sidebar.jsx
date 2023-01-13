@@ -36,6 +36,9 @@ function Sidebar() {
           sx={{
             backgroundColor: "primary.main",
             width: { xs: "20vw", sm: "13vw", md: "20vw" },
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
@@ -315,7 +318,7 @@ function Sidebar() {
               justifyContent: "flex-end",
               alignItems: "center",
               gap: 3,
-              p: 2,
+              p: 1,
             }}
           >
             <Typography
