@@ -12,7 +12,7 @@ import Transactions from "../Pages/Transactions";
 
 const router = createBrowserRouter([
   {
-    path: "/login",
+    path: "/",
     element: <Login />,
   },
   {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
     element: <Sidebar />,
     children: [
       {
-        path: "/",
+        path: "/dashboard",
         element: <Dashboard />,
       },
       {
