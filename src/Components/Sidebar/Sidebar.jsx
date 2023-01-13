@@ -327,7 +327,7 @@ function Sidebar() {
               justifyContent: "flex-end",
               alignItems: "center",
               gap: 3,
-              p: 0.5,
+              p: 1,
               boxShadow: "0 2px 2px -2px rgba(0,0,0,.2)",
             }}
           >
