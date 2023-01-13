@@ -14,6 +14,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import DocumentTitle from "../../Components/DocumentTitle";
 
 import {
   LineChart,
@@ -27,6 +28,7 @@ import {
 } from "recharts";
 
 function Dashboard() {
+  DocumentTitle("Dashboard | Tax Receit");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
 
@@ -103,6 +105,7 @@ function Dashboard() {
           alignItems: "center",
           flexWrap: "wrap",
           p: 2,
+          pl: 0,
           gap: 1,
         }}
       >
@@ -115,7 +118,7 @@ function Dashboard() {
             alignItems: "center",
             justifyContent: "space-between",
             height: { xs: "150px", md: "none" },
-            width: { xs: "290px", md: "none" },
+            width: { xs: "250px", md: "none" },
           }}
         >
           <Box sx={{}}>
@@ -154,7 +157,7 @@ function Dashboard() {
             alignItems: "center",
             justifyContent: "space-between",
             height: { xs: "150px", md: "none" },
-            width: { xs: "290px", md: "none" },
+            width: { xs: "250px", md: "none" },
           }}
         >
           <Box sx={{}}>
@@ -192,7 +195,7 @@ function Dashboard() {
             alignItems: "center",
             justifyContent: "space-between",
             height: { xs: "150px", md: "none" },
-            width: { xs: "290px", md: "none" },
+            width: { xs: "250px", md: "none" },
           }}
         >
           <Box sx={{}}>
@@ -231,7 +234,7 @@ function Dashboard() {
             alignItems: "center",
             justifyContent: "space-between",
             height: { xs: "150px", md: "none" },
-            width: { xs: "290px", md: "none" },
+            width: { xs: "250px", md: "none" },
           }}
         >
           <Box sx={{}}>
@@ -270,7 +273,7 @@ function Dashboard() {
             alignItems: "center",
             justifyContent: "space-between",
             height: { xs: "150px", md: "none" },
-            width: { xs: "290px", md: "none" },
+            width: { xs: "250px", md: "none" },
           }}
         >
           <Box sx={{}}>
@@ -309,7 +312,7 @@ function Dashboard() {
             alignItems: "center",
             justifyContent: "space-between",
             height: { xs: "150px", md: "none" },
-            width: { xs: "290px", md: "none" },
+            width: { xs: "250px", md: "none" },
           }}
         >
           <Box sx={{}}>
