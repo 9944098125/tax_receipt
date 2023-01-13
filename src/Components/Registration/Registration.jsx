@@ -371,7 +371,7 @@ function Registration() {
             gap: 0,
           }}
         >
-          <Box sx={{ pl: 0 }}>
+          <Box sx={{ pl: 0, pr: { xs: 0, sm: 3, md: 0 } }}>
             <Typography
               sx={{
                 fontSize: { xs: "23px", sm: "25px", md: "30px" },
