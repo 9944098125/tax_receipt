@@ -35,7 +35,7 @@ function Sidebar() {
         <Box
           sx={{
             backgroundColor: "primary.main",
-            width: { xs: "20vw", sm: "13vw", md: "20vw" },
+            width: { xs: "15vw", sm: "12vw", md: "15vw" },
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -45,22 +45,37 @@ function Sidebar() {
             <Box
               sx={{
                 display: "flex",
+                justifyContent: "center",
                 alignItems: "center",
-                gap: 2,
                 pt: 2,
                 cursor: "pointer",
-                pl: { xs: 1, sm: 1.5, md: 2 },
               }}
             >
-              <img
+              {/* <img
                 src={saveTree}
                 alt="logo"
-                style={{ height: "28px", width: "50px" }}
-              />
+                style={{
+                  height: "33px",
+                  width: "50px",
+                  backgroundColor: "white",
+                  padding: "5px",
+                  borderRadius: "4px",
+                }}
+              /> */}
               <Typography
                 sx={{
                   color: "white",
-                  fontSize: "1.5rem",
+                  fontSize: "20px",
+                  fontWeight: "600",
+                  display: { xs: "block", md: "none" },
+                }}
+              >
+                D
+              </Typography>
+              <Typography
+                sx={{
+                  color: "white",
+                  fontSize: "18px",
                   display: { xs: "none", md: "block" },
                   fontWeight: "600",
                 }}
@@ -77,10 +92,9 @@ function Sidebar() {
                   alignItems: "center",
                   gap: 2,
                   cursor: "pointer",
-                  px: 1,
-                  py: 2,
+                  p: 2,
                   "&:hover": {
-                    backgroundColor: "primary.dark",
+                    backgroundColor: "primary.light",
                     borderRadius: "4px",
                   },
                 }}
@@ -97,7 +111,7 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "1.125rem",
+                    fontSize: "16px",
                     color: "white",
                     fontWeight: "500",
                     mb: -0.7,
@@ -117,10 +131,9 @@ function Sidebar() {
                   alignItems: "center",
                   gap: 2,
                   cursor: "pointer",
-                  px: 1,
-                  py: 2,
+                  p: 2,
                   "&:hover": {
-                    backgroundColor: "primary.dark",
+                    backgroundColor: "primary.light",
                     borderRadius: "4px",
                   },
                 }}
@@ -137,13 +150,13 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "1.125rem",
+                    fontSize: "16px",
                     color: "white",
                     fontWeight: "500",
                     mb: -0.7,
                   }}
                 >
-                  Client Management
+                  Clients
                 </Typography>
               </Box>
             </Link>
@@ -157,10 +170,9 @@ function Sidebar() {
                   alignItems: "center",
                   gap: 2,
                   cursor: "pointer",
-                  px: 1,
-                  py: 2,
+                  p: 2,
                   "&:hover": {
-                    backgroundColor: "primary.dark",
+                    backgroundColor: "primary.light",
                     borderRadius: "4px",
                   },
                 }}
@@ -177,13 +189,13 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "1.125rem",
+                    fontSize: "16px",
                     color: "white",
                     fontWeight: "500",
                     mb: -0.7,
                   }}
                 >
-                  Package Management
+                  Packages
                 </Typography>
               </Box>
             </Link>
@@ -197,10 +209,9 @@ function Sidebar() {
                   alignItems: "center",
                   gap: 2,
                   cursor: "pointer",
-                  px: 1,
-                  py: 2,
+                  p: 2,
                   "&:hover": {
-                    backgroundColor: "primary.dark",
+                    backgroundColor: "primary.light",
                     borderRadius: "4px",
                   },
                 }}
@@ -217,7 +228,7 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "1.125rem",
+                    fontSize: "16px",
                     color: "white",
                     fontWeight: "500",
                     mb: -0.7,
@@ -237,10 +248,9 @@ function Sidebar() {
                   alignItems: "center",
                   gap: 2,
                   cursor: "pointer",
-                  px: 1,
-                  py: 2,
+                  p: 2,
                   "&:hover": {
-                    backgroundColor: "primary.dark",
+                    backgroundColor: "primary.light",
                     borderRadius: "4px",
                   },
                 }}
@@ -257,7 +267,7 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "1.125rem",
+                    fontSize: "16px",
                     color: "white",
                     fontWeight: "500",
                     mb: -0.7,
@@ -273,10 +283,9 @@ function Sidebar() {
                 alignItems: "center",
                 gap: 2,
                 cursor: "pointer",
-                px: 1,
-                py: 2,
+                p: 2,
                 "&:hover": {
-                  backgroundColor: "primary.dark",
+                  backgroundColor: "primary.light",
                   borderRadius: "4px",
                 },
               }}
@@ -290,7 +299,7 @@ function Sidebar() {
                     xs: "none",
                     md: "block",
                   },
-                  fontSize: "1.125rem",
+                  fontSize: "16px",
                   color: "white",
                   fontWeight: "500",
                   mb: -0.7,
@@ -305,9 +314,9 @@ function Sidebar() {
         <Box
           sx={{
             width: {
-              xs: "80vw",
-              sm: "87vw",
-              md: "80vw",
+              xs: "85vw",
+              sm: "88vw",
+              md: "85vw",
             },
           }}
         >
