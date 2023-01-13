@@ -166,10 +166,6 @@
   outline-offset: 2px;
 }
 
-.date {
-  width: 50% !important;
-}
-
 @media screen and (max-width: 768px) {
   .login-fields {
     width: 400px;
@@ -191,7 +187,8 @@
   .login-fields {
     width: 280px;
   }
-  .date {
-    width: 100% !important;
-  }
+}
+
+.date {
+  cursor: pointer !important;
 }

@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
-import DateRangePicker from "react-bootstrap-daterangepicker";
-// import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-daterangepicker/daterangepicker.css";
+import React, { Fragment, useState } from "react";
+import DatePicker from "react-datepicker";
+
+import "react-datepicker/dist/react-datepicker.css";
 import { Typography, Box } from "@mui/material";
 import PaidIcon from "@mui/icons-material/Paid";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
@@ -27,6 +27,9 @@ import {
 } from "recharts";
 
 function Dashboard() {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+
   function createData(name, amount) {
     return { name, amount };
   }
@@ -62,23 +65,37 @@ function Dashboard() {
 
   return (
     <Fragment>
-      <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-        <DateRangePicker
-          initialSettings={{ startDate: "01/01/2020", endDate: "01/15/2020" }}
-        >
-          <input type="text" className="form-control date" />
-        </DateRangePicker>
-        <Typography
-          sx={{
-            fontSize: "14px",
-            fontWeight: "600",
-            color: "#234e8e",
-            ml: -30,
-            display: { xs: "none", md: "block" },
-          }}
-        >
-          Select start date and end date
-        </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          alignItems: "center",
+        }}
+      >
+        <Box sx={{ mr: { xs: 2, md: 10 }, pl: 2 }}>
+          <Typography
+            sx={{ color: "primary.dark", fontWeight: "600", fontSize: "16px" }}
+          >
+            Start Date
+          </Typography>
+          <DatePicker
+            selected={startDate}
+            onChange={(date) => setStartDate(date)}
+            className="date"
+          />
+        </Box>
+        <Box sx={{}}>
+          <Typography
+            sx={{ color: "primary.dark", fontWeight: "600", fontSize: "16px" }}
+          >
+            End Date
+          </Typography>
+          <DatePicker
+            selected={endDate}
+            onChange={(date) => setEndDate(date)}
+            className="date"
+          />
+        </Box>
       </Box>
       <Box
         sx={{
@@ -96,6 +113,9 @@ function Dashboard() {
             p: 2.5,
             display: "flex",
             alignItems: "center",
+            justifyContent: "space-between",
+            height: { xs: "150px", md: "none" },
+            width: { xs: "290px", md: "none" },
           }}
         >
           <Box sx={{}}>
@@ -117,8 +137,8 @@ function Dashboard() {
           </Box>
           <Person2Icon
             sx={{
-              height: "40px",
-              width: "40px",
+              height: "60px",
+              width: "60px",
               p: 0.3,
               backgroundColor: "white",
               borderRadius: "50%",
@@ -132,6 +152,9 @@ function Dashboard() {
             p: 2.5,
             display: "flex",
             alignItems: "center",
+            justifyContent: "space-between",
+            height: { xs: "150px", md: "none" },
+            width: { xs: "290px", md: "none" },
           }}
         >
           <Box sx={{}}>
@@ -155,8 +178,8 @@ function Dashboard() {
             sx={{
               backgroundColor: "white",
               borderRadius: "50%",
-              height: "40px",
-              width: "40px",
+              height: "60px",
+              width: "60px",
             }}
           />
         </Box>
@@ -167,6 +190,9 @@ function Dashboard() {
             p: 2.5,
             display: "flex",
             alignItems: "center",
+            justifyContent: "space-between",
+            height: { xs: "150px", md: "none" },
+            width: { xs: "290px", md: "none" },
           }}
         >
           <Box sx={{}}>
@@ -188,8 +214,8 @@ function Dashboard() {
           </Box>
           <Person2Icon
             sx={{
-              height: "40px",
-              width: "40px",
+              height: "60px",
+              width: "60px",
               p: 0.3,
               backgroundColor: "white",
               borderRadius: "50%",
@@ -203,6 +229,9 @@ function Dashboard() {
             p: 2.5,
             display: "flex",
             alignItems: "center",
+            justifyContent: "space-between",
+            height: { xs: "150px", md: "none" },
+            width: { xs: "290px", md: "none" },
           }}
         >
           <Box sx={{}}>
@@ -224,8 +253,8 @@ function Dashboard() {
           </Box>
           <PictureAsPdfIcon
             sx={{
-              height: "40px",
-              width: "40px",
+              height: "60px",
+              width: "60px",
               backgroundColor: "white",
               borderRadius: "50%",
               p: 0.3,
@@ -239,6 +268,9 @@ function Dashboard() {
             p: 2.5,
             display: "flex",
             alignItems: "center",
+            justifyContent: "space-between",
+            height: { xs: "150px", md: "none" },
+            width: { xs: "290px", md: "none" },
           }}
         >
           <Box sx={{}}>
@@ -260,8 +292,8 @@ function Dashboard() {
           </Box>
           <EmailIcon
             sx={{
-              height: "40px",
-              width: "40px",
+              height: "60px",
+              width: "60px",
               backgroundColor: "white",
               borderRadius: "50%",
               p: 0.3,
@@ -275,6 +307,9 @@ function Dashboard() {
             p: 2.5,
             display: "flex",
             alignItems: "center",
+            justifyContent: "space-between",
+            height: { xs: "150px", md: "none" },
+            width: { xs: "290px", md: "none" },
           }}
         >
           <Box sx={{}}>
@@ -296,8 +331,8 @@ function Dashboard() {
           </Box>
           <EmailIcon
             sx={{
-              height: "40px",
-              width: "40px",
+              height: "60px",
+              width: "60px",
               backgroundColor: "white",
               borderRadius: "50%",
               p: 0.3,
