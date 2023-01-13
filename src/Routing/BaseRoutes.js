@@ -2,13 +2,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Login from "../Components/Login/Login";
 import Registration from "../Components/Registration/Registration";
+import Sidebar from "../Components/Sidebar/Sidebar";
 
 import ClientManagement from "../Pages/ClientManagement";
 import Dashboard from "../Pages/Dashboard";
 import PackageManagement from "../Pages/PackageManagement";
 import Orders from "../Pages/Orders";
 import Transactions from "../Pages/Transactions";
-import Sidebar from "../Components/Sidebar/Sidebar";
 
 const router = createBrowserRouter([
   {
