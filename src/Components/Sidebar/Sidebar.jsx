@@ -322,12 +322,13 @@ function Sidebar() {
         >
           <Box
             sx={{
-              backgroundColor: "#e8eaf6",
+              backgroundColor: "#FAF9F6",
               display: "flex",
               justifyContent: "flex-end",
               alignItems: "center",
               gap: 3,
-              p: 1,
+              p: 0.5,
+              boxShadow: "0 2px 2px -2px rgba(0,0,0,.2)",
             }}
           >
             <Typography
@@ -378,7 +379,7 @@ function Sidebar() {
           {/* scrollable content */}
           <Box
             sx={{
-              height: { xs: "84vh", sm: "88vh", md: "85vh" },
+              height: { xs: "84vh", sm: "88vh", md: "88vh" },
               overflowY: "scroll",
               p: 2,
             }}

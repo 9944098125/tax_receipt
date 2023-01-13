@@ -380,10 +380,13 @@ function Dashboard() {
         sx={{
           p: 1.5,
           display: "flex",
+          flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
           justifyContent: "space-between",
           color: "primary.main",
           height: "50vh",
+          maxWidth: "1024px",
+          gap: 5,
         }}
       >
         <ResponsiveContainer width="100%" height="100%">
