@@ -1,7 +1,101 @@
-import React from "react";
+import React, { Fragment } from "react";
+import HomeIcon from "@mui/icons-material/Home";
+import DocumentTitle from "../../Components/DocumentTitle";
+import { Box, Typography } from "@mui/material";
+import TableWithHeader from "../../Components/Table/TableWithHeader";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import PropTypes from "prop-types";
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
 
 function ClientManagement() {
-  return <div>ClientManagement</div>;
+  DocumentTitle("Client Management | Tax Receit");
+
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+  return (
+    <Fragment>
+      <Box
+        sx={{
+          backgroundColor: "primary.bg",
+          color: "primary.dark",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          p: 3,
+        }}
+      >
+        <Typography sx={{ fontSize: "1.5rem", fontWeight: "600" }}>
+          Client Management
+        </Typography>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
+          <HomeIcon />
+          <Typography sx={{ color: "primary.dark", fontSize: "0.875rem" }}>
+            / Client Management
+          </Typography>
+        </Box>
+      </Box>
+      <Box sx={{ p: 0, mt: 4 }}>
+        <Box sx={{ width: "100%" }}>
+          <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+            <Tabs
+              value={value}
+              onChange={handleChange}
+              aria-label="basic tabs example"
+            >
+              <Tab label="Pending" {...a11yProps(0)} />
+              <Tab label="Active" {...a11yProps(1)} />
+              <Tab label="In Active" {...a11yProps(2)} />
+            </Tabs>
+          </Box>
+          <TabPanel value={value} index={0}>
+            <TableWithHeader status="PENDING" />
+          </TabPanel>
+          <TabPanel value={value} index={1}>
+            <TableWithHeader status="ACTIVE" />
+          </TabPanel>
+          <TabPanel value={value} index={2}>
+            <TableWithHeader status="INACTIVE" />
+          </TabPanel>
+        </Box>
+      </Box>
+    </Fragment>
+  );
 }
 
 export default ClientManagement;
