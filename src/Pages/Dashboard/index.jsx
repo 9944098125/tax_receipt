@@ -119,6 +119,7 @@ function Dashboard() {
             justifyContent: "space-between",
             height: { xs: "150px", md: "none" },
             width: { xs: "250px", md: "none" },
+            cursor: "pointer",
           }}
         >
           <Box sx={{}}>
@@ -158,6 +159,7 @@ function Dashboard() {
             justifyContent: "space-between",
             height: { xs: "150px", md: "none" },
             width: { xs: "250px", md: "none" },
+            cursor: "pointer",
           }}
         >
           <Box sx={{}}>
@@ -196,6 +198,7 @@ function Dashboard() {
             justifyContent: "space-between",
             height: { xs: "150px", md: "none" },
             width: { xs: "250px", md: "none" },
+            cursor: "pointer",
           }}
         >
           <Box sx={{}}>
@@ -235,6 +238,7 @@ function Dashboard() {
             justifyContent: "space-between",
             height: { xs: "150px", md: "none" },
             width: { xs: "250px", md: "none" },
+            cursor: "pointer",
           }}
         >
           <Box sx={{}}>
@@ -274,6 +278,7 @@ function Dashboard() {
             justifyContent: "space-between",
             height: { xs: "150px", md: "none" },
             width: { xs: "250px", md: "none" },
+            cursor: "pointer",
           }}
         >
           <Box sx={{}}>
@@ -313,6 +318,7 @@ function Dashboard() {
             justifyContent: "space-between",
             height: { xs: "150px", md: "none" },
             width: { xs: "250px", md: "none" },
+            cursor: "pointer",
           }}
         >
           <Box sx={{}}>

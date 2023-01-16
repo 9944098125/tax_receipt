@@ -173,7 +173,11 @@ function Registration() {
                     <div className="form-group">
                       <Box sx={{ mb: 2 }}>
                         <Typography
-                          sx={{ fontSize: "1.125rem", color: "#234e8e" }}
+                          sx={{
+                            fontSize: "1.125rem",
+                            color: "#234e8e",
+                            fontWeight: "600",
+                          }}
                         >
                           Your name
                         </Typography>
@@ -195,7 +199,11 @@ function Registration() {
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Typography
-                          sx={{ fontSize: "1.125rem", color: "#234e8e" }}
+                          sx={{
+                            fontSize: "1.125rem",
+                            color: "#234e8e",
+                            fontWeight: "600",
+                          }}
                         >
                           Your email
                         </Typography>
@@ -217,7 +225,11 @@ function Registration() {
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Typography
-                          sx={{ fontSize: "1.125rem", color: "#234e8e" }}
+                          sx={{
+                            fontSize: "1.125rem",
+                            color: "#234e8e",
+                            fontWeight: "600",
+                          }}
                         >
                           Mobile Number
                         </Typography>
@@ -239,7 +251,11 @@ function Registration() {
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Typography
-                          sx={{ fontSize: "1.125rem", color: "#234e8e" }}
+                          sx={{
+                            fontSize: "1.125rem",
+                            color: "#234e8e",
+                            fontWeight: "600",
+                          }}
                         >
                           Choose a password
                         </Typography>
@@ -261,7 +277,11 @@ function Registration() {
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Typography
-                          sx={{ fontSize: "1.125rem", color: "#234e8e" }}
+                          sx={{
+                            fontSize: "1.125rem",
+                            color: "#234e8e",
+                            fontWeight: "600",
+                          }}
                         >
                           Confirm Your password
                         </Typography>
@@ -283,7 +303,11 @@ function Registration() {
                       </Box>
                       <Box sx={{ mb: 2 }}>
                         <Typography
-                          sx={{ fontSize: "1.125rem", color: "#234e8e" }}
+                          sx={{
+                            fontSize: "1.125rem",
+                            color: "#234e8e",
+                            fontWeight: "600",
+                          }}
                         >
                           Organization Name
                         </Typography>
@@ -334,7 +358,7 @@ function Registration() {
                             >
                               Privacy Policy
                             </Link>
-                            .*
+                            .
                           </label>
                         </Box>
                       </Box>

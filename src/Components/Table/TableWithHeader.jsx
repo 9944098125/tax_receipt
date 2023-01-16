@@ -222,40 +222,100 @@ function TableWithHeader({ status }) {
 
   return (
     <Fragment>
-      <TableContainer component={Paper}>
+      <TableContainer sx={{ border: "2px solid #234e8e" }} component={Paper}>
         <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
           <TableHead
             sx={{ backgroundColor: "primary.bg", color: "primary.dark" }}
           >
-            <TableRow>
-              <TableCell sx={{ fontWeight: "600", fontSize: "12px" }}>
+            <TableRow sx={{ borderBottom: "1px solid #234e8e" }}>
+              <TableCell
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                  borderBottom: "2px solid #234e8e",
+                }}
+              >
                 Client ID
               </TableCell>
-              <TableCell sx={{ fontWeight: "600", fontSize: "12px" }}>
+              <TableCell
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                  borderBottom: "2px solid #234e8e",
+                }}
+              >
                 Client Name
               </TableCell>
-              <TableCell sx={{ fontWeight: "600", fontSize: "12px" }}>
+              <TableCell
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                  borderBottom: "2px solid #234e8e",
+                }}
+              >
                 Organization
               </TableCell>
-              <TableCell sx={{ fontWeight: "600", fontSize: "12px" }}>
+              <TableCell
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                  borderBottom: "2px solid #234e8e",
+                }}
+              >
                 Email
               </TableCell>
-              <TableCell sx={{ fontWeight: "600", fontSize: "12px" }}>
+              <TableCell
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                  borderBottom: "2px solid #234e8e",
+                }}
+              >
                 Mobile Number
               </TableCell>
-              <TableCell sx={{ fontWeight: "600", fontSize: "12px" }}>
+              <TableCell
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                  borderBottom: "2px solid #234e8e",
+                }}
+              >
                 Status
               </TableCell>
-              <TableCell sx={{ fontWeight: "600", fontSize: "12px" }}>
+              <TableCell
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                  borderBottom: "2px solid #234e8e",
+                }}
+              >
                 Package
               </TableCell>
-              <TableCell sx={{ fontWeight: "600", fontSize: "12px" }}>
+              <TableCell
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                  borderBottom: "2px solid #234e8e",
+                }}
+              >
                 Start Date
               </TableCell>
-              <TableCell sx={{ fontWeight: "600", fontSize: "12px" }}>
+              <TableCell
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                  borderBottom: "2px solid #234e8e",
+                }}
+              >
                 Expiry Date
               </TableCell>
-              <TableCell sx={{ fontWeight: "600", fontSize: "12px" }}>
+              <TableCell
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                  borderBottom: "2px solid #234e8e",
+                }}
+              >
                 Actions
               </TableCell>
             </TableRow>
@@ -317,6 +377,11 @@ function TableWithHeader({ status }) {
           alignItems: "center",
           justifyContent: "space-between",
           px: 1,
+          mt: 2,
+          borderBottom: "2px solid #234e8e",
+          borderLeft: "2px solid #234e8e",
+          borderRight: "2px solid #234e8e",
+          borderRadius: "4px",
         }}
       >
         <TablePagination
