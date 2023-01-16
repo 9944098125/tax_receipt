@@ -96,6 +96,8 @@ function Registration() {
             flexDirection: "column",
             justifyContent: "flex-end",
             alignItems: "center",
+            mr: { xs: "none", md: -5 },
+            mt: { xs: "none", md: -2 },
           }}
         >
           <Typography
@@ -110,8 +112,9 @@ function Registration() {
           <Typography
             sx={{
               fontSize: "1.5rem",
-              color: "#bbdefb",
+              color: "#ffffff",
               fontWeight: "500",
+              opacity: ".8",
             }}
           >
             Free for 14 days, no credit card required...
