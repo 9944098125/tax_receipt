@@ -85,10 +85,7 @@ function Sidebar() {
             </Box>
           </Link>
           <Box sx={{ p: 1, pt: 5 }}>
-            <Link
-              to="/dashboard"
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
+            <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
               <Box
                 sx={{
                   display: "flex",
