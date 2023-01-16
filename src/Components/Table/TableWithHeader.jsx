@@ -18,6 +18,7 @@ import LastPageIcon from "@mui/icons-material/LastPage";
 import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { TableHead, Typography } from "@mui/material";
+import { blueGrey } from "@mui/material/colors";
 
 function createData(
   clientId,
@@ -227,12 +228,13 @@ function TableWithHeader({ status }) {
           <TableHead
             sx={{ backgroundColor: "primary.bg", color: "primary.dark" }}
           >
-            <TableRow sx={{ borderBottom: "1px solid #234e8e" }}>
+            <TableRow sx={{ backgroundColor: "primary.main" }}>
               <TableCell
                 sx={{
                   fontWeight: "600",
                   fontSize: "12px",
                   borderBottom: "2px solid #234e8e",
+                  color: "white",
                 }}
               >
                 Client ID
@@ -242,6 +244,7 @@ function TableWithHeader({ status }) {
                   fontWeight: "600",
                   fontSize: "12px",
                   borderBottom: "2px solid #234e8e",
+                  color: "white",
                 }}
               >
                 Client Name
@@ -251,6 +254,7 @@ function TableWithHeader({ status }) {
                   fontWeight: "600",
                   fontSize: "12px",
                   borderBottom: "2px solid #234e8e",
+                  color: "white",
                 }}
               >
                 Organization
@@ -260,6 +264,7 @@ function TableWithHeader({ status }) {
                   fontWeight: "600",
                   fontSize: "12px",
                   borderBottom: "2px solid #234e8e",
+                  color: "white",
                 }}
               >
                 Email
@@ -269,6 +274,7 @@ function TableWithHeader({ status }) {
                   fontWeight: "600",
                   fontSize: "12px",
                   borderBottom: "2px solid #234e8e",
+                  color: "white",
                 }}
               >
                 Mobile Number
@@ -278,6 +284,7 @@ function TableWithHeader({ status }) {
                   fontWeight: "600",
                   fontSize: "12px",
                   borderBottom: "2px solid #234e8e",
+                  color: "white",
                 }}
               >
                 Status
@@ -287,6 +294,7 @@ function TableWithHeader({ status }) {
                   fontWeight: "600",
                   fontSize: "12px",
                   borderBottom: "2px solid #234e8e",
+                  color: "white",
                 }}
               >
                 Package
@@ -296,6 +304,7 @@ function TableWithHeader({ status }) {
                   fontWeight: "600",
                   fontSize: "12px",
                   borderBottom: "2px solid #234e8e",
+                  color: "white",
                 }}
               >
                 Start Date
@@ -305,6 +314,7 @@ function TableWithHeader({ status }) {
                   fontWeight: "600",
                   fontSize: "12px",
                   borderBottom: "2px solid #234e8e",
+                  color: "white",
                 }}
               >
                 Expiry Date
@@ -314,6 +324,7 @@ function TableWithHeader({ status }) {
                   fontWeight: "600",
                   fontSize: "12px",
                   borderBottom: "2px solid #234e8e",
+                  color: "white",
                 }}
               >
                 Actions
@@ -376,6 +387,7 @@ function TableWithHeader({ status }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          backgroundColor: "primary.bg",
           px: 1,
           mt: 2,
           borderBottom: "2px solid #234e8e",
