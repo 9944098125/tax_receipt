@@ -19,119 +19,29 @@ import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { TableHead, Typography } from "@mui/material";
 
-function createData(
-  clientId,
-  clientName,
-  organization,
-  email,
-  mobileNo,
-  status,
-  packages,
-  startDate,
-  expiryDate
-) {
+function createData(sno, name, customerLimit, pdfLimit, emailLimit, price) {
   return {
-    clientId,
-    clientName,
-    organization,
-    email,
-    mobileNo,
-    status,
-    packages,
-    startDate,
-    expiryDate,
+    sno,
+    name,
+    customerLimit,
+    pdfLimit,
+    emailLimit,
+    price,
   };
 }
 
 const rows = [
-  createData(
-    123,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    2342,
-    "SomeOne",
-    "Some company",
-    "someCompany@gmail.com",
-    2342342342,
-    "Pending",
-    45000,
-    "15/12/21",
-    "12/12/22"
-  ),
-  createData(
-    123,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    2342,
-    "SomeOne",
-    "Some company",
-    "someCompany@gmail.com",
-    2342342342,
-    "Pending",
-    45000,
-    "15/12/21",
-    "12/12/22"
-  ),
-  createData(
-    123,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    2342,
-    "SomeOne",
-    "Some company",
-    "someCompany@gmail.com",
-    2342342342,
-    "Pending",
-    45000,
-    "15/12/21",
-    "12/12/22"
-  ),
-  createData(
-    123,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    2342,
-    "SomeOne",
-    "Some company",
-    "someCompany@gmail.com",
-    2342342342,
-    "Pending",
-    45000,
-    "15/12/21",
-    "12/12/22"
-  ),
+  createData(1, "Premium", 12, 10, 14, 15000),
+  createData(1, "Premium", 12, 10, 14, 15000),
+  createData(1, "Premium", 12, 10, 14, 15000),
+  createData(1, "Premium", 12, 10, 14, 15000),
+  createData(1, "Premium", 12, 10, 14, 15000),
+
+  createData(1, "Premium", 12, 10, 14, 15000),
+  createData(1, "Premium", 12, 10, 14, 15000),
+  createData(1, "Premium", 12, 10, 14, 15000),
+  createData(1, "Premium", 12, 10, 14, 15000),
+  createData(1, "Premium", 12, 10, 14, 15000),
 ];
 
 function TablePaginationActions(props) {
@@ -203,7 +113,7 @@ TablePaginationActions.propTypes = {
   rowsPerPage: PropTypes.number.isRequired,
 };
 
-function TableWithHeader({ status }) {
+function PackageTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
@@ -234,7 +144,7 @@ function TableWithHeader({ status }) {
                   color: "white",
                 }}
               >
-                Client ID
+                SLNO.
               </TableCell>
               <TableCell
                 sx={{
@@ -244,7 +154,7 @@ function TableWithHeader({ status }) {
                   color: "white",
                 }}
               >
-                Client Name
+                Name
               </TableCell>
               <TableCell
                 sx={{
@@ -254,7 +164,7 @@ function TableWithHeader({ status }) {
                   color: "white",
                 }}
               >
-                Organization
+                Customer Limit
               </TableCell>
               <TableCell
                 sx={{
@@ -264,7 +174,7 @@ function TableWithHeader({ status }) {
                   color: "white",
                 }}
               >
-                Email
+                PDF Limit
               </TableCell>
               <TableCell
                 sx={{
@@ -274,7 +184,7 @@ function TableWithHeader({ status }) {
                   color: "white",
                 }}
               >
-                Mobile Number
+                Email Limit
               </TableCell>
               <TableCell
                 sx={{
@@ -284,37 +194,7 @@ function TableWithHeader({ status }) {
                   color: "white",
                 }}
               >
-                Status
-              </TableCell>
-              <TableCell
-                sx={{
-                  fontWeight: "600",
-                  fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
-                }}
-              >
-                Package
-              </TableCell>
-              <TableCell
-                sx={{
-                  fontWeight: "600",
-                  fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
-                }}
-              >
-                Start Date
-              </TableCell>
-              <TableCell
-                sx={{
-                  fontWeight: "600",
-                  fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
-                }}
-              >
-                Expiry Date
+                Price
               </TableCell>
               <TableCell
                 sx={{
@@ -336,20 +216,15 @@ function TableWithHeader({ status }) {
               <>
                 <TableRow key={row.name}>
                   <TableCell component="th" scope="row">
-                    {row.clientId}
+                    {row.sno}
                   </TableCell>
-                  <TableCell align="left">{row.clientName}</TableCell>
-                  <TableCell align="left">{row.organization}</TableCell>
+                  <TableCell align="left">{row.name}</TableCell>
+                  <TableCell align="left">{row.customerLimit}</TableCell>
                   <TableCell component="th" scope="row">
-                    {row.email}
+                    {row.pdfLimit}
                   </TableCell>
-                  <TableCell align="left">{row.mobileNo}</TableCell>
-                  <TableCell align="left">{status}</TableCell>
-                  <TableCell component="th" scope="row">
-                    {row.packages}
-                  </TableCell>
-                  <TableCell align="left">{row.startDate}</TableCell>
-                  <TableCell align="left">{row.expiryDate}</TableCell>
+                  <TableCell align="left">{row.emailLimit}</TableCell>
+                  <TableCell align="left">{row.price}</TableCell>
                   <TableCell
                     sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
                     component="th"
@@ -429,4 +304,4 @@ function TableWithHeader({ status }) {
   );
 }
 
-export default TableWithHeader;
+export default PackageTable;
