@@ -3,8 +3,10 @@ import { Box, Typography } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import PackageTable from "../../Components/Table/PackageTable";
+import DocumentTitle from "../../Components/DocumentTitle";
 
 function PackageManagement() {
+  DocumentTitle("Package Management | Tax Receit");
   return (
     <Fragment>
       <Box
