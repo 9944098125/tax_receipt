@@ -36,7 +36,7 @@ function PackageManagement() {
           Add New Package
         </button>
       </Box>
-      <Box sx={{ mt: 1 }}>
+      <Box sx={{ mt: 0 }}>
         <PackageTable />
       </Box>
     </Fragment>

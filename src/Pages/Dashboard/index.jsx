@@ -74,9 +74,18 @@ function Dashboard() {
           alignItems: "center",
         }}
       >
-        <Box sx={{ mr: { xs: 2, md: 10 }, pl: 2 }}>
+        <Box
+          sx={{
+            mr: { xs: 2, md: 10 },
+            pl: 0,
+            backgroundColor: "primary.main",
+            px: 3,
+            py: 1,
+            borderRadius: "8px",
+          }}
+        >
           <Typography
-            sx={{ color: "primary.dark", fontWeight: "600", fontSize: "16px" }}
+            sx={{ color: "#e6f2ff", fontWeight: "600", fontSize: "16px" }}
           >
             Start Date
           </Typography>
@@ -86,9 +95,16 @@ function Dashboard() {
             className="date"
           />
         </Box>
-        <Box sx={{}}>
+        <Box
+          sx={{
+            backgroundColor: "primary.main",
+            px: 3,
+            py: 1,
+            borderRadius: "8px",
+          }}
+        >
           <Typography
-            sx={{ color: "primary.dark", fontWeight: "600", fontSize: "16px" }}
+            sx={{ color: "#e6f2ff", fontWeight: "600", fontSize: "16px" }}
           >
             End Date
           </Typography>
@@ -117,8 +133,8 @@ function Dashboard() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            height: { xs: "150px", md: "none" },
-            width: { xs: "250px", md: "none" },
+            height: { xs: "120px" },
+            width: { xs: "250px" },
             cursor: "pointer",
           }}
         >
@@ -157,8 +173,8 @@ function Dashboard() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            height: { xs: "150px", md: "none" },
-            width: { xs: "250px", md: "none" },
+            height: { xs: "120px" },
+            width: { xs: "250px" },
             cursor: "pointer",
           }}
         >
@@ -196,8 +212,8 @@ function Dashboard() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            height: { xs: "150px", md: "none" },
-            width: { xs: "250px", md: "none" },
+            height: { xs: "120px" },
+            width: { xs: "250px" },
             cursor: "pointer",
           }}
         >
@@ -236,8 +252,8 @@ function Dashboard() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            height: { xs: "150px", md: "none" },
-            width: { xs: "250px", md: "none" },
+            height: { xs: "120px" },
+            width: { xs: "250px" },
             cursor: "pointer",
           }}
         >
@@ -276,8 +292,8 @@ function Dashboard() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            height: { xs: "150px", md: "none" },
-            width: { xs: "250px", md: "none" },
+            height: { xs: "120px" },
+            width: { xs: "250px" },
             cursor: "pointer",
           }}
         >
@@ -316,8 +332,8 @@ function Dashboard() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            height: { xs: "150px", md: "none" },
-            width: { xs: "250px", md: "none" },
+            height: { xs: "120px" },
+            width: { xs: "250px" },
             cursor: "pointer",
           }}
         >
@@ -428,7 +444,7 @@ function Dashboard() {
           alignItems: "center",
           justifyContent: "space-between",
           color: "primary.main",
-          height: "50vh",
+          height: "40vh",
           maxWidth: "1024px",
           gap: 5,
         }}

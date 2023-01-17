@@ -68,7 +68,7 @@ function Sidebar() {
               /> */}
               <Typography
                 sx={{
-                  color: "white",
+                  color: "#e6f2ff",
                   fontSize: "20px",
                   fontWeight: "600",
                   display: { xs: "block", md: "none" },
@@ -78,8 +78,8 @@ function Sidebar() {
               </Typography>
               <Typography
                 sx={{
-                  color: "white",
-                  fontSize: "18px",
+                  color: "#e6f2ff",
+                  fontSize: "1.125rem",
                   display: { xs: "none", md: "block" },
                   fontWeight: "600",
                 }}
@@ -88,7 +88,14 @@ function Sidebar() {
               </Typography>
             </Box>
           </Link>
-          <Box sx={{ p: 1, pt: 5 }}>
+          <Box sx={{ mt: 4, pl: 4, alignSelf: "flex-start" }}>
+            <Typography
+              sx={{ color: "#e6f2ff", fontSize: "0.875rem", fontWeight: "600" }}
+            >
+              Activity
+            </Typography>
+          </Box>
+          <Box sx={{ p: 1, pt: 1 }}>
             <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
               <Box
                 sx={{
@@ -116,8 +123,8 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "16px",
-                    color: "white",
+                    fontSize: "18px",
+                    color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
                   }}
@@ -156,8 +163,8 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "16px",
-                    color: "white",
+                    fontSize: "18px",
+                    color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
                   }}
@@ -196,8 +203,8 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "16px",
-                    color: "white",
+                    fontSize: "18px",
+                    color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
                   }}
@@ -236,8 +243,8 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "16px",
-                    color: "white",
+                    fontSize: "18px",
+                    color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
                   }}
@@ -276,8 +283,8 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "16px",
-                    color: "white",
+                    fontSize: "18px",
+                    color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
                   }}
@@ -310,8 +317,8 @@ function Sidebar() {
                     xs: "none",
                     md: "block",
                   },
-                  fontSize: "16px",
-                  color: "white",
+                  fontSize: "18px",
+                  color: "#e6f2ff",
                   fontWeight: "500",
                   mb: -0.7,
                 }}
@@ -338,12 +345,12 @@ function Sidebar() {
               justifyContent: "flex-end",
               alignItems: "center",
               gap: 3,
-              p: 1,
+              p: "8px 12px",
               boxShadow: "0 2px 2px -2px rgba(0,0,0,.2)",
             }}
           >
             <Typography
-              sx={{ color: "#9fa8da", fontSize: "1.125rem", fontWeight: "600" }}
+              sx={{ color: "#9fa8da", fontSize: "1rem", fontWeight: "600" }}
             >
               Feedback ?
             </Typography>
