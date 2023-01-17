@@ -21,7 +21,7 @@ function Orders() {
         <Typography sx={{ fontSize: "1.5rem", fontWeight: "600" }}>
           Orders
         </Typography>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>
           <HomeIcon />
           <Typography sx={{ color: "primary.dark", fontSize: "0.875rem" }}>
             / orders

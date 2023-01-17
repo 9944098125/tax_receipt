@@ -63,7 +63,7 @@ function Transactions() {
         <Typography sx={{ fontSize: "1.5rem", fontWeight: "600" }}>
           Transactions
         </Typography>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>
           <HomeIcon />
           <Typography sx={{ color: "primary.dark", fontSize: "0.875rem" }}>
             / Transactions
@@ -79,9 +79,21 @@ function Transactions() {
               onChange={handleChange}
               aria-label="basic tabs example"
             >
-              <Tab label="Customers" {...a11yProps(0)} />
-              <Tab label="PDF Generated" {...a11yProps(1)} />
-              <Tab label="Sent Mail" {...a11yProps(2)} />
+              <Tab
+                sx={{ fontSize: { xs: "8px", md: "16px" } }}
+                label="Customers"
+                {...a11yProps(0)}
+              />
+              <Tab
+                sx={{ fontSize: { xs: "8px", md: "16px" } }}
+                label="PDF Generated"
+                {...a11yProps(1)}
+              />
+              <Tab
+                sx={{ fontSize: { xs: "8px", md: "16px" } }}
+                label="Sent Mail"
+                {...a11yProps(2)}
+              />
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>

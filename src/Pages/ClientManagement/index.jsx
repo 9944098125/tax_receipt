@@ -63,7 +63,7 @@ function ClientManagement() {
         <Typography sx={{ fontSize: "1.5rem", fontWeight: "600" }}>
           Client Management
         </Typography>
-        <Box sx={{ display: "flex", alignItems: "center" }}>
+        <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>
           <HomeIcon />
           <Typography sx={{ color: "primary.dark", fontSize: "0.875rem" }}>
             / Client Management
@@ -78,9 +78,21 @@ function ClientManagement() {
               onChange={handleChange}
               aria-label="basic tabs example"
             >
-              <Tab label="Pending" {...a11yProps(0)} />
-              <Tab label="Active" {...a11yProps(1)} />
-              <Tab label="In Active" {...a11yProps(2)} />
+              <Tab
+                sx={{ fontSize: { xs: "8px", md: "16px" } }}
+                label="Pending"
+                {...a11yProps(0)}
+              />
+              <Tab
+                sx={{ fontSize: { xs: "8px", md: "16px" } }}
+                label="Active"
+                {...a11yProps(1)}
+              />
+              <Tab
+                sx={{ fontSize: { xs: "8px", md: "16px" } }}
+                label="In Active"
+                {...a11yProps(2)}
+              />
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
