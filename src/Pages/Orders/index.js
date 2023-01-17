@@ -2,8 +2,10 @@ import { Box, Typography } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import React, { Fragment } from "react";
 import OrdersTable from "../../Components/Table/OrdersTable";
+import DocumentTitle from "../../Components/DocumentTitle";
 
 function Orders() {
+  DocumentTitle("Orders | Tax Receit");
   return (
     <Fragment>
       <Box

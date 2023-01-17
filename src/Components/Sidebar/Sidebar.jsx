@@ -1,6 +1,6 @@
 import { Typography, Box, Avatar, InputBase } from "@mui/material";
 import React, { Fragment, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import saveTree from "../../Assets/saveTree.png";
 import CottageIcon from "@mui/icons-material/Cottage";
 import PersonIcon from "@mui/icons-material/Person";
@@ -18,7 +18,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Link } from "react-router-dom";
 
 function Sidebar() {
-  const options = ["Your Profile", "Billings and Information", "Sign out"];
+  const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -27,6 +27,10 @@ function Sidebar() {
   const handleClose = () => {
     setAnchorEl(null);
   };
+  const logout = () => {
+    navigate("/login");
+  };
+
   const ITEM_HEIGHT = 48;
   return (
     <Fragment>
@@ -283,6 +287,7 @@ function Sidebar() {
               </Box>
             </Link>
             <Box
+              onClick={logout}
               sx={{
                 display: "flex",
                 alignItems: "center",
@@ -371,15 +376,15 @@ function Sidebar() {
                 },
               }}
             >
-              {options.map((option) => (
-                <MenuItem
-                  key={option}
-                  selected={option === "Pyxis"}
-                  onClick={handleClose}
-                >
-                  {option}
-                </MenuItem>
-              ))}
+              <MenuItem key="profile" onClick={handleClose}>
+                Your Profile
+              </MenuItem>
+              <MenuItem key="billing" onClick={handleClose}>
+                Billing Address and Information
+              </MenuItem>
+              <MenuItem key="out" onClick={logout}>
+                Sign Out
+              </MenuItem>
             </Menu>
           </Box>
           {/* scrollable content */}
