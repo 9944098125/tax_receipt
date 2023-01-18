@@ -71,6 +71,17 @@ function Transactions() {
         </Box>
       </Box>
 
+      <Box sx={{ display: "flex", justifyContent: "flex-end", px: 3, py: 2 }}>
+        <select className="org-selection" defaultValue="sel">
+          <option value="sel">Select Organization</option>
+          <option value="tek">Teknotrait</option>
+          <option value="rum">Rumango</option>
+          <option value="cen">Cenzus</option>
+          <option value="cog">Cognizant</option>
+          <option value="ibm">IBM</option>
+        </select>
+      </Box>
+
       <Box sx={{ p: 0, mt: 4 }}>
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>

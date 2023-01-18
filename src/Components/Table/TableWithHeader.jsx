@@ -67,7 +67,7 @@ const rows = [
     "12/12/22"
   ),
   createData(
-    123,
+    1245,
     "Abhik",
     "Teknotrait",
     "tekis@org.com",
@@ -78,7 +78,7 @@ const rows = [
     "12/12/22"
   ),
   createData(
-    2342,
+    23255,
     "SomeOne",
     "Some company",
     "someCompany@gmail.com",
@@ -89,7 +89,7 @@ const rows = [
     "12/12/22"
   ),
   createData(
-    123,
+    12356,
     "Abhik",
     "Teknotrait",
     "tekis@org.com",
@@ -100,7 +100,7 @@ const rows = [
     "12/12/22"
   ),
   createData(
-    2342,
+    234543,
     "SomeOne",
     "Some company",
     "someCompany@gmail.com",
@@ -111,7 +111,7 @@ const rows = [
     "12/12/22"
   ),
   createData(
-    123,
+    1563,
     "Abhik",
     "Teknotrait",
     "tekis@org.com",
@@ -122,7 +122,7 @@ const rows = [
     "12/12/22"
   ),
   createData(
-    2342,
+    23175,
     "SomeOne",
     "Some company",
     "someCompany@gmail.com",
@@ -206,6 +206,7 @@ TablePaginationActions.propTypes = {
 function TableWithHeader({ status }) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [selectedRow, setSelectedRow] = React.useState([]);
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
@@ -219,6 +220,19 @@ function TableWithHeader({ status }) {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };
+
+  function handleSelect(e) {
+    const checked = e.target.checked;
+    const value = e.target.value;
+    setSelectedRow(
+      checked
+        ? [...selectedRow, value]
+        : selectedRow.filter((item) => item !== value)
+    );
+    console.log("selected row", selectedRow.clientId);
+  }
+
+  const deleteRow = () => {};
 
   return (
     <Fragment>
@@ -365,6 +379,11 @@ function TableWithHeader({ status }) {
                     <DeleteIcon
                       sx={{ color: "red", fontSize: "14px", cursor: "pointer" }}
                     />
+                    <input
+                      value={selectedRow.clientId}
+                      onChange={handleSelect}
+                      type="checkbox"
+                    />
                   </TableCell>
                 </TableRow>
               </>
@@ -410,6 +429,7 @@ function TableWithHeader({ status }) {
           ActionsComponent={TablePaginationActions}
         />
         <Box
+          onClick={deleteRow}
           sx={{
             backgroundColor: "red",
             width: "100px",

@@ -206,3 +206,31 @@
   background-color: #2539a7;
   margin-top: 17px;
 }
+
+.add-package-fields {
+  width: 100%;
+  line-height: 1.75rem;
+  outline: none !important;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  color: #536f94 !important;
+  border-width: 1px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  --tw-border-opacity: 0;
+  --tw-bg-opacity: 1;
+}
+
+.org-selection {
+  height: 40px;
+  width: 240px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.org-selection:active,
+.org-selection:focus {
+  border: 2px solid #234e8e;
+}

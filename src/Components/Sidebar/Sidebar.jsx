@@ -14,6 +14,7 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 import { Link } from "react-router-dom";
 
@@ -88,7 +89,14 @@ function Sidebar() {
               </Typography>
             </Box>
           </Link>
-          <Box sx={{ mt: 4, pl: 4, alignSelf: "flex-start", display:{xs:'none', md:'block'} }}>
+          <Box
+            sx={{
+              mt: 4,
+              pl: 4,
+              alignSelf: "flex-start",
+              display: { xs: "none", md: "block" },
+            }}
+          >
             <Typography
               sx={{ color: "#e6f2ff", fontSize: "0.875rem", fontWeight: "600" }}
             >
@@ -365,8 +373,8 @@ function Sidebar() {
               aria-haspopup="true"
               onClick={handleClick}
             >
-              <Avatar src="" />
-              <MoreVertIcon />
+              <Avatar sx={{ height: "30px", width: "30px" }} src="" />
+              <ArrowDropDownIcon />
             </IconButton>
             <Menu
               id="long-menu"

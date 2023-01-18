@@ -1,12 +1,24 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Box, Typography } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import PackageTable from "../../Components/Table/PackageTable";
 import DocumentTitle from "../../Components/DocumentTitle";
+import PackageModal from "../../Components/PackageModal";
 
 function PackageManagement() {
   DocumentTitle("Package Management | Tax Receit");
+
+  const [showModal, setShowModal] = useState(false);
+
+  function openShowModal() {
+    setShowModal(true);
+  }
+
+  function closeModal() {
+    setShowModal(false);
+  }
+
   return (
     <Fragment>
       <Box
@@ -31,10 +43,11 @@ function PackageManagement() {
       </Box>
       {/* don't touch this box, don't put anything else except package button in this box */}
       <Box sx={{ height: "100px" }}>
-        <button className="packageBtn">
+        <button onClick={openShowModal} className="packageBtn">
           <AddCircleIcon sx={{ mr: 2, height: "15px", width: "15px" }} />
           Add New Package
         </button>
+        <PackageModal show={showModal} close={closeModal} />
       </Box>
       <Box sx={{ mt: 0 }}>
         <PackageTable />

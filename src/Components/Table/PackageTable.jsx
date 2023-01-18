@@ -6,7 +6,6 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
-import TableFooter from "@mui/material/TableFooter";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
@@ -212,9 +211,9 @@ function PackageTable() {
             {(rowsPerPage > 0
               ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               : rows
-            ).map((row) => (
+            ).map((row, idx) => (
               <>
-                <TableRow key={row.name}>
+                <TableRow key={idx}>
                   <TableCell component="th" scope="row">
                     {row.sno}
                   </TableCell>
