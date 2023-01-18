@@ -50,21 +50,12 @@ function Sidebar() {
             <Box
               sx={{
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "flex-start",
                 alignItems: "center",
                 pt: 2,
                 cursor: "pointer",
               }}
             >
-              <img
-                src={saveTree}
-                alt="logo"
-                style={{
-                  height: "30px",
-                  width: "60px",
-                  marginRight: "5px",
-                }}
-              />
               <Typography
                 sx={{
                   color: "#e6f2ff",

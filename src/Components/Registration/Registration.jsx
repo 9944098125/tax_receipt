@@ -128,7 +128,7 @@ function Registration() {
           <Typography sx={{ color: "white", fontSize: "13px" }}>
             Already have an account ? Then{" "}
             <Link
-              to="/"
+              to="/login"
               style={{
                 color: "inherit",
                 textDecoration: "none",
