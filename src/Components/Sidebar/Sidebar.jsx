@@ -91,8 +91,8 @@ function Sidebar() {
           </Link>
           <Box
             sx={{
-              mt: 4,
-              pl: 4,
+              mt: 2,
+              pl: 2,
               alignSelf: "flex-start",
               display: { xs: "none", md: "block" },
             }}
