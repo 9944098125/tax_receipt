@@ -78,6 +78,8 @@ function Dashboard() {
           sx={{
             mr: { xs: 2, md: 10 },
             pl: 0,
+            mb: 2,
+            ml: 2,
             backgroundColor: "primary.main",
             px: 3,
             py: 1,
@@ -101,6 +103,7 @@ function Dashboard() {
             px: 3,
             py: 1,
             borderRadius: "8px",
+            mb: 2,
           }}
         >
           <Typography
@@ -365,6 +368,7 @@ function Dashboard() {
           />
         </Box>
       </Box>
+      {/* tables */}
       <Box
         sx={{
           display: "flex",
@@ -377,7 +381,7 @@ function Dashboard() {
       >
         <TableContainer sx={{ border: "2px solid #234e8e" }} component={Paper}>
           <Table aria-label="simple table">
-            <TableHead sx={{ backgroundColor: "grey" }}>
+            <TableHead sx={{ backgroundColor: "primary.main" }}>
               <TableRow>
                 <TableCell sx={{ color: "white", fontWeight: "700" }}>
                   Client
@@ -407,7 +411,7 @@ function Dashboard() {
         </TableContainer>
         <TableContainer sx={{ border: "2px solid #234e8e" }} component={Paper}>
           <Table aria-label="simple table">
-            <TableHead sx={{ backgroundColor: "grey" }}>
+            <TableHead sx={{ backgroundColor: "primary.main" }}>
               <TableRow>
                 <TableCell sx={{ color: "white", fontWeight: "700" }}>
                   Client

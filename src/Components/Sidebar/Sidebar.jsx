@@ -88,7 +88,7 @@ function Sidebar() {
               </Typography>
             </Box>
           </Link>
-          <Box sx={{ mt: 4, pl: 4, alignSelf: "flex-start" }}>
+          <Box sx={{ mt: 4, pl: 4, alignSelf: "flex-start", display:{xs:'none', md:'block'} }}>
             <Typography
               sx={{ color: "#e6f2ff", fontSize: "0.875rem", fontWeight: "600" }}
             >
