@@ -56,17 +56,15 @@ function Sidebar() {
                 cursor: "pointer",
               }}
             >
-              {/* <img
+              <img
                 src={saveTree}
                 alt="logo"
                 style={{
-                  height: "33px",
-                  width: "50px",
-                  backgroundColor: "white",
-                  padding: "5px",
-                  borderRadius: "4px",
+                  height: "30px",
+                  width: "60px",
+                  marginRight: "5px",
                 }}
-              /> */}
+              />
               <Typography
                 sx={{
                   color: "#e6f2ff",

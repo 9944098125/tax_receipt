@@ -257,20 +257,18 @@ function TransactionsTable({ cps }) {
             {(rowsPerPage > 0
               ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               : rows
-            ).map((row) => (
-              <>
-                <TableRow key={row.name}>
-                  <TableCell component="th" scope="row">
-                    {row.clientId}
-                  </TableCell>
-                  <TableCell align="left">{row.clientName}</TableCell>
-                  <TableCell align="left">{row.receiptNo}</TableCell>
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                  <TableCell align="left">{row.date}</TableCell>
-                </TableRow>
-              </>
+            ).map((row, idx) => (
+              <TableRow key={idx}>
+                <TableCell component="th" scope="row">
+                  {row.clientId}
+                </TableCell>
+                <TableCell align="left">{row.clientName}</TableCell>
+                <TableCell align="left">{row.receiptNo}</TableCell>
+                <TableCell component="th" scope="row">
+                  {row.name}
+                </TableCell>
+                <TableCell align="left">{row.date}</TableCell>
+              </TableRow>
             ))}
 
             {emptyRows > 0 && (

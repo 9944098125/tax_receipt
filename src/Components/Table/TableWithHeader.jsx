@@ -6,7 +6,6 @@ import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
-import TableFooter from "@mui/material/TableFooter";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
@@ -221,16 +220,7 @@ function TableWithHeader({ status }) {
     setPage(0);
   };
 
-  function handleSelect(e) {
-    const checked = e.target.checked;
-    const value = e.target.value;
-    setSelectedRow(
-      checked
-        ? [...selectedRow, value]
-        : selectedRow.filter((item) => item !== value)
-    );
-    console.log("selected row", selectedRow.clientId);
-  }
+  function handleSelect(e) {}
 
   const deleteRow = () => {};
 
@@ -346,47 +336,45 @@ function TableWithHeader({ status }) {
             {(rowsPerPage > 0
               ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               : rows
-            ).map((row) => (
-              <>
-                <TableRow key={row.name}>
-                  <TableCell component="th" scope="row">
-                    {row.clientId}
-                  </TableCell>
-                  <TableCell align="left">{row.clientName}</TableCell>
-                  <TableCell align="left">{row.organization}</TableCell>
-                  <TableCell component="th" scope="row">
-                    {row.email}
-                  </TableCell>
-                  <TableCell align="left">{row.mobileNo}</TableCell>
-                  <TableCell align="left">{status}</TableCell>
-                  <TableCell component="th" scope="row">
-                    {row.packages}
-                  </TableCell>
-                  <TableCell align="left">{row.startDate}</TableCell>
-                  <TableCell align="left">{row.expiryDate}</TableCell>
-                  <TableCell
-                    sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
-                    component="th"
-                    scope="row"
-                  >
-                    <ModeEditIcon
-                      sx={{
-                        color: "primary.dark",
-                        fontSize: "14px",
-                        cursor: "pointer",
-                      }}
-                    />
-                    <DeleteIcon
-                      sx={{ color: "red", fontSize: "14px", cursor: "pointer" }}
-                    />
-                    <input
-                      value={selectedRow.clientId}
-                      onChange={handleSelect}
-                      type="checkbox"
-                    />
-                  </TableCell>
-                </TableRow>
-              </>
+            ).map((row, idx) => (
+              <TableRow key={idx}>
+                <TableCell component="th" scope="row">
+                  {row.clientId}
+                </TableCell>
+                <TableCell align="left">{row.clientName}</TableCell>
+                <TableCell align="left">{row.organization}</TableCell>
+                <TableCell component="th" scope="row">
+                  {row.email}
+                </TableCell>
+                <TableCell align="left">{row.mobileNo}</TableCell>
+                <TableCell align="left">{status}</TableCell>
+                <TableCell component="th" scope="row">
+                  {row.packages}
+                </TableCell>
+                <TableCell align="left">{row.startDate}</TableCell>
+                <TableCell align="left">{row.expiryDate}</TableCell>
+                <TableCell
+                  sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
+                  component="th"
+                  scope="row"
+                >
+                  <ModeEditIcon
+                    sx={{
+                      color: "primary.dark",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                    }}
+                  />
+                  <DeleteIcon
+                    sx={{ color: "red", fontSize: "14px", cursor: "pointer" }}
+                  />
+                  <input
+                    value={selectedRow.clientId}
+                    onChange={handleSelect}
+                    type="checkbox"
+                  />
+                </TableCell>
+              </TableRow>
             ))}
 
             {emptyRows > 0 && (

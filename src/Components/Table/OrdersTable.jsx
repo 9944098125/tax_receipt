@@ -452,33 +452,29 @@ function OrdersTable() {
             {(rowsPerPage > 0
               ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               : rows
-            ).map((row) => (
-              <>
-                <TableRow key={row.name}>
-                  <TableCell component="th" scope="row">
-                    {row.sno}
-                  </TableCell>
-                  <TableCell align="left">{row.transactionId}</TableCell>
-                  <TableCell align="left">{row.date}</TableCell>
-                  <TableCell component="th" scope="row">
-                    {row.clientName}
-                  </TableCell>
-                  <TableCell align="left">{row.organization}</TableCell>
-                  <TableCell align="left">{row.packageName}</TableCell>
-                  <TableCell align="left">{row.startDate}</TableCell>
-                  <TableCell align="left">{row.expiryDate}</TableCell>
-                  <TableCell align="left">{row.amount}</TableCell>
-                  <TableCell
-                    sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
-                    component="th"
-                    scope="row"
-                  >
-                    <RemoveRedEyeIcon
-                      sx={{ color: "blue", cursor: "pointer" }}
-                    />
-                  </TableCell>
-                </TableRow>
-              </>
+            ).map((row, idx) => (
+              <TableRow key={idx}>
+                <TableCell component="th" scope="row">
+                  {row.sno}
+                </TableCell>
+                <TableCell align="left">{row.transactionId}</TableCell>
+                <TableCell align="left">{row.date}</TableCell>
+                <TableCell component="th" scope="row">
+                  {row.clientName}
+                </TableCell>
+                <TableCell align="left">{row.organization}</TableCell>
+                <TableCell align="left">{row.packageName}</TableCell>
+                <TableCell align="left">{row.startDate}</TableCell>
+                <TableCell align="left">{row.expiryDate}</TableCell>
+                <TableCell align="left">{row.amount}</TableCell>
+                <TableCell
+                  sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
+                  component="th"
+                  scope="row"
+                >
+                  <RemoveRedEyeIcon sx={{ color: "blue", cursor: "pointer" }} />
+                </TableCell>
+              </TableRow>
             ))}
 
             {emptyRows > 0 && (

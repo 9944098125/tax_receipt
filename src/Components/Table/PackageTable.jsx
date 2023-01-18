@@ -212,36 +212,34 @@ function PackageTable() {
               ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               : rows
             ).map((row, idx) => (
-              <>
-                <TableRow key={idx}>
-                  <TableCell component="th" scope="row">
-                    {row.sno}
-                  </TableCell>
-                  <TableCell align="left">{row.name}</TableCell>
-                  <TableCell align="left">{row.customerLimit}</TableCell>
-                  <TableCell component="th" scope="row">
-                    {row.pdfLimit}
-                  </TableCell>
-                  <TableCell align="left">{row.emailLimit}</TableCell>
-                  <TableCell align="left">{row.price}</TableCell>
-                  <TableCell
-                    sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
-                    component="th"
-                    scope="row"
-                  >
-                    <ModeEditIcon
-                      sx={{
-                        color: "primary.dark",
-                        fontSize: "14px",
-                        cursor: "pointer",
-                      }}
-                    />
-                    <DeleteIcon
-                      sx={{ color: "red", fontSize: "14px", cursor: "pointer" }}
-                    />
-                  </TableCell>
-                </TableRow>
-              </>
+              <TableRow key={idx}>
+                <TableCell component="th" scope="row">
+                  {row.sno}
+                </TableCell>
+                <TableCell align="left">{row.name}</TableCell>
+                <TableCell align="left">{row.customerLimit}</TableCell>
+                <TableCell component="th" scope="row">
+                  {row.pdfLimit}
+                </TableCell>
+                <TableCell align="left">{row.emailLimit}</TableCell>
+                <TableCell align="left">{row.price}</TableCell>
+                <TableCell
+                  sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
+                  component="th"
+                  scope="row"
+                >
+                  <ModeEditIcon
+                    sx={{
+                      color: "primary.dark",
+                      fontSize: "14px",
+                      cursor: "pointer",
+                    }}
+                  />
+                  <DeleteIcon
+                    sx={{ color: "red", fontSize: "14px", cursor: "pointer" }}
+                  />
+                </TableCell>
+              </TableRow>
             ))}
 
             {emptyRows > 0 && (
