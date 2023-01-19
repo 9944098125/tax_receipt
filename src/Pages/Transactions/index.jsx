@@ -61,7 +61,7 @@ function Transactions() {
         }}
       >
         <Typography sx={{ fontSize: "1.5rem", fontWeight: "600" }}>
-          Transactions
+          TRANSACTIONS
         </Typography>
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>
           <HomeIcon />
