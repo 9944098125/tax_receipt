@@ -415,6 +415,7 @@ function TableWithHeader({ status }) {
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
           ActionsComponent={TablePaginationActions}
+          className="tableFooter"
         />
         <Box
           onClick={deleteRow}
