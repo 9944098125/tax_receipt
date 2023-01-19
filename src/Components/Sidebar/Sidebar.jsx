@@ -110,7 +110,7 @@ function Sidebar() {
               >
                 <CottageIcon
                   sx={{
-                    color: "#9fa8da",
+                    color: "#ffffff",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -150,7 +150,7 @@ function Sidebar() {
               >
                 <PersonIcon
                   sx={{
-                    color: "#9fa8da",
+                    color: "#ffffff",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -190,7 +190,7 @@ function Sidebar() {
               >
                 <Inventory2Icon
                   sx={{
-                    color: "#9fa8da",
+                    color: "#ffffff",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -230,7 +230,7 @@ function Sidebar() {
               >
                 <FilterFramesIcon
                   sx={{
-                    color: "#9fa8da",
+                    color: "#ffffff",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -270,7 +270,7 @@ function Sidebar() {
               >
                 <PaidIcon
                   sx={{
-                    color: "#9fa8da",
+                    color: "#ffffff",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -306,7 +306,7 @@ function Sidebar() {
               }}
             >
               <ExitToAppIcon
-                sx={{ color: "#9fa8da", ml: { xs: -0.7, sm: 1.6, md: "none" } }}
+                sx={{ color: "#ffffff", ml: { xs: -0.7, sm: 1.6, md: "none" } }}
               />
               <Typography
                 sx={{
