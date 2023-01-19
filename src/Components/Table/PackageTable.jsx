@@ -223,20 +223,17 @@ function PackageTable() {
                 </TableCell>
                 <TableCell align="left">{row.emailLimit}</TableCell>
                 <TableCell align="left">{row.price}</TableCell>
-                <TableCell
-                  sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
-                  component="th"
-                  scope="row"
-                >
+                <TableCell component="th" scope="row">
                   <ModeEditIcon
                     sx={{
                       color: "primary.dark",
-                      fontSize: "14px",
+                      fontSize: "17px",
                       cursor: "pointer",
+                      mr: 1,
                     }}
                   />
                   <DeleteIcon
-                    sx={{ color: "red", fontSize: "14px", cursor: "pointer" }}
+                    sx={{ color: "red", fontSize: "17px", cursor: "pointer" }}
                   />
                 </TableCell>
               </TableRow>
@@ -256,13 +253,8 @@ function PackageTable() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          backgroundColor: "primary.bg",
           px: 1,
           mt: 2,
-          borderBottom: "2px solid #234e8e",
-          borderLeft: "2px solid #234e8e",
-          borderRight: "2px solid #234e8e",
-          borderRadius: "4px",
         }}
       >
         <TablePagination

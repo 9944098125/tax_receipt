@@ -40,20 +40,21 @@ function Sidebar() {
         <Box
           sx={{
             backgroundColor: "primary.main",
-            width: { xs: "15vw", sm: "12vw", md: "15vw" },
+            width: { xs: "15vw", sm: "12vw", md: "18vw" },
             display: "flex",
             flexDirection: "column",
-            alignItems: "center",
-            px: 2,
+            alignItems: "flex-start",
+            pl: 0.5,
           }}
         >
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
             <Box
               sx={{
                 display: "flex",
-                justifyContent: "flex-start",
+                justifyContent: "center",
                 alignItems: "center",
                 pt: 2,
+                px: { xs: 1.5, sm: 4, md: 6.5 },
                 cursor: "pointer",
               }}
             >
@@ -88,9 +89,13 @@ function Sidebar() {
             }}
           >
             <Typography
-              sx={{ color: "#e6f2ff", fontSize: "0.875rem", fontWeight: "600" }}
+              sx={{
+                color: "#ffffff59",
+                fontSize: "0.875rem",
+                fontWeight: "600",
+              }}
             >
-              Activity
+              ACTIVITY
             </Typography>
           </Box>
           <Box sx={{ p: 1, pt: 1 }}>
@@ -99,9 +104,9 @@ function Sidebar() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 2,
+                  gap: 1,
                   cursor: "pointer",
-                  p: 2,
+                  p: 0.8,
                   py: 1,
                   "&:hover": {
                     backgroundColor: "primary.light",
@@ -121,7 +126,7 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "18px",
+                    fontSize: "16px",
                     color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
@@ -139,9 +144,9 @@ function Sidebar() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 2,
+                  gap: 1,
                   cursor: "pointer",
-                  p: 2,
+                  p: 0.8,
                   py: 1,
                   "&:hover": {
                     backgroundColor: "primary.light",
@@ -161,13 +166,13 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "18px",
+                    fontSize: "16px",
                     color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
                   }}
                 >
-                  Clients
+                  Client Management
                 </Typography>
               </Box>
             </Link>
@@ -179,9 +184,9 @@ function Sidebar() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 2,
+                  gap: 1,
                   cursor: "pointer",
-                  p: 2,
+                  p: 0.8,
                   py: 1,
                   "&:hover": {
                     backgroundColor: "primary.light",
@@ -201,13 +206,13 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "18px",
+                    fontSize: "16px",
                     color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
                   }}
                 >
-                  Packages
+                  Package Management
                 </Typography>
               </Box>
             </Link>
@@ -219,9 +224,9 @@ function Sidebar() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 2,
+                  gap: 1,
                   cursor: "pointer",
-                  p: 2,
+                  p: 0.8,
                   py: 1,
                   "&:hover": {
                     backgroundColor: "primary.light",
@@ -241,7 +246,7 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "18px",
+                    fontSize: "16px",
                     color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
@@ -259,9 +264,9 @@ function Sidebar() {
                 sx={{
                   display: "flex",
                   alignItems: "center",
-                  gap: 2,
+                  gap: 1,
                   cursor: "pointer",
-                  p: 2,
+                  p: 0.8,
                   py: 1,
                   "&:hover": {
                     backgroundColor: "primary.light",
@@ -281,7 +286,7 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "18px",
+                    fontSize: "16px",
                     color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
@@ -296,9 +301,9 @@ function Sidebar() {
               sx={{
                 display: "flex",
                 alignItems: "center",
-                gap: 2,
+                gap: 1,
                 cursor: "pointer",
-                p: 2,
+                p: 0.8,
                 py: 1,
                 "&:hover": {
                   backgroundColor: "primary.light",
@@ -315,7 +320,7 @@ function Sidebar() {
                     xs: "none",
                     md: "block",
                   },
-                  fontSize: "18px",
+                  fontSize: "16px",
                   color: "#e6f2ff",
                   fontWeight: "500",
                   mb: -0.7,

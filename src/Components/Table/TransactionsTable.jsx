@@ -285,13 +285,13 @@ function TransactionsTable({ cps }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          backgroundColor: "primary.bg",
+          // backgroundColor: "primary.bg",
           px: 1,
           mt: 2,
-          borderBottom: "2px solid #234e8e",
-          borderLeft: "2px solid #234e8e",
-          borderRight: "2px solid #234e8e",
-          borderRadius: "4px",
+          // borderBottom: "2px solid #234e8e",
+          // borderLeft: "2px solid #234e8e",
+          // borderRight: "2px solid #234e8e",
+          // borderRadius: "4px",
         }}
       >
         <TablePagination

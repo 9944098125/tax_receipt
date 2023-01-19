@@ -353,26 +353,31 @@ function TableWithHeader({ status }) {
                 </TableCell>
                 <TableCell align="left">{row.startDate}</TableCell>
                 <TableCell align="left">{row.expiryDate}</TableCell>
-                <TableCell
-                  sx={{ display: "flex", alignItems: "center", gap: 0.5 }}
-                  component="th"
-                  scope="row"
-                >
-                  <ModeEditIcon
-                    sx={{
-                      color: "primary.dark",
-                      fontSize: "14px",
-                      cursor: "pointer",
-                    }}
-                  />
-                  <DeleteIcon
-                    sx={{ color: "red", fontSize: "14px", cursor: "pointer" }}
-                  />
-                  <input
-                    value={selectedRow.clientId}
-                    onChange={handleSelect}
-                    type="checkbox"
-                  />
+                <TableCell component="th" scope="row">
+                  <div className="d-flex align-items-center">
+                    <ModeEditIcon
+                      sx={{
+                        color: "primary.dark",
+                        fontSize: "14px",
+                        cursor: "pointer",
+                        mr: 0.5,
+                      }}
+                    />
+                    <DeleteIcon
+                      sx={{
+                        color: "red",
+                        fontSize: "14px",
+                        cursor: "pointer",
+                        mr: 0.5,
+                      }}
+                    />
+                    <input
+                      value={selectedRow.clientId}
+                      onChange={handleSelect}
+                      type="checkbox"
+                      className="delete-checkbox"
+                    />
+                  </div>
                 </TableCell>
               </TableRow>
             ))}
@@ -391,13 +396,8 @@ function TableWithHeader({ status }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          backgroundColor: "primary.bg",
           px: 1,
           mt: 2,
-          borderBottom: "2px solid #234e8e",
-          borderLeft: "2px solid #234e8e",
-          borderRight: "2px solid #234e8e",
-          borderRadius: "4px",
         }}
       >
         <TablePagination
