@@ -516,7 +516,7 @@ function OrdersTable() {
           onRowsPerPageChange={handleChangeRowsPerPage}
           ActionsComponent={TablePaginationActions}
         />
-        <Box
+        {/* <Box
           sx={{
             backgroundColor: "red",
             width: "100px",
@@ -530,7 +530,7 @@ function OrdersTable() {
         >
           <DeleteIcon sx={{ color: "white" }} />
           <Typography sx={{ color: "white" }}>Delete</Typography>
-        </Box>
+        </Box> */}
       </Box>
     </Fragment>
   );

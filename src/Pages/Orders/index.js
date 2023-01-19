@@ -19,7 +19,7 @@ function Orders() {
         }}
       >
         <Typography sx={{ fontSize: "1.5rem", fontWeight: "600" }}>
-          Orders
+          ORDERS
         </Typography>
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>
           <HomeIcon />

@@ -234,3 +234,11 @@
 .org-selection:focus {
   border: 2px solid #234e8e;
 }
+
+.css-x9pkyd-MuiTablePagination-selectLabel {
+  margin-top: 15px !important;
+}
+
+.css-1oatkhr-MuiTablePagination-displayedRows {
+  margin-top: 15px !important;
+}

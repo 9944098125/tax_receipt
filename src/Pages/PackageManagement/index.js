@@ -32,7 +32,7 @@ function PackageManagement() {
         }}
       >
         <Typography sx={{ fontSize: "1.5rem", fontWeight: "600" }}>
-          Package Management
+          PACKAGE MANAGEMENT
         </Typography>
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>
           <HomeIcon />

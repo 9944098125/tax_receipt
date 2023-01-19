@@ -61,7 +61,7 @@ function ClientManagement() {
         }}
       >
         <Typography sx={{ fontSize: "1.5rem", fontWeight: "600" }}>
-          Client Management
+          CLIENT MANAGEMENT
         </Typography>
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>
           <HomeIcon />
@@ -79,30 +79,30 @@ function ClientManagement() {
               aria-label="basic tabs example"
             >
               <Tab
-                sx={{ fontSize: { xs: "8px", md: "16px" } }}
+                sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
                 label="Pending"
                 {...a11yProps(0)}
               />
               <Tab
-                sx={{ fontSize: { xs: "8px", md: "16px" } }}
+                sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
                 label="Active"
                 {...a11yProps(1)}
               />
               <Tab
-                sx={{ fontSize: { xs: "8px", md: "16px" } }}
+                sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
                 label="In Active"
                 {...a11yProps(2)}
               />
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
-            <TableWithHeader status="PENDING" />
+            <TableWithHeader status="Pending" />
           </TabPanel>
           <TabPanel value={value} index={1}>
-            <TableWithHeader status="ACTIVE" />
+            <TableWithHeader status="Active" />
           </TabPanel>
           <TabPanel value={value} index={2}>
-            <TableWithHeader status="INACTIVE" />
+            <TableWithHeader status="Inactive" />
           </TabPanel>
         </Box>
       </Box>

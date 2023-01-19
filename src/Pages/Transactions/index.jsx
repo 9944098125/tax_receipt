@@ -91,17 +91,17 @@ function Transactions() {
               aria-label="basic tabs example"
             >
               <Tab
-                sx={{ fontSize: { xs: "8px", md: "16px" } }}
+                sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
                 label="Customers"
                 {...a11yProps(0)}
               />
               <Tab
-                sx={{ fontSize: { xs: "8px", md: "16px" } }}
+                sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
                 label="PDF Generated"
                 {...a11yProps(1)}
               />
               <Tab
-                sx={{ fontSize: { xs: "8px", md: "16px" } }}
+                sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
                 label="Sent Mail"
                 {...a11yProps(2)}
               />

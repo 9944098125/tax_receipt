@@ -44,6 +44,7 @@ function Sidebar() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            px: 2,
           }}
         >
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
