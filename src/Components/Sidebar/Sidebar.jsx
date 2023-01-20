@@ -45,6 +45,7 @@ function Sidebar() {
             flexDirection: "column",
             alignItems: "flex-start",
             pl: 0.5,
+            // p: "8px 12px",
           }}
         >
           <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
@@ -353,7 +354,7 @@ function Sidebar() {
             }}
           >
             <Typography
-              sx={{ color: "#9fa8da", fontSize: "1rem", fontWeight: "600" }}
+              sx={{ color: "#9fa8da", fontSize: "14.4px", fontWeight: "600" }}
             >
               Feedback ?
             </Typography>

@@ -1,12 +1,9 @@
 import React, { Fragment, useState } from "react";
-import DatePicker from "react-datepicker";
-
-import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from "react-date-picker";
 import { Typography, Box } from "@mui/material";
 import PaidIcon from "@mui/icons-material/Paid";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import EmailIcon from "@mui/icons-material/Email";
-import Person2Icon from "@mui/icons-material/Person2";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -15,6 +12,10 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import DocumentTitle from "../../Components/DocumentTitle";
+import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
+import BorderColorIcon from "@mui/icons-material/BorderColor";
+import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
+import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 
 import {
   LineChart,
@@ -23,7 +24,6 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 
@@ -80,26 +80,25 @@ function Dashboard() {
             pl: 0,
             mb: 2,
             ml: 2,
-            backgroundColor: "primary.main",
+            backgroundColor: "primary.bg",
             px: 3,
             py: 1,
             borderRadius: "8px",
           }}
         >
           <Typography
-            sx={{ color: "#e6f2ff", fontWeight: "600", fontSize: "16px" }}
+            sx={{ color: "#00254d", fontWeight: "600", fontSize: "16px" }}
           >
             Start Date
           </Typography>
           <DatePicker
-            selected={startDate}
-            onChange={(date) => setStartDate(date)}
-            className="date"
+            onChange={() => setStartDate(new Date())}
+            value={startDate}
           />
         </Box>
         <Box
           sx={{
-            backgroundColor: "primary.main",
+            backgroundColor: "primary.bg",
             px: 3,
             py: 1,
             borderRadius: "8px",
@@ -107,15 +106,11 @@ function Dashboard() {
           }}
         >
           <Typography
-            sx={{ color: "#e6f2ff", fontWeight: "600", fontSize: "16px" }}
+            sx={{ color: "#000254d", fontWeight: "600", fontSize: "16px" }}
           >
             End Date
           </Typography>
-          <DatePicker
-            selected={endDate}
-            onChange={(date) => setEndDate(date)}
-            className="date"
-          />
+          <DatePicker onChange={() => setEndDate(new Date())} value={endDate} />
         </Box>
       </Box>
       <Box
@@ -130,242 +125,339 @@ function Dashboard() {
       >
         <Box
           sx={{
-            backgroundColor: "#009688",
-            borderRadius: "8px",
-            p: 2.5,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            height: { xs: "120px" },
-            width: { xs: "250px" },
+            backgroundImage:
+              "linear-gradient(100deg, #42a5f5, #b39ddb, #880e4f)",
+            p: 1.5,
+            py: 3,
+            mr: 4,
+            width: { xs: "180px" },
+            minHeight: "260px",
             cursor: "pointer",
           }}
         >
-          <Box sx={{}}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
+            <LibraryAddIcon
+              sx={{
+                height: "60px",
+                width: "60px",
+                color: "white",
+                p: 1.3,
+                backgroundImage: "linear-gradient(pink, blue)",
+                borderRadius: "50%",
+              }}
+            />
             <Typography
-              sx={{ fontSize: "17px", fontWeight: "600", color: "white" }}
+              sx={{ fontSize: "20px", fontWeight: "700", color: "white" }}
             >
               46
             </Typography>
             <Typography
-              sx={{ fontSize: "14px", fontWeight: "500", color: "white" }}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "600",
+                color: "white",
+              }}
             >
               Donations
             </Typography>
             <Typography
-              sx={{ fontSize: "12px", fontWeight: "400", color: "white" }}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "600",
+                color: "white",
+                textAlign: "center",
+              }}
             >
-              This is transaction status
+              This is transactions status
             </Typography>
           </Box>
-          <Person2Icon
-            sx={{
-              height: "60px",
-              width: "60px",
-              p: 0.3,
-              backgroundColor: "white",
-              borderRadius: "50%",
-            }}
-          />
         </Box>
         <Box
           sx={{
-            backgroundColor: "#607d8b",
-            borderRadius: "8px",
-            p: 2.5,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            height: { xs: "120px" },
-            width: { xs: "250px" },
+            backgroundImage:
+              "linear-gradient(96deg, #1b5e20, #c8e6c9, #cddc39)",
+            p: 1.5,
+            py: 3,
+            mr: 4,
+            width: { xs: "180px" },
+            minHeight: "260px",
             cursor: "pointer",
           }}
         >
-          <Box sx={{}}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
+            <BorderColorIcon
+              sx={{
+                height: "60px",
+                width: "60px",
+                color: "white",
+                p: 1.3,
+                backgroundImage: "linear-gradient(#4caf50, #cddc39)",
+                borderRadius: "50%",
+              }}
+            />
             <Typography
-              sx={{ fontSize: "17px", fontWeight: "600", color: "white" }}
+              sx={{ fontSize: "20px", fontWeight: "700", color: "white" }}
             >
-              30
+              35
             </Typography>
             <Typography
-              sx={{ fontSize: "14px", fontWeight: "500", color: "white" }}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "600",
+                color: "white",
+              }}
             >
               Orders
             </Typography>
             <Typography
-              sx={{ fontSize: "12px", fontWeight: "400", color: "white" }}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "600",
+                color: "white",
+                textAlign: "center",
+              }}
             >
               This is orders status
             </Typography>
           </Box>
-          <PaidIcon
-            sx={{
-              backgroundColor: "white",
-              borderRadius: "50%",
-              height: "60px",
-              width: "60px",
-            }}
-          />
         </Box>
         <Box
           sx={{
-            backgroundColor: "#f44336",
-            borderRadius: "8px",
-            p: 2.5,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            height: { xs: "120px" },
-            width: { xs: "250px" },
+            backgroundImage:
+              "linear-gradient(100deg, #f44336, #ef9a9a, #b71c1c)",
+            p: 1.5,
+            py: 3,
+            mr: 4,
+            width: { xs: "180px" },
+            minHeight: "260px",
             cursor: "pointer",
           }}
         >
-          <Box sx={{}}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
+            <AssignmentIndIcon
+              sx={{
+                height: "60px",
+                width: "60px",
+                color: "white",
+                p: 1.3,
+                backgroundImage: "linear-gradient(#ef9a9a, #f44336)",
+                borderRadius: "50%",
+              }}
+            />
             <Typography
-              sx={{ fontSize: "17px", fontWeight: "600", color: "white" }}
+              sx={{ fontSize: "20px", fontWeight: "700", color: "white" }}
             >
-              29
+              65
             </Typography>
             <Typography
-              sx={{ fontSize: "14px", fontWeight: "500", color: "white" }}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "600",
+                color: "white",
+              }}
             >
               Clients
             </Typography>
             <Typography
-              sx={{ fontSize: "12px", fontWeight: "400", color: "white" }}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "600",
+                color: "white",
+                textAlign: "center",
+              }}
             >
-              This is client status
+              This is clients status
             </Typography>
           </Box>
-          <Person2Icon
-            sx={{
-              height: "60px",
-              width: "60px",
-              p: 0.3,
-              backgroundColor: "white",
-              borderRadius: "50%",
-            }}
-          />
         </Box>
         <Box
           sx={{
-            backgroundColor: "#ffc107",
-            borderRadius: "8px",
-            p: 2.5,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            height: { xs: "120px" },
-            width: { xs: "250px" },
+            backgroundImage:
+              "linear-gradient(120deg, #2196f3, #ce93d8, #4a148c)",
+            p: 1.5,
+            py: 3,
+            mr: 4,
+            width: { xs: "180px" },
+            minHeight: "260px",
             cursor: "pointer",
           }}
         >
-          <Box sx={{}}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
+            <PictureAsPdfIcon
+              sx={{
+                height: "60px",
+                width: "60px",
+                color: "white",
+                p: 1.3,
+                backgroundImage: "linear-gradient(pink, blue)",
+                borderRadius: "50%",
+              }}
+            />
             <Typography
-              sx={{ fontSize: "17px", fontWeight: "600", color: "white" }}
+              sx={{ fontSize: "20px", fontWeight: "700", color: "white" }}
             >
-              1
+              23
             </Typography>
             <Typography
-              sx={{ fontSize: "14px", fontWeight: "500", color: "white" }}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "600",
+                color: "white",
+              }}
             >
               PDF
             </Typography>
             <Typography
-              sx={{ fontSize: "12px", fontWeight: "400", color: "white" }}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "600",
+                color: "white",
+                textAlign: "center",
+              }}
             >
-              This is pdf status
+              This is Pdf status
             </Typography>
           </Box>
-          <PictureAsPdfIcon
-            sx={{
-              height: "60px",
-              width: "60px",
-              backgroundColor: "white",
-              borderRadius: "50%",
-              p: 0.3,
-            }}
-          />
         </Box>
         <Box
           sx={{
-            backgroundColor: "#00bcd4",
-            borderRadius: "8px",
-            p: 2.5,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            height: { xs: "120px" },
-            width: { xs: "250px" },
+            backgroundImage:
+              "linear-gradient(96deg, #1b5e20, #c8e6c9, #311b92)",
+            p: 1.5,
+            py: 3,
+            mr: 4,
+            width: { xs: "180px" },
+            minHeight: "260px",
             cursor: "pointer",
           }}
         >
-          <Box sx={{}}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
+            <EmailIcon
+              sx={{
+                height: "60px",
+                width: "60px",
+                color: "white",
+                p: 1.3,
+                backgroundImage: "linear-gradient(pink, blue)",
+                borderRadius: "50%",
+              }}
+            />
             <Typography
-              sx={{ fontSize: "17px", fontWeight: "600", color: "white" }}
+              sx={{ fontSize: "20px", fontWeight: "700", color: "white" }}
             >
-              12
+              43
             </Typography>
             <Typography
-              sx={{ fontSize: "14px", fontWeight: "500", color: "white" }}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "600",
+                color: "white",
+              }}
             >
               Emails
             </Typography>
             <Typography
-              sx={{ fontSize: "12px", fontWeight: "400", color: "white" }}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "600",
+                color: "white",
+                textAlign: "center",
+              }}
             >
               This is emails status
             </Typography>
           </Box>
-          <EmailIcon
-            sx={{
-              height: "60px",
-              width: "60px",
-              backgroundColor: "white",
-              borderRadius: "50%",
-              p: 0.3,
-            }}
-          />
         </Box>
         <Box
           sx={{
-            backgroundColor: "#ec407a",
-            borderRadius: "8px",
-            p: 2.5,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            height: { xs: "120px" },
-            width: { xs: "250px" },
+            backgroundImage:
+              "linear-gradient(120deg, #42a5f5, #e91e63, #9c27b0)",
+            p: 1.5,
+            py: 3,
+            mr: 4,
+            width: { xs: "180px" },
+            minHeight: "260px",
             cursor: "pointer",
           }}
         >
-          <Box sx={{}}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 2,
+            }}
+          >
+            <CurrencyExchangeIcon
+              sx={{
+                height: "60px",
+                width: "60px",
+                color: "white",
+                p: 1.3,
+                backgroundImage: "linear-gradient(pink, blue)",
+                borderRadius: "50%",
+              }}
+            />
             <Typography
-              sx={{ fontSize: "17px", fontWeight: "600", color: "white" }}
+              sx={{ fontSize: "20px", fontWeight: "700", color: "white" }}
             >
-              55
+              46
             </Typography>
             <Typography
-              sx={{ fontSize: "14px", fontWeight: "500", color: "white" }}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "600",
+                color: "white",
+              }}
             >
               Revenue
             </Typography>
             <Typography
-              sx={{ fontSize: "12px", fontWeight: "400", color: "white" }}
+              sx={{
+                fontSize: "17px",
+                fontWeight: "600",
+                color: "white",
+                textAlign: "center",
+              }}
             >
               This is revenue status
             </Typography>
           </Box>
-          <EmailIcon
-            sx={{
-              height: "60px",
-              width: "60px",
-              backgroundColor: "white",
-              borderRadius: "50%",
-              p: 0.3,
-            }}
-          />
         </Box>
       </Box>
       {/* tables */}

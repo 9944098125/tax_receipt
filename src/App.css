@@ -242,3 +242,28 @@
 .css-1q15akj {
   margin-bottom: -0px;
 }
+
+.react-date-picker__wrapper{
+  border-radius: 4px;
+  border: 2px solid #00254d;
+}
+
+.react-date-picker__inputGroup__input {
+  font-weight: 700;
+  color: #00254d;
+}
+
+.react-date-picker__calendar .react-calendar {
+  background-color: #ffffff;
+  border:2px solid #3f51b5;
+  border-radius: 9px;
+}
+
+.react-calendar__navigation button {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.react-calendar__navigation button:hover {
+  color: black;
+}
