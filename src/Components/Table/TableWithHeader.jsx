@@ -205,8 +205,9 @@ TablePaginationActions.propTypes = {
 function TableWithHeader({ status }) {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const [selectedRow, setSelectedRow] = React.useState([]);
 
+  const [clients, setClients] = React.useState([]);
+  const [selectedClients, setSelectedClients] = React.useState([]);
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
@@ -220,7 +221,7 @@ function TableWithHeader({ status }) {
     setPage(0);
   };
 
-  function handleSelect(e) {}
+  function handleChange(e) {}
 
   const deleteRow = () => {};
 
@@ -330,6 +331,20 @@ function TableWithHeader({ status }) {
               >
                 Actions
               </TableCell>
+              <TableCell
+                sx={{
+                  fontWeight: "600",
+                  fontSize: "12px",
+                  borderBottom: "2px solid #234e8e",
+                  color: "white",
+                }}
+              >
+                <input
+                  onChange={(e) => handleChange(e)}
+                  type="checkbox"
+                  name="allSelect"
+                />
+              </TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -371,13 +386,14 @@ function TableWithHeader({ status }) {
                         mr: 0.5,
                       }}
                     />
-                    <input
-                      value={selectedRow.clientId}
-                      onChange={handleSelect}
-                      type="checkbox"
-                      className="delete-checkbox"
-                    />
                   </div>
+                </TableCell>
+                <TableCell>
+                  <input
+                    type="checkbox"
+                    className="delete-checkbox"
+                    onChange={(e) => handleChange(e)}
+                  />
                 </TableCell>
               </TableRow>
             ))}
