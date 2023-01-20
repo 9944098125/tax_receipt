@@ -74,24 +74,24 @@ function Dashboard() {
           flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
           gap: { xs: 2, md: 5 },
+          pl: 0,
         }}
       >
         <Box
           sx={{
-            pl: 0,
             mb: 2,
             // backgroundColor: "primary.bg",
-            px: 3,
-            py: 1,
             borderRadius: "8px",
             display: "flex",
             alignItems: "center",
           }}
         >
-          <CalendarMonthIcon sx={{ height: "90px", width: "65px" }} />
+          <CalendarMonthIcon
+            sx={{ height: "70px", width: "60px", color: "#00254d" }}
+          />
           <Box sx={{}}>
             <Typography
-              sx={{ color: "#00254d", fontWeight: "600", fontSize: "16px" }}
+              sx={{ color: "#00254d", fontWeight: "600", fontSize: "14px" }}
             >
               Start Date
             </Typography>
@@ -105,18 +105,18 @@ function Dashboard() {
         <Box
           sx={{
             // backgroundColor: "primary.bg",
-            px: 3,
-            py: 1,
             borderRadius: "8px",
             mb: 2,
             display: "flex",
             alignItems: "center",
           }}
         >
-          <CalendarMonthIcon sx={{ height: "90px", width: "65px" }} />
+          <CalendarMonthIcon
+            sx={{ height: "70px", width: "60px", color: "#00254d" }}
+          />
           <Box sx={{}}>
             <Typography
-              sx={{ color: "#000254d", fontWeight: "600", fontSize: "16px" }}
+              sx={{ color: "#000254d", fontWeight: "600", fontSize: "14px" }}
             >
               End Date
             </Typography>
