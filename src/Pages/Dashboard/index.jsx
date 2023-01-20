@@ -16,6 +16,7 @@ import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 
 import {
   LineChart,
@@ -72,29 +73,34 @@ function Dashboard() {
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
           alignItems: "center",
+          gap: { xs: 2, md: 5 },
         }}
       >
         <Box
           sx={{
-            mr: { xs: 2, md: 10 },
             pl: 0,
             mb: 2,
-            ml: 2,
             backgroundColor: "primary.bg",
             px: 3,
             py: 1,
             borderRadius: "8px",
+            display: "flex",
+            alignItems: "center",
           }}
         >
-          <Typography
-            sx={{ color: "#00254d", fontWeight: "600", fontSize: "16px" }}
-          >
-            Start Date
-          </Typography>
-          <DatePicker
-            onChange={() => setStartDate(new Date())}
-            value={startDate}
-          />
+          <CalendarMonthIcon sx={{ height: "90px", width: "65px" }} />
+          <Box sx={{}}>
+            <Typography
+              sx={{ color: "#00254d", fontWeight: "600", fontSize: "16px" }}
+            >
+              Start Date
+            </Typography>
+            <DatePicker
+              onChange={() => setStartDate(new Date())}
+              value={startDate}
+              id="startDate"
+            />
+          </Box>
         </Box>
         <Box
           sx={{
@@ -103,14 +109,22 @@ function Dashboard() {
             py: 1,
             borderRadius: "8px",
             mb: 2,
+            display: "flex",
+            alignItems: "center",
           }}
         >
-          <Typography
-            sx={{ color: "#000254d", fontWeight: "600", fontSize: "16px" }}
-          >
-            End Date
-          </Typography>
-          <DatePicker onChange={() => setEndDate(new Date())} value={endDate} />
+          <CalendarMonthIcon sx={{ height: "90px", width: "65px" }} />
+          <Box sx={{}}>
+            <Typography
+              sx={{ color: "#000254d", fontWeight: "600", fontSize: "16px" }}
+            >
+              End Date
+            </Typography>
+            <DatePicker
+              onChange={() => setEndDate(new Date())}
+              value={endDate}
+            />
+          </Box>
         </Box>
       </Box>
       <Box
@@ -125,8 +139,7 @@ function Dashboard() {
       >
         <Box
           sx={{
-            backgroundImage:
-              "linear-gradient(100deg, #42a5f5, #b39ddb, #880e4f)",
+            backgroundImage: "linear-gradient(140deg, #42a5f5 10%, #880e4f)",
             p: 1.5,
             py: 3,
             mr: 4,
@@ -181,8 +194,7 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage:
-              "linear-gradient(96deg, #1b5e20, #c8e6c9, #cddc39)",
+            backgroundImage: "linear-gradient(96deg, #1b5e20, #cddc39)",
             p: 1.5,
             py: 3,
             mr: 4,
@@ -237,8 +249,7 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage:
-              "linear-gradient(100deg, #f44336, #ef9a9a, #b71c1c)",
+            backgroundImage: "linear-gradient(120deg, #ef5350, #b71c1c)",
             p: 1.5,
             py: 3,
             mr: 4,
@@ -293,8 +304,7 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage:
-              "linear-gradient(120deg, #2196f3, #ce93d8, #4a148c)",
+            backgroundImage: "linear-gradient(120deg, #2196f3, #4a148c)",
             p: 1.5,
             py: 3,
             mr: 4,
@@ -343,14 +353,13 @@ function Dashboard() {
                 textAlign: "center",
               }}
             >
-              This is Pdf status
+              This is the Pdf status
             </Typography>
           </Box>
         </Box>
         <Box
           sx={{
-            backgroundImage:
-              "linear-gradient(96deg, #1b5e20, #c8e6c9, #311b92)",
+            backgroundImage: "linear-gradient(140deg, #e91e63 10%, #311b92)",
             p: 1.5,
             py: 3,
             mr: 4,
@@ -405,8 +414,7 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage:
-              "linear-gradient(120deg, #42a5f5, #e91e63, #9c27b0)",
+            backgroundImage: "linear-gradient(120deg, #42a5f5, #9c27b0)",
             p: 1.5,
             py: 3,
             mr: 4,
