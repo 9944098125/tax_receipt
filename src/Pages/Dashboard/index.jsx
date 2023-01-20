@@ -139,7 +139,7 @@ function Dashboard() {
       >
         <Box
           sx={{
-            backgroundImage: "linear-gradient(140deg, #42a5f5 10%, #880e4f)",
+            backgroundImage: "linear-gradient(140deg, #311b92 10%, #7986cb)",
             p: 1.5,
             py: 3,
             mr: 4,
@@ -249,7 +249,7 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage: "linear-gradient(120deg, #ef5350, #b71c1c)",
+            backgroundImage: "linear-gradient(120deg, #ffc107, #c2185b)",
             p: 1.5,
             py: 3,
             mr: 4,
@@ -304,7 +304,7 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage: "linear-gradient(120deg, #2196f3, #4a148c)",
+            backgroundImage: "linear-gradient(120deg, #e91e63 10%, #2196f3)",
             p: 1.5,
             py: 3,
             mr: 4,
@@ -359,7 +359,8 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage: "linear-gradient(140deg, #e91e63 10%, #311b92)",
+            backgroundImage:
+              "linear-gradient(120deg, #ffeb3b, #f57f17, #e65100)",
             p: 1.5,
             py: 3,
             mr: 4,
@@ -382,7 +383,7 @@ function Dashboard() {
                 width: "60px",
                 color: "white",
                 p: 1.3,
-                backgroundImage: "linear-gradient(pink, blue)",
+                backgroundImage: "linear-gradient(orange, yellow)",
                 borderRadius: "50%",
               }}
             />
@@ -414,7 +415,7 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage: "linear-gradient(120deg, #42a5f5, #9c27b0)",
+            backgroundImage: "linear-gradient(120deg, #ef5350, #c2185b)",
             p: 1.5,
             py: 3,
             mr: 4,
@@ -437,7 +438,7 @@ function Dashboard() {
                 width: "60px",
                 color: "white",
                 p: 1.3,
-                backgroundImage: "linear-gradient(pink, blue)",
+                backgroundImage: "linear-gradient(red, #8bc34a)",
                 borderRadius: "50%",
               }}
             />
