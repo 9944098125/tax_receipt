@@ -14,7 +14,6 @@ import FirstPageIcon from "@mui/icons-material/FirstPage";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import LastPageIcon from "@mui/icons-material/LastPage";
-import DeleteIcon from "@mui/icons-material/Delete";
 import { TableHead, Typography } from "@mui/material";
 
 function TablePaginationActions(props) {
@@ -197,56 +196,51 @@ function TransactionsTable({ cps }) {
   };
   return (
     <Fragment>
-      <TableContainer sx={{ border: "2px solid #234e8e" }} component={Paper}>
+      <TableContainer component={Paper}>
         <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
           <TableHead>
-            <TableRow sx={{ backgroundColor: "primary.main" }}>
+            <TableRow>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Client ID
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Client Name
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Receipt Number
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Name
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Date
@@ -288,7 +282,6 @@ function TransactionsTable({ cps }) {
           // backgroundColor: "primary.bg",
           px: 1,
           mt: 2,
-          // borderBottom: "2px solid #234e8e",
           // borderLeft: "2px solid #234e8e",
           // borderRight: "2px solid #234e8e",
           // borderRadius: "4px",

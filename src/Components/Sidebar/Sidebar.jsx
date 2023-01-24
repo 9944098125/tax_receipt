@@ -40,7 +40,7 @@ function Sidebar() {
         <Box
           sx={{
             backgroundColor: "primary.main",
-            width: { xs: "15vw", sm: "12vw", md: "18vw" },
+            width: { xs: "15vw", sm: "12vw", md: "17vw" },
             display: "flex",
             flexDirection: "column",
             alignItems: "flex-start",
@@ -75,6 +75,7 @@ function Sidebar() {
                   fontSize: "1.125rem",
                   display: { xs: "none", md: "block" },
                   fontWeight: "600",
+                  textAlign: "center",
                 }}
               >
                 Demo Agency
@@ -117,7 +118,7 @@ function Sidebar() {
               >
                 <CottageIcon
                   sx={{
-                    color: "#ffffff",
+                    color: "#ffffff55",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -127,7 +128,7 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "16px",
+                    fontSize: "15px",
                     color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
@@ -157,7 +158,7 @@ function Sidebar() {
               >
                 <PersonIcon
                   sx={{
-                    color: "#ffffff",
+                    color: "#ffffff59",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -167,7 +168,7 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "16px",
+                    fontSize: "15px",
                     color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
@@ -197,7 +198,7 @@ function Sidebar() {
               >
                 <Inventory2Icon
                   sx={{
-                    color: "#ffffff",
+                    color: "#ffffff59",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -207,7 +208,7 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "16px",
+                    fontSize: "15px",
                     color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
@@ -237,7 +238,7 @@ function Sidebar() {
               >
                 <FilterFramesIcon
                   sx={{
-                    color: "#ffffff",
+                    color: "#ffffff59",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -247,7 +248,7 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "16px",
+                    fontSize: "15px",
                     color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
@@ -277,7 +278,7 @@ function Sidebar() {
               >
                 <PaidIcon
                   sx={{
-                    color: "#ffffff",
+                    color: "#ffffff59",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -287,7 +288,7 @@ function Sidebar() {
                       xs: "none",
                       md: "block",
                     },
-                    fontSize: "16px",
+                    fontSize: "15px",
                     color: "#e6f2ff",
                     fontWeight: "500",
                     mb: -0.7,
@@ -313,7 +314,10 @@ function Sidebar() {
               }}
             >
               <ExitToAppIcon
-                sx={{ color: "#ffffff", ml: { xs: -0.7, sm: 1.6, md: "none" } }}
+                sx={{
+                  color: "#ffffff59",
+                  ml: { xs: -0.7, sm: 1.6, md: "none" },
+                }}
               />
               <Typography
                 sx={{
@@ -321,7 +325,7 @@ function Sidebar() {
                     xs: "none",
                     md: "block",
                   },
-                  fontSize: "16px",
+                  fontSize: "15px",
                   color: "#e6f2ff",
                   fontWeight: "500",
                   mb: -0.7,

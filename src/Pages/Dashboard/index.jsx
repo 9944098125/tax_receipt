@@ -486,15 +486,15 @@ function Dashboard() {
           mb: 5,
         }}
       >
-        <TableContainer sx={{ border: "2px solid #234e8e" }} component={Paper}>
+        <TableContainer component={Paper}>
           <Table aria-label="simple table">
-            <TableHead sx={{ backgroundColor: "primary.main" }}>
+            <TableHead>
               <TableRow>
-                <TableCell sx={{ color: "white", fontWeight: "700" }}>
+                <TableCell sx={{ color: "grey", fontWeight: "700" }}>
                   Client
                 </TableCell>
                 <TableCell
-                  sx={{ color: "white", fontWeight: "700" }}
+                  sx={{ color: "grey", fontWeight: "700" }}
                   align="right"
                 >
                   Donations
@@ -502,12 +502,16 @@ function Dashboard() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row) => (
+              {rows.map((row, idx) => (
                 <TableRow
-                  key={row.name}
+                  key={idx}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
-                  <TableCell component="th" scope="row">
+                  <TableCell
+                    sx={{ color: "primary.main", fontWeight: "600" }}
+                    component="th"
+                    scope="row"
+                  >
                     {row.name}
                   </TableCell>
                   <TableCell align="right">{row.amount}</TableCell>
@@ -516,15 +520,15 @@ function Dashboard() {
             </TableBody>
           </Table>
         </TableContainer>
-        <TableContainer sx={{ border: "2px solid #234e8e" }} component={Paper}>
+        <TableContainer component={Paper}>
           <Table aria-label="simple table">
-            <TableHead sx={{ backgroundColor: "primary.main" }}>
+            <TableHead>
               <TableRow>
-                <TableCell sx={{ color: "white", fontWeight: "700" }}>
+                <TableCell sx={{ color: "grey", fontWeight: "700" }}>
                   Client
                 </TableCell>
                 <TableCell
-                  sx={{ color: "white", fontWeight: "700" }}
+                  sx={{ color: "grey", fontWeight: "700" }}
                   align="right"
                 >
                   Donations
@@ -532,12 +536,16 @@ function Dashboard() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row) => (
+              {rows.map((row, idx) => (
                 <TableRow
-                  key={row.name}
+                  key={row.idx}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
-                  <TableCell component="th" scope="row">
+                  <TableCell
+                    sx={{ color: "primary.main", fontWeight: "600" }}
+                    component="th"
+                    scope="row"
+                  >
                     {row.name}
                   </TableCell>
                   <TableCell align="right">{row.amount}</TableCell>

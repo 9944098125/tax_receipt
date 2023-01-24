@@ -227,106 +227,96 @@ function TableWithHeader({ status }) {
 
   return (
     <Fragment>
-      <TableContainer sx={{ border: "2px solid #234e8e" }} component={Paper}>
+      <TableContainer component={Paper}>
         <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
           <TableHead>
-            <TableRow sx={{ backgroundColor: "primary.main" }}>
+            <TableRow>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Client ID
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Client Name
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Organization
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
-                Email
+                Email Address
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Mobile Number
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Status
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Package
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Start Date
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Expiry Date
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "600",
+                  fontWeight: "800",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
-                  color: "white",
+                  color: "#00000099",
                 }}
               >
                 Actions
@@ -335,7 +325,6 @@ function TableWithHeader({ status }) {
                 sx={{
                   fontWeight: "600",
                   fontSize: "12px",
-                  borderBottom: "2px solid #234e8e",
                   color: "white",
                 }}
               >
