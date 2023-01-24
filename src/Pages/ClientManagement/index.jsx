@@ -2,10 +2,15 @@ import React, { Fragment } from "react";
 import HomeIcon from "@mui/icons-material/Home";
 import DocumentTitle from "../../Components/DocumentTitle";
 import { Box, Typography } from "@mui/material";
-import TableWithHeader from "../../Components/Table/TableWithHeader";
+import {
+  ActiveTable,
+  InactiveTable,
+  PendingTable,
+} from "../../Components/Table/TableWithHeader";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import PropTypes from "prop-types";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -96,15 +101,21 @@ function ClientManagement() {
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>
-            <TableWithHeader status="Pending" />
+            <PendingTable />
           </TabPanel>
           <TabPanel value={value} index={1}>
-            <TableWithHeader status="Active" />
+            <ActiveTable status="Active" />
           </TabPanel>
           <TabPanel value={value} index={2}>
-            <TableWithHeader status="Inactive" />
+            <InactiveTable status="Inactive" />
           </TabPanel>
         </Box>
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+        <button style={{ width: "15%" }} className="register-button">
+          <DeleteIcon />
+          Delete All
+        </button>
       </Box>
     </Fragment>
   );

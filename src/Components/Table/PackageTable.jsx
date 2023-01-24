@@ -266,21 +266,6 @@ function PackageTable() {
           onRowsPerPageChange={handleChangeRowsPerPage}
           ActionsComponent={TablePaginationActions}
         />
-        <Box
-          sx={{
-            backgroundColor: "red",
-            width: "100px",
-            p: 0.4,
-            borderRadius: "5px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-          }}
-        >
-          <DeleteIcon sx={{ color: "white" }} />
-          <Typography sx={{ color: "white" }}>Delete</Typography>
-        </Box>
       </Box>
     </Fragment>
   );

@@ -119,6 +119,7 @@ function Sidebar() {
                 <CottageIcon
                   sx={{
                     color: "#ffffff55",
+                    fontSize: "20px",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -131,7 +132,6 @@ function Sidebar() {
                     fontSize: "15px",
                     color: "#e6f2ff",
                     fontWeight: "500",
-                    mb: -0.7,
                   }}
                 >
                   Dashboard
@@ -159,6 +159,7 @@ function Sidebar() {
                 <PersonIcon
                   sx={{
                     color: "#ffffff59",
+                    fontSize: "20px",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -171,7 +172,6 @@ function Sidebar() {
                     fontSize: "15px",
                     color: "#e6f2ff",
                     fontWeight: "500",
-                    mb: -0.7,
                   }}
                 >
                   Client Management
@@ -199,6 +199,7 @@ function Sidebar() {
                 <Inventory2Icon
                   sx={{
                     color: "#ffffff59",
+                    fontSize: "20px",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -211,7 +212,6 @@ function Sidebar() {
                     fontSize: "15px",
                     color: "#e6f2ff",
                     fontWeight: "500",
-                    mb: -0.7,
                   }}
                 >
                   Package Management
@@ -239,6 +239,7 @@ function Sidebar() {
                 <FilterFramesIcon
                   sx={{
                     color: "#ffffff59",
+                    fontSize: "20px",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -251,7 +252,6 @@ function Sidebar() {
                     fontSize: "15px",
                     color: "#e6f2ff",
                     fontWeight: "500",
-                    mb: -0.7,
                   }}
                 >
                   Orders
@@ -279,6 +279,7 @@ function Sidebar() {
                 <PaidIcon
                   sx={{
                     color: "#ffffff59",
+                    fontSize: "20px",
                     ml: { xs: -0.7, sm: 1.6, md: "none" },
                   }}
                 />
@@ -291,7 +292,6 @@ function Sidebar() {
                     fontSize: "15px",
                     color: "#e6f2ff",
                     fontWeight: "500",
-                    mb: -0.7,
                   }}
                 >
                   Transactions
@@ -316,6 +316,7 @@ function Sidebar() {
               <ExitToAppIcon
                 sx={{
                   color: "#ffffff59",
+                  fontSize: "20px",
                   ml: { xs: -0.7, sm: 1.6, md: "none" },
                 }}
               />
@@ -328,7 +329,6 @@ function Sidebar() {
                   fontSize: "15px",
                   color: "#e6f2ff",
                   fontWeight: "500",
-                  mb: -0.7,
                 }}
               >
                 Logout

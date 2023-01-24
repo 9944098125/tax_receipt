@@ -139,7 +139,7 @@ function Dashboard() {
       >
         <Box
           sx={{
-            backgroundImage: "linear-gradient(140deg, #311b92 10%, #3f51b5)",
+            backgroundImage: "linear-gradient(135deg, #f5af19,#f12711)",
             p: 1.5,
             py: 3,
             mr: 1,
@@ -163,8 +163,8 @@ function Dashboard() {
                 width: "60px",
                 color: "white",
                 p: 1.3,
-                backgroundImage: "linear-gradient(pink, blue)",
                 borderRadius: "50%",
+                background: "linear-gradient(135deg, #f12711 50%,#f5af19 50%)",
               }}
             />
             <Typography
@@ -195,7 +195,8 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage: "linear-gradient(96deg, #1b5e20, #cddc39)",
+            backgroundImage:
+              "linear-gradient(130deg, #8a2387, #e94057, #f27121)",
             p: 1.5,
             py: 3,
             mr: 1,
@@ -219,7 +220,8 @@ function Dashboard() {
                 width: "60px",
                 color: "white",
                 p: 1.3,
-                backgroundImage: "linear-gradient(#4caf50, #cddc39)",
+                backgroundImage:
+                  "linear-gradient(130deg, #e94057 50%, #8a2387 50%)",
                 borderRadius: "50%",
               }}
             />
@@ -251,7 +253,8 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage: "linear-gradient(120deg, #ffc107, #c2185b)",
+            backgroundImage:
+              "linear-gradient(130deg, #0f2027, #203a43, #2c5364)",
             p: 1.5,
             py: 3,
             mr: 1,
@@ -275,7 +278,8 @@ function Dashboard() {
                 width: "60px",
                 color: "white",
                 p: 1.3,
-                backgroundImage: "linear-gradient(#ef9a9a, #f44336)",
+                backgroundImage:
+                  "linear-gradient(130deg, #2653c4 50%, #203a43 50%)",
                 borderRadius: "50%",
               }}
             />
@@ -307,7 +311,7 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage: "linear-gradient(120deg, #e91e63 10%, #2196f3)",
+            backgroundImage: "linear-gradient(130deg, #b92b27, #1565C0)",
             p: 1.5,
             py: 3,
             mr: 1,
@@ -331,7 +335,8 @@ function Dashboard() {
                 width: "60px",
                 color: "white",
                 p: 1.3,
-                backgroundImage: "linear-gradient(pink, blue)",
+                backgroundImage:
+                  "linear-gradient(130deg, #b29b27 50%, #1565C0 50%)",
                 borderRadius: "50%",
               }}
             />
@@ -363,8 +368,7 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage:
-              "linear-gradient(120deg, #ffeb3b, #f57f17, #e65100)",
+            backgroundImage: "linear-gradient(120deg, #009FFF, #ec2F4B)",
             p: 1.5,
             py: 3,
             mr: 1,
@@ -388,7 +392,8 @@ function Dashboard() {
                 width: "60px",
                 color: "white",
                 p: 1.3,
-                backgroundImage: "linear-gradient(orange, yellow)",
+                backgroundImage:
+                  "linear-gradient(120deg, #ec2F4B 50%, #009FFF 50%)",
                 borderRadius: "50%",
               }}
             />
@@ -420,7 +425,8 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage: "linear-gradient(120deg, #ef5350, #c2185b)",
+            backgroundImage:
+              "linear-gradient(130deg, #03001e, #7303c0, #ec38bc)",
             p: 1.5,
             py: 3,
             mr: 1,
@@ -444,7 +450,8 @@ function Dashboard() {
                 width: "60px",
                 color: "white",
                 p: 1.3,
-                backgroundImage: "linear-gradient(red, #8bc34a)",
+                backgroundImage:
+                  "linear-gradient(130deg, #ec38bc 50%, #8bc34a 50%)",
                 borderRadius: "50%",
               }}
             />
