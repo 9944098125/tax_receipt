@@ -107,6 +107,9 @@ function Dashboard() {
               fontSize: { xs: "17px", md: "24px" },
               fontWeight: "700",
               color: "#234e8e",
+              border: "2px solid #234e8e",
+              p: 0.3,
+              borderRadius: "9px",
             }}
           >
             {`${format(dates[0].startDate, "MM/dd/yyyy")} to ${format(
