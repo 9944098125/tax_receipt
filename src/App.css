@@ -302,3 +302,18 @@
 .css-uly8yd .MuiDataGrid-iconSeparator {
   display:none !important
 }
+/* for development */
+.css-f2n1q9-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: rgb(112, 103, 103) !important;
+}
+
+/* for deployed */
+.css-4qc760.Mui-selected {
+  color: rgb(112, 103, 103) !important;
+}
+
+
+.css-1jbbcbn-MuiDataGrid-columnHeaderTitle {
+  color:#6b778c;
+  font-weight: 700 !important;
+}

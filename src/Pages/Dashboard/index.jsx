@@ -21,10 +21,9 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css";
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
-
 import {
-  LineChart,
-  Line,
+  AreaChart,
+  Area,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -64,23 +63,92 @@ function Dashboard() {
   ];
 
   const data1 = [
-    { name: "Page A", uv: 4000 },
-    { name: "Page B", uv: 3000 },
-    { name: "Page C", uv: 2000 },
-    { name: "Page D", uv: 5000 },
-    { name: "Page E", uv: 1890 },
-    { name: "Page F", uv: 2390 },
-    { name: "Page G", uv: 3490 },
+    {
+      name: "Page A",
+      uv: 4000,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: "Page B",
+      uv: 3000,
+      pv: 1398,
+      amt: 2210,
+    },
+    {
+      name: "Page C",
+      uv: 2000,
+      pv: 9800,
+      amt: 2290,
+    },
+    {
+      name: "Page D",
+      uv: 2780,
+      pv: 3908,
+      amt: 2000,
+    },
+    {
+      name: "Page E",
+      uv: 1890,
+      pv: 4800,
+      amt: 2181,
+    },
+    {
+      name: "Page F",
+      uv: 2390,
+      pv: 3800,
+      amt: 2500,
+    },
+    {
+      name: "Page G",
+      uv: 3490,
+      pv: 4300,
+      amt: 2100,
+    },
   ];
-
   const data2 = [
-    { name: "JAN", uv: 2000 },
-    { name: "FEB", uv: 1000 },
-    { name: "MAR", uv: 6000 },
-    { name: "APR", uv: 3000 },
-    { name: "MAY", uv: 5890 },
-    { name: "JUNE", uv: 1390 },
-    { name: "JUL", uv: 1490 },
+    {
+      name: "Page A",
+      uv: 2000,
+      pv: 5400,
+      amt: 3400,
+    },
+    {
+      name: "Page B",
+      uv: 6000,
+      pv: 3398,
+      amt: 4210,
+    },
+    {
+      name: "Page C",
+      uv: 8000,
+      pv: 10800,
+      amt: 3290,
+    },
+    {
+      name: "Page D",
+      uv: 8780,
+      pv: 3908,
+      amt: 2000,
+    },
+    {
+      name: "Page E",
+      uv: 9890,
+      pv: 4800,
+      amt: 2181,
+    },
+    {
+      name: "Page F",
+      uv: 10390,
+      pv: 3800,
+      amt: 2500,
+    },
+    {
+      name: "Page G",
+      uv: 11490,
+      pv: 4300,
+      amt: 2100,
+    },
   ];
 
   return (
@@ -89,37 +157,58 @@ function Dashboard() {
         sx={{
           display: "flex",
           flexDirection: "column",
-          pl: 0,
           position: "relative",
         }}
       >
         <Box
           sx={{
             display: "flex",
-            alignItems: "center",
+            flexDirection: "column",
           }}
         >
-          <CalendarMonthIcon
-            onClick={toggleCalendar}
-            sx={{ fontSize: "55px", color: "#234e8e", cursor: "pointer" }}
-          />
           <Typography
-            onClick={toggleCalendar}
             sx={{
-              fontSize: { xs: "17px", md: "24px" },
+              color: "#00254D",
+              fontSize: "0.875rem",
               fontWeight: "700",
-              color: "#234e8e",
-              border: "2px solid #234e8e",
-              p: 0.3,
-              borderRadius: "9px",
-              cursor: "pointer",
+              ml: 1,
             }}
           >
-            {`${format(dates[0].startDate, "MM/dd/yyyy")} to ${format(
-              dates[0].endDate,
-              "MM/dd/yyyy"
-            )}`}
+            Choose A Date
           </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
+            <CalendarMonthIcon
+              onClick={toggleCalendar}
+              sx={{
+                fontSize: "45px",
+                color: "#00254d",
+                cursor: "pointer",
+                mt: -0.3,
+              }}
+            />
+            <Typography
+              onClick={toggleCalendar}
+              sx={{
+                fontSize: { xs: "15px", md: "19px" },
+                fontWeight: "700",
+                color: "#00254d",
+                border: "2px solid #234e8e",
+                p: 0.3,
+                borderRadius: "9px",
+                cursor: "pointer",
+              }}
+            >
+              {`${format(dates[0].startDate, "MM/dd/yyyy")} to ${format(
+                dates[0].endDate,
+                "MM/dd/yyyy"
+              )}`}
+            </Typography>
+          </Box>
         </Box>
         {showCalendar && (
           <DateRange
@@ -143,7 +232,8 @@ function Dashboard() {
       >
         <Box
           sx={{
-            backgroundImage: "linear-gradient(135deg, #f5af19,#f12711)",
+            backgroundImage:
+              "linear-gradient(135deg, #2196f3 30%, #ff80ab, #e91e63)",
             p: 1.5,
             py: 3,
             mr: 1,
@@ -168,7 +258,7 @@ function Dashboard() {
                 color: "white",
                 p: 1.3,
                 borderRadius: "50%",
-                background: "linear-gradient(135deg, #f12711 50%,#f5af19 50%)",
+                background: "linear-gradient(135deg, #2196f3 50%,#e91e63 50%)",
               }}
             />
             <Typography
@@ -199,8 +289,7 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage:
-              "linear-gradient(130deg, #8a2387, #e94057, #f27121)",
+            backgroundImage: "linear-gradient(130deg, #1b5e20, #66bb6a)",
             p: 1.5,
             py: 3,
             mr: 1,
@@ -225,7 +314,7 @@ function Dashboard() {
                 color: "white",
                 p: 1.3,
                 backgroundImage:
-                  "linear-gradient(130deg, #e94057 50%, #8a2387 50%)",
+                  "linear-gradient(130deg, #66bb6a 50%, #1b5e20 50%)",
                 borderRadius: "50%",
               }}
             />
@@ -258,7 +347,7 @@ function Dashboard() {
         <Box
           sx={{
             backgroundImage:
-              "linear-gradient(130deg, #0f2027, #203a43, #2c5364)",
+              "linear-gradient(130deg, #ff8a80, #f44336, #b71c1c)",
             p: 1.5,
             py: 3,
             mr: 1,
@@ -283,7 +372,7 @@ function Dashboard() {
                 color: "white",
                 p: 1.3,
                 backgroundImage:
-                  "linear-gradient(130deg, #2653c4 50%, #203a43 50%)",
+                  "linear-gradient(130deg, #b71c1c 50%, #ff8a80 50%)",
                 borderRadius: "50%",
               }}
             />
@@ -315,7 +404,7 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage: "linear-gradient(130deg, #b92b27, #1565C0)",
+            backgroundImage: "linear-gradient(130deg, #e91e63, #2196f3)",
             p: 1.5,
             py: 3,
             mr: 1,
@@ -372,7 +461,7 @@ function Dashboard() {
         </Box>
         <Box
           sx={{
-            backgroundImage: "linear-gradient(120deg, #009FFF, #ec2F4B)",
+            backgroundImage: "linear-gradient(120deg, #ff9800, #ffeb3b)",
             p: 1.5,
             py: 3,
             mr: 1,
@@ -397,7 +486,7 @@ function Dashboard() {
                 color: "white",
                 p: 1.3,
                 backgroundImage:
-                  "linear-gradient(120deg, #ec2F4B 50%, #009FFF 50%)",
+                  "linear-gradient(120deg, #ffeb3b 50%, #ff9800 50%)",
                 borderRadius: "50%",
               }}
             />
@@ -501,14 +590,15 @@ function Dashboard() {
           <Table aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell sx={{ color: "grey", fontWeight: "700" }}>
-                  Client
+                <TableCell>
+                  <Typography sx={{ color: "grey", fontWeight: "700" }}>
+                    Client
+                  </Typography>
                 </TableCell>
-                <TableCell
-                  sx={{ color: "grey", fontWeight: "700" }}
-                  align="right"
-                >
-                  Donations
+                <TableCell align="right">
+                  <Typography sx={{ color: "grey", fontWeight: "700" }}>
+                    Donations
+                  </Typography>
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -519,13 +609,15 @@ function Dashboard() {
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
                   <TableCell
-                    sx={{ color: "primary.main", fontWeight: "600" }}
+                    sx={{ color: "#00254d", fontWeight: "500" }}
                     component="th"
                     scope="row"
                   >
                     {row.name}
                   </TableCell>
-                  <TableCell align="right">{row.amount}</TableCell>
+                  <TableCell sx={{ color: "#00254d" }} align="right">
+                    {row.amount}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -535,14 +627,15 @@ function Dashboard() {
           <Table aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell sx={{ color: "grey", fontWeight: "700" }}>
-                  Client
+                <TableCell>
+                  <Typography sx={{ color: "grey", fontWeight: "700" }}>
+                    Clients
+                  </Typography>
                 </TableCell>
-                <TableCell
-                  sx={{ color: "grey", fontWeight: "700" }}
-                  align="right"
-                >
-                  Donations
+                <TableCell align="right">
+                  <Typography sx={{ color: "grey", fontWeight: "700" }}>
+                    Donations
+                  </Typography>
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -553,13 +646,15 @@ function Dashboard() {
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
                   <TableCell
-                    sx={{ color: "primary.main", fontWeight: "600" }}
+                    sx={{ color: "#00254d", fontWeight: "500" }}
                     component="th"
                     scope="row"
                   >
                     {row.name}
                   </TableCell>
-                  <TableCell align="right">{row.amount}</TableCell>
+                  <TableCell sx={{ color: "#00254d" }} align="right">
+                    {row.amount}
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -579,8 +674,8 @@ function Dashboard() {
           gap: 5,
         }}
       >
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart
+        <ResponsiveContainer width="100%" height={200}>
+          <AreaChart
             width={500}
             height={200}
             data={data1}
@@ -595,16 +690,16 @@ function Dashboard() {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Line
+            <Area
               type="monotone"
               dataKey="uv"
               stroke="#8884d8"
               fill="#8884d8"
             />
-          </LineChart>
+          </AreaChart>
         </ResponsiveContainer>
-        <ResponsiveContainer width="100%" height="100%">
-          <LineChart
+        <ResponsiveContainer width="100%" height={200}>
+          <AreaChart
             width={500}
             height={200}
             data={data2}
@@ -619,14 +714,14 @@ function Dashboard() {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Line
+            <Area
               connectNulls
               type="monotone"
               dataKey="uv"
               stroke="#8884d8"
               fill="#8884d8"
             />
-          </LineChart>
+          </AreaChart>
         </ResponsiveContainer>
       </Box>
     </Fragment>

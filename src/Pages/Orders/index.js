@@ -10,8 +10,7 @@ function Orders() {
     <Fragment>
       <Box
         sx={{
-          backgroundColor: "primary.bg",
-          color: "primary.dark",
+          color: "#00254d",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -23,9 +22,7 @@ function Orders() {
         </Typography>
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>
           <HomeIcon />
-          <Typography sx={{ color: "primary.dark", fontSize: "0.875rem" }}>
-            / orders
-          </Typography>
+          <Typography sx={{ fontSize: "0.875rem" }}>/ orders</Typography>
         </Box>
       </Box>
       <Box sx={{ mt: 1 }}>

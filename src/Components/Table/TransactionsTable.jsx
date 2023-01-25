@@ -202,45 +202,45 @@ function TransactionsTable({ cps }) {
             <TableRow>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Client ID
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Client Name
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Receipt Number
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Name
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Date

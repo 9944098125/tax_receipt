@@ -57,8 +57,7 @@ function ClientManagement() {
     <Fragment>
       <Box
         sx={{
-          backgroundColor: "primary.bg",
-          color: "primary.dark",
+          color: "#00254d",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -70,7 +69,7 @@ function ClientManagement() {
         </Typography>
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>
           <HomeIcon />
-          <Typography sx={{ color: "primary.dark", fontSize: "0.875rem" }}>
+          <Typography sx={{ color: "#00254d", fontSize: "0.875rem" }}>
             / Client Management
           </Typography>
         </Box>

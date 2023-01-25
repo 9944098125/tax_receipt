@@ -52,8 +52,7 @@ function Transactions() {
     <Fragment>
       <Box
         sx={{
-          backgroundColor: "primary.bg",
-          color: "primary.dark",
+          color: "#00254d",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -65,9 +64,7 @@ function Transactions() {
         </Typography>
         <Box sx={{ display: { xs: "none", md: "flex" }, alignItems: "center" }}>
           <HomeIcon />
-          <Typography sx={{ color: "primary.dark", fontSize: "0.875rem" }}>
-            / Transactions
-          </Typography>
+          <Typography sx={{ fontSize: "0.875rem" }}>/ Transactions</Typography>
         </Box>
       </Box>
 
@@ -97,7 +94,7 @@ function Transactions() {
               />
               <Tab
                 sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
-                label="PDF Generated"
+                label="pdf Generated"
                 {...a11yProps(1)}
               />
               <Tab

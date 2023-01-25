@@ -17,6 +17,7 @@ import LastPageIcon from "@mui/icons-material/LastPage";
 import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { TableHead, Typography } from "@mui/material";
+import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 
 function createData(sno, name, customerLimit, pdfLimit, emailLimit, price) {
   return {
@@ -137,63 +138,54 @@ function PackageTable() {
             <TableRow>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 SLNO.
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Name
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Customer Limit
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 PDF Limit
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Email Limit
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
-                }}
-              >
-                Price
-              </TableCell>
-              <TableCell
-                sx={{
-                  fontWeight: "800",
-                  fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Actions
@@ -209,13 +201,17 @@ function PackageTable() {
                 <TableCell component="th" scope="row">
                   {row.sno}
                 </TableCell>
-                <TableCell align="left">{row.name}</TableCell>
+                <TableCell align="left">
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                    {row.name} (<CurrencyRupeeIcon sx={{ fontSize: "10px" }} />
+                    {row.price})
+                  </Box>
+                </TableCell>
                 <TableCell align="left">{row.customerLimit}</TableCell>
                 <TableCell component="th" scope="row">
                   {row.pdfLimit}
                 </TableCell>
                 <TableCell align="left">{row.emailLimit}</TableCell>
-                <TableCell align="left">{row.price}</TableCell>
                 <TableCell component="th" scope="row">
                   <ModeEditIcon
                     sx={{

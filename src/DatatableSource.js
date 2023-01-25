@@ -33,8 +33,8 @@ export const clientColumns = [
           sx={{
             p: "5px",
             borderRadius: "5px",
-            backgroundColor: "lightgreen",
-            color: "darkgreen",
+            backgroundColor: "#cce5ff",
+            color: "#007bff",
           }}
         >
           {params.row.status}
@@ -44,8 +44,8 @@ export const clientColumns = [
           sx={{
             p: "5px",
             borderRadius: "5px",
-            backgroundColor: "red",
-            color: "goldenrod",
+            backgroundColor: "#fff4d3",
+            color: "#fcb000",
           }}
         >
           {params.row.status}
@@ -56,8 +56,8 @@ export const clientColumns = [
             sx={{
               p: "5px",
               borderRadius: "5px",
-              backgroundColor: "yellow",
-              color: "goldenrod",
+              backgroundColor: "#fae3e5",
+              color: "#e4606d",
             }}
           >
             {params.row.status}

@@ -348,90 +348,90 @@ function OrdersTable() {
             <TableRow>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 SLNO.
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Transaction ID
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Date
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Client Name
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Organization
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Package Name
               </TableCell>
-              {/* <TableCell
+              <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Start Date
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Expiry Date
-              </TableCell> */}
+              </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 Amount
               </TableCell>
               <TableCell
                 sx={{
-                  fontWeight: "800",
+                  fontWeight: "700",
                   fontSize: "12px",
-                  color: "#00000099",
+                  color: "#6b778c",
                 }}
               >
                 View Invoice
@@ -452,11 +452,10 @@ function OrdersTable() {
                 <TableCell component="th" scope="row">
                   {row.clientName}
                 </TableCell>
-                <TableCell align="left">
-                  <div className="d-flex flex-column">{row.organization}</div>(
-                  {row.startDate} - {row.expiryDate})
-                </TableCell>
+                <TableCell align="left">{row.organization}</TableCell>
                 <TableCell align="left">{row.packageName}</TableCell>
+                <TableCell align="left">{row.startDate}</TableCell>
+                <TableCell align="left">{row.expiryDate}</TableCell>
                 <TableCell align="left">{row.amount}</TableCell>
                 <TableCell component="th" scope="row">
                   <RemoveRedEyeIcon sx={{ color: "blue", cursor: "pointer" }} />
