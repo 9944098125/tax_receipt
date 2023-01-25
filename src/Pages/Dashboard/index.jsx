@@ -17,6 +17,10 @@ import BorderColorIcon from "@mui/icons-material/BorderColor";
 import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 import CurrencyExchangeIcon from "@mui/icons-material/CurrencyExchange";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css";
+import { DateRange } from "react-date-range";
+import { format } from "date-fns";
 
 import {
   LineChart,
@@ -32,6 +36,19 @@ function Dashboard() {
   DocumentTitle("Dashboard | Tax Receit");
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+
+  const [dates, setDates] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
+  ]);
+  const [showCalendar, setShowCalendar] = useState(false);
+
+  const toggleCalendar = () => {
+    setShowCalendar(!showCalendar);
+  };
 
   function createData(name, amount) {
     return { name, amount };
@@ -71,61 +88,42 @@ function Dashboard() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", md: "row" },
-          alignItems: "center",
-          gap: { xs: 2, md: 5 },
+          flexDirection: "column",
           pl: 0,
+          position: "relative",
         }}
       >
         <Box
+          onClick={toggleCalendar}
           sx={{
-            mb: 2,
-            // backgroundColor: "primary.bg",
-            borderRadius: "8px",
             display: "flex",
             alignItems: "center",
+            cursor: "pointer",
           }}
         >
-          <CalendarMonthIcon
-            sx={{ height: "70px", width: "60px", color: "#00254d" }}
-          />
-          <Box sx={{}}>
-            <Typography
-              sx={{ color: "#00254d", fontWeight: "600", fontSize: "14px" }}
-            >
-              Start Date
-            </Typography>
-            <DatePicker
-              onChange={() => setStartDate(new Date())}
-              value={startDate}
-              id="startDate"
-            />
-          </Box>
+          <CalendarMonthIcon sx={{ fontSize: "55px", color: "#234e8e" }} />
+          <Typography
+            sx={{
+              fontSize: { xs: "17px", md: "24px" },
+              fontWeight: "700",
+              color: "#234e8e",
+            }}
+          >
+            {`${format(dates[0].startDate, "MM/dd/yyyy")} to ${format(
+              dates[0].endDate,
+              "MM/dd/yyyy"
+            )}`}
+          </Typography>
         </Box>
-        <Box
-          sx={{
-            // backgroundColor: "primary.bg",
-            borderRadius: "8px",
-            mb: 2,
-            display: "flex",
-            alignItems: "center",
-          }}
-        >
-          <CalendarMonthIcon
-            sx={{ height: "70px", width: "60px", color: "#00254d" }}
+        {showCalendar && (
+          <DateRange
+            editableDateInputs={true}
+            onChange={(item) => setDates([item.selection])}
+            moveRangeOnFirstSelection={false}
+            ranges={dates}
+            className="date"
           />
-          <Box sx={{}}>
-            <Typography
-              sx={{ color: "#000254d", fontWeight: "600", fontSize: "14px" }}
-            >
-              End Date
-            </Typography>
-            <DatePicker
-              onChange={() => setEndDate(new Date())}
-              value={endDate}
-            />
-          </Box>
-        </Box>
+        )}
       </Box>
       <Box
         sx={{

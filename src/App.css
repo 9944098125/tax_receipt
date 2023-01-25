@@ -267,3 +267,17 @@
 .react-calendar__navigation button:hover {
   color: black;
 }
+
+.date {
+  position: absolute;
+  top: 50px;
+  z-index: 2;
+  font-size: 19px;
+}
+
+@media screen and (max-width:768px) {
+  .date {
+    width: 250px !important;
+    font-size: 8px !important;
+  }
+}
