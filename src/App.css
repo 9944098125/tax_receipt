@@ -293,6 +293,12 @@
   border-radius: 4px;
 }
 
+/* this is for development purpose */
 .css-1gzje1m-MuiDataGrid-root .MuiDataGrid-iconSeparator {
   display: none;
+}
+
+/* this className is for deployed version */
+.css-uly8yd .MuiDataGrid-iconSeparator {
+  display:none !important
 }
