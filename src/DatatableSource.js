@@ -10,7 +10,7 @@ export const clientColumns = [
   {
     field: "organization",
     headerName: "Organization",
-    width: 100,
+    width: 120,
   },
 
   {

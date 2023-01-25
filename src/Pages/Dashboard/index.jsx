@@ -94,15 +94,17 @@ function Dashboard() {
         }}
       >
         <Box
-          onClick={toggleCalendar}
           sx={{
             display: "flex",
             alignItems: "center",
-            cursor: "pointer",
           }}
         >
-          <CalendarMonthIcon sx={{ fontSize: "55px", color: "#234e8e" }} />
+          <CalendarMonthIcon
+            onClick={toggleCalendar}
+            sx={{ fontSize: "55px", color: "#234e8e", cursor: "pointer" }}
+          />
           <Typography
+            onClick={toggleCalendar}
             sx={{
               fontSize: { xs: "17px", md: "24px" },
               fontWeight: "700",
@@ -110,6 +112,7 @@ function Dashboard() {
               border: "2px solid #234e8e",
               p: 0.3,
               borderRadius: "9px",
+              cursor: "pointer",
             }}
           >
             {`${format(dates[0].startDate, "MM/dd/yyyy")} to ${format(

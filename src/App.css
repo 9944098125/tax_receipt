@@ -292,3 +292,7 @@
   font-size: 1.125rem;
   border-radius: 4px;
 }
+
+.css-1gzje1m-MuiDataGrid-root .MuiDataGrid-iconSeparator {
+  display: none;
+}
