@@ -400,7 +400,7 @@ function OrdersTable() {
               >
                 Package Name
               </TableCell>
-              <TableCell
+              {/* <TableCell
                 sx={{
                   fontWeight: "800",
                   fontSize: "12px",
@@ -417,7 +417,7 @@ function OrdersTable() {
                 }}
               >
                 Expiry Date
-              </TableCell>
+              </TableCell> */}
               <TableCell
                 sx={{
                   fontWeight: "800",
@@ -452,10 +452,11 @@ function OrdersTable() {
                 <TableCell component="th" scope="row">
                   {row.clientName}
                 </TableCell>
-                <TableCell align="left">{row.organization}</TableCell>
+                <TableCell align="left">
+                  <div className="d-flex flex-column">{row.organization}</div>(
+                  {row.startDate} - {row.expiryDate})
+                </TableCell>
                 <TableCell align="left">{row.packageName}</TableCell>
-                <TableCell align="left">{row.startDate}</TableCell>
-                <TableCell align="left">{row.expiryDate}</TableCell>
                 <TableCell align="left">{row.amount}</TableCell>
                 <TableCell component="th" scope="row">
                   <RemoveRedEyeIcon sx={{ color: "blue", cursor: "pointer" }} />

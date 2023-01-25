@@ -274,51 +274,22 @@ function TransactionsTable({ cps }) {
         </Table>
       </TableContainer>
 
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          // backgroundColor: "primary.bg",
-          px: 1,
-          mt: 2,
-          // borderLeft: "2px solid #234e8e",
-          // borderRight: "2px solid #234e8e",
-          // borderRadius: "4px",
+      <TablePagination
+        rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
+        colSpan={3}
+        count={rows.length}
+        rowsPerPage={rowsPerPage}
+        page={page}
+        SelectProps={{
+          inputProps: {
+            "aria-label": "rows per page",
+          },
+          native: true,
         }}
-      >
-        <TablePagination
-          rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
-          colSpan={3}
-          count={rows.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          SelectProps={{
-            inputProps: {
-              "aria-label": "rows per page",
-            },
-            native: true,
-          }}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-          ActionsComponent={TablePaginationActions}
-        />
-        {/* <Box
-          sx={{
-            backgroundColor: "red",
-            width: "100px",
-            p: 0.4,
-            borderRadius: "5px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            cursor: "pointer",
-          }}
-        >
-          <DeleteIcon sx={{ color: "white" }} />
-          <Typography sx={{ color: "white" }}>Delete</Typography>
-        </Box> */}
-      </Box>
+        onPageChange={handleChangePage}
+        onRowsPerPageChange={handleChangeRowsPerPage}
+        ActionsComponent={TablePaginationActions}
+      />
     </Fragment>
   );
 }

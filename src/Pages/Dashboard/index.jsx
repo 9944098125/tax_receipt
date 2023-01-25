@@ -543,7 +543,7 @@ function Dashboard() {
             <TableBody>
               {rows.map((row, idx) => (
                 <TableRow
-                  key={row.idx}
+                  key={idx}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
                   <TableCell

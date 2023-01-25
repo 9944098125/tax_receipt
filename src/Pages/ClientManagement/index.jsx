@@ -25,7 +25,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box sx={{ p: 0, mt: 2 }}>
-          <Typography>{children}</Typography>
+          <div>{children}</div>
         </Box>
       )}
     </div>
@@ -112,7 +112,7 @@ function ClientManagement() {
         </Box>
       </Box>
       <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
-        <button style={{ width: "15%" }} className="register-button">
+        <button className="delete-btn">
           <DeleteIcon />
           Delete All
         </button>

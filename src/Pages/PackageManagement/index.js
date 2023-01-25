@@ -49,9 +49,7 @@ function PackageManagement() {
         </button>
         <PackageModal show={showModal} close={closeModal} />
       </Box>
-      <Box sx={{ mt: 0 }}>
-        <PackageTable />
-      </Box>
+      <PackageTable />
     </Fragment>
   );
 }

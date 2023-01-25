@@ -281,3 +281,14 @@
     font-size: 8px !important;
   }
 }
+
+.delete-btn {
+  background-color: #aa4444;
+  color: white;
+  width: 150px;
+  font-weight: 700;
+  border: none;
+  line-height: 2.75rem;
+  font-size: 1.125rem;
+  border-radius: 4px;
+}
