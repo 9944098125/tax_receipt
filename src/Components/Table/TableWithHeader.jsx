@@ -300,7 +300,7 @@ export function PendingTable() {
         }}
       >
         <DataGrid
-          style={{ color: "black" }}
+          style={{ color: "#00254d" }}
           rows={pendingRows}
           columns={clientColumns.concat(actionColumn)}
           pageSize={5}
