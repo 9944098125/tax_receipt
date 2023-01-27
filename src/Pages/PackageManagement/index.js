@@ -41,7 +41,15 @@ function PackageManagement() {
         </Box>
       </Box>
       {/* don't touch this box, don't put anything else except package button in this box */}
-      <Box sx={{ height: "100px" }}>
+      <Box
+        sx={{
+          height: "100px",
+          display: "flex",
+          justifyContent: "flex-end",
+          pr: 2,
+          pb: 2,
+        }}
+      >
         <button onClick={openShowModal} className="packageBtn">
           <AddCircleIcon sx={{ mr: 2, height: "15px", width: "15px" }} />
           Add New Package
