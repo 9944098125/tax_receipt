@@ -1,0 +1,389 @@
+/* 1 */
+.counter{
+    font-family: 'ProximaNova', sans-serif;
+    margin-bottom:25px;
+    background: #fff;
+    text-align: center;
+    width: 200px;
+    min-height: 250px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  .counter:before{
+    content: '';
+    background-color: #9dd662;
+    height: 105px;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .counter .counter-icon{
+    color: #fff;
+    background: #7CA936;
+    font-size: 50px;
+    line-height: 90px;
+    width: 120px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 10px 10px 0 0;
+    transform: translateY(-20px);
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .counter .counter-icon:before{
+    content: "";
+    background: #8AC248;
+    width: 120px;
+    height: 90px;
+    border-radius: 10px 10px 0 0;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .counter h3{
+    color: #8AC248;
+    font-size:17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+  }
+  .counter .counter-value{
+    color: #7CA936;
+    font-size: 30px;
+    font-weight: 600;
+    display: block;
+  }
+  
+  /* 2 */
+  .counterP{
+    font-family: 'ProximaNova', sans-serif;
+    margin-bottom:25px;
+    background: #fff;
+    text-align: center;
+    width: 200px;
+    min-height: 250px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  .counterP:before{
+    content: '';
+    background-color: #9575cd;
+    height: 105px;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .counterP .counterP-icon{
+    color: #fff;
+    background: #3d206e;
+    font-size: 50px;
+    line-height: 90px;
+    width: 120px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 10px 10px 0 0;
+    transform: translateY(-20px);
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .counterP .counterP-icon:before{
+    content: "";
+    background: #673ab7;
+    width: 120px;
+    height: 90px;
+    border-radius: 10px 10px 0 0;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .counterP h3{
+    color: #050505;
+    font-size:17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+  }
+  .counterP .counterP-value{
+    color: #673ab7;
+    font-size: 30px;
+    font-weight: 600;
+    display: block;
+  }
+  
+  /* 3 */
+  .counterPink{
+    font-family: 'ProximaNova', sans-serif;
+    margin-bottom:25px;
+    background: #fff;
+    text-align: center;
+    width: 200px;
+    min-height: 250px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  .counterPink:before{
+    content: '';
+    background-color: #ca56da;
+    height: 105px;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .counterPink .counterPink-icon{
+    color: #fff;
+    background: #81237d;
+    font-size: 50px;
+    line-height: 90px;
+    width: 120px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 10px 10px 0 0;
+    transform: translateY(-20px);
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .counterPink .counterPink-icon:before{
+    content: "";
+    background: #a811a8;
+    width: 120px;
+    height: 90px;
+    border-radius: 10px 10px 0 0;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .counterPink h3{
+    color: #333;
+    font-size:17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+  }
+  .counterPink .counterPink-value{
+    color: #7e1194;
+    font-size: 30px;
+    font-weight: 600;
+    display: block;
+  }
+  
+  /* 4 */
+  .counterAmber{
+    font-family: 'ProximaNova', sans-serif;
+    margin-bottom:25px;
+    background: #fff;
+    text-align: center;
+    width: 200px;
+    min-height: 250px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  .counterAmber:before{
+    content: '';
+    background-color: #ffd54f;
+    height: 105px;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .counterAmber .counterAmber-icon{
+    color: #fff;
+    background: #9c7a13;
+    font-size: 50px;
+    line-height: 90px;
+    width: 120px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 10px 10px 0 0;
+    transform: translateY(-20px);
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .counterAmber .counterAmber-icon:before{
+    content: "";
+    background: #ffc107;
+    width: 120px;
+    height: 90px;
+    border-radius: 10px 10px 0 0;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .counterAmber h3{
+    color: #333;
+    font-size:17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+  }
+  .counterAmber .counterAmber-value{
+    color: #ffc107;
+    font-size: 30px;
+    font-weight: 600;
+    display: block;
+  }
+  
+  /* 5 */
+  .counterTeal{
+    font-family: 'ProximaNova', sans-serif;
+    margin-bottom:25px;
+    background: #fff;
+    text-align: center;
+    width: 200px;
+    min-height: 250px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  .counterTeal:before{
+    content: '';
+    background-color: #4db6ac;
+    height: 105px;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .counterTeal .counterTeal-icon{
+    color: #fff;
+    background: #0e685f;
+    font-size: 50px;
+    line-height: 90px;
+    width: 120px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 10px 10px 0 0;
+    transform: translateY(-20px);
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .counterTeal .counterTeal-icon:before{
+    content: "";
+    background: #009688;
+    width: 120px;
+    height: 90px;
+    border-radius: 10px 10px 0 0;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .counterTeal h3{
+    color: #333;
+    font-size:17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+  }
+  .counterTeal .counterTeal-value{
+    color: #009688;
+    font-size: 30px;
+    font-weight: 600;
+    display: block;
+  }
+  
+  
+  /* 6 */
+  .counterRed{
+    font-family: 'ProximaNova', sans-serif;
+    margin-bottom:25px;
+    background: #fff;
+    text-align: center;
+    width: 200px;
+    min-height: 250px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  .counterRed:before{
+    content: '';
+    background-color: #e57373;
+    height: 105px;
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .counterRed .counterRed-icon{
+    color: #fff;
+    background: #942720;
+    font-size: 50px;
+    line-height: 90px;
+    width: 120px;
+    height: 100px;
+    margin: 0 auto 10px;
+    border-radius: 10px 10px 0 0;
+    transform: translateY(-20px);
+    position: relative;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .counterRed .counterRed-icon:before{
+    content: "";
+    background: #f44336;
+    width: 120px;
+    height: 90px;
+    border-radius: 10px 10px 0 0;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
+  }
+  .counterRed h3{
+    color: #333;
+    font-size:17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 5px 0;
+  }
+  .counterRed .counterRed-value{
+    color: #f44336;
+    font-size: 30px;
+    font-weight: 600;
+    display: block;
+  }
+
+  .parent:hover .child{
+    transform: rotate(360deg);
+    transition: all 0.3s ease;
+}

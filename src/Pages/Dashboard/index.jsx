@@ -21,6 +21,7 @@ import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css";
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
+import "./cardsStyles.css";
 import {
   AreaChart,
   Area,
@@ -225,355 +226,130 @@ function Dashboard() {
           display: "flex",
           alignItems: "center",
           flexWrap: "wrap",
-          p: 2,
+          pt: 4,
+          pb: 4,
           pl: 0,
-          gap: 1,
         }}
       >
-        <Box
-          sx={{
-            backgroundImage:
-              "linear-gradient(135deg, #2196f3 30%, #ff80ab, #e91e63)",
-            p: 1.5,
-            py: 3,
-            mr: 1,
-            borderRadius: "8px",
-            width: { xs: "180px" },
-            minHeight: "260px",
-            cursor: "pointer",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: 2,
-            }}
-          >
-            <LibraryAddIcon
-              sx={{
-                height: "60px",
-                width: "60px",
-                color: "white",
-                p: 1.3,
-                borderRadius: "50%",
-                background: "linear-gradient(135deg, #2196f3 50%,#e91e63 50%)",
-              }}
-            />
-            <Typography
-              sx={{ fontSize: "20px", fontWeight: "700", color: "white" }}
-            >
-              46
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "17px",
-                fontWeight: "600",
-                color: "white",
-              }}
-            >
-              Donations
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "17px",
-                fontWeight: "600",
-                color: "white",
-                textAlign: "center",
-              }}
-            >
-              This is transactions status
-            </Typography>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            backgroundImage: "linear-gradient(130deg, #1b5e20, #66bb6a)",
-            p: 1.5,
-            py: 3,
-            mr: 1,
-            borderRadius: "8px",
-            width: { xs: "180px" },
-            minHeight: "260px",
-            cursor: "pointer",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: 2,
-            }}
-          >
-            <BorderColorIcon
-              sx={{
-                height: "60px",
-                width: "60px",
-                color: "white",
-                p: 1.3,
-                backgroundImage:
-                  "linear-gradient(130deg, #66bb6a 50%, #1b5e20 50%)",
-                borderRadius: "50%",
-              }}
-            />
-            <Typography
-              sx={{ fontSize: "20px", fontWeight: "700", color: "white" }}
-            >
-              35
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "17px",
-                fontWeight: "600",
-                color: "white",
-              }}
-            >
-              Orders
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "17px",
-                fontWeight: "600",
-                color: "white",
-                textAlign: "center",
-              }}
-            >
-              This is orders status
-            </Typography>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            backgroundImage:
-              "linear-gradient(130deg, #ff8a80, #f44336, #b71c1c)",
-            p: 1.5,
-            py: 3,
-            mr: 1,
-            borderRadius: "8px",
-            width: { xs: "180px" },
-            minHeight: "260px",
-            cursor: "pointer",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: 2,
-            }}
-          >
-            <AssignmentIndIcon
-              sx={{
-                height: "60px",
-                width: "60px",
-                color: "white",
-                p: 1.3,
-                backgroundImage:
-                  "linear-gradient(130deg, #b71c1c 50%, #ff8a80 50%)",
-                borderRadius: "50%",
-              }}
-            />
-            <Typography
-              sx={{ fontSize: "20px", fontWeight: "700", color: "white" }}
-            >
-              65
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "17px",
-                fontWeight: "600",
-                color: "white",
-              }}
-            >
-              Clients
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "17px",
-                fontWeight: "600",
-                color: "white",
-                textAlign: "center",
-              }}
-            >
-              This is clients status
-            </Typography>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            backgroundImage: "linear-gradient(130deg, #e91e63, #2196f3)",
-            p: 1.5,
-            py: 3,
-            mr: 1,
-            borderRadius: "8px",
-            width: { xs: "180px" },
-            minHeight: "260px",
-            cursor: "pointer",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: 2,
-            }}
-          >
-            <PictureAsPdfIcon
-              sx={{
-                height: "60px",
-                width: "60px",
-                color: "white",
-                p: 1.3,
-                backgroundImage:
-                  "linear-gradient(130deg, #2196f3 50%, #e91e63 50%)",
-                borderRadius: "50%",
-              }}
-            />
-            <Typography
-              sx={{ fontSize: "20px", fontWeight: "700", color: "white" }}
-            >
-              23
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "17px",
-                fontWeight: "600",
-                color: "white",
-              }}
-            >
-              PDF
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "17px",
-                fontWeight: "600",
-                color: "white",
-                textAlign: "center",
-              }}
-            >
-              This is the Pdf status
-            </Typography>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            backgroundImage: "linear-gradient(120deg, #ff9800, #ffeb3b)",
-            p: 1.5,
-            py: 3,
-            mr: 1,
-            borderRadius: "8px",
-            width: { xs: "180px" },
-            minHeight: "260px",
-            cursor: "pointer",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: 2,
-            }}
-          >
-            <EmailIcon
-              sx={{
-                height: "60px",
-                width: "60px",
-                color: "white",
-                p: 1.3,
-                backgroundImage:
-                  "linear-gradient(120deg, #ffeb3b 50%, #ff9800 50%)",
-                borderRadius: "50%",
-              }}
-            />
-            <Typography
-              sx={{ fontSize: "20px", fontWeight: "700", color: "white" }}
-            >
-              43
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "17px",
-                fontWeight: "600",
-                color: "white",
-              }}
-            >
-              Emails
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "17px",
-                fontWeight: "600",
-                color: "white",
-                textAlign: "center",
-              }}
-            >
-              This is emails status
-            </Typography>
-          </Box>
-        </Box>
-        <Box
-          sx={{
-            backgroundImage:
-              "linear-gradient(130deg, #03001e, #7303c0, #ec38bc)",
-            p: 1.5,
-            py: 3,
-            mr: 1,
-            borderRadius: "8px",
-            width: { xs: "180px" },
-            minHeight: "260px",
-            cursor: "pointer",
-          }}
-        >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              gap: 2,
-            }}
-          >
-            <CurrencyExchangeIcon
-              sx={{
-                height: "60px",
-                width: "60px",
-                color: "white",
-                p: 1.3,
-                backgroundImage:
-                  "linear-gradient(130deg, #ec38bc 50%, #7303c0 50%)",
-                borderRadius: "50%",
-              }}
-            />
-            <Typography
-              sx={{ fontSize: "20px", fontWeight: "700", color: "white" }}
-            >
-              46
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "17px",
-                fontWeight: "600",
-                color: "white",
-              }}
-            >
-              Revenue
-            </Typography>
-            <Typography
-              sx={{
-                fontSize: "17px",
-                fontWeight: "600",
-                color: "white",
-                textAlign: "center",
-              }}
-            >
-              This is revenue status
-            </Typography>
-          </Box>
-        </Box>
+        <div className="col-md-3 col-sm-6">
+          <div className="counter parent">
+            <div className="counter-icon">
+              <LibraryAddIcon
+                className="child"
+                sx={{
+                  height: "40px",
+                  width: "50px",
+                  color: "white",
+                }}
+              />
+            </div>
+            <div className="counter-content">
+              <h3>46</h3>
+              <span className="counter-value">Donations</span>
+              <Typography sx={{}}>This is the donations status</Typography>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-md-3 col-sm-6">
+          <div className="counterP parent">
+            <div className="counterP-icon">
+              <BorderColorIcon
+                className="child"
+                sx={{
+                  height: "40px",
+                  width: "50px",
+                  color: "white",
+                }}
+              />
+            </div>
+            <div className="counterP-content">
+              <h3>35</h3>
+              <span className="counterP-value">Orders</span>
+              <Typography sx={{}}>This is the orders status</Typography>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-md-3 col-sm-6">
+          <div className="counterPink parent">
+            <div className="counterPink-icon">
+              <AssignmentIndIcon
+                className="child"
+                sx={{
+                  height: "40px",
+                  width: "50px",
+                  color: "white",
+                }}
+              />
+            </div>
+            <div className="counterPink-content">
+              <h3>54</h3>
+              <span className="counterPink-value">Clients</span>
+              <Typography sx={{}}>This is the clients status</Typography>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-md-3 col-sm-6">
+          <div className="counterAmber parent">
+            <div className="counterAmber-icon">
+              <PictureAsPdfIcon
+                className="child"
+                sx={{
+                  height: "40px",
+                  width: "50px",
+                  color: "white",
+                }}
+              />
+            </div>
+            <div className="counterAmber-content">
+              <h3>23</h3>
+              <span className="counterAmber-value">PDF</span>
+              <Typography sx={{}}>This is the pdf status</Typography>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-md-3 col-sm-6">
+          <div className="counterTeal parent">
+            <div className="counterTeal-icon">
+              <EmailIcon
+                className="child"
+                sx={{
+                  height: "40px",
+                  width: "50px",
+                  color: "white",
+                }}
+              />
+            </div>
+            <div className="counterTeal-content">
+              <h3>67</h3>
+              <span className="counterTeal-value">Emails</span>
+              <Typography sx={{}}>This is the emails status</Typography>
+            </div>
+          </div>
+        </div>
+
+        <div className="col-md-3 col-sm-6">
+          <div className="counterRed parent">
+            <div className="counterRed-icon">
+              <CurrencyExchangeIcon
+                className="child"
+                sx={{
+                  height: "40px",
+                  width: "50px",
+                  color: "white",
+                }}
+              />
+            </div>
+            <div className="counterRed-content">
+              <h3>36</h3>
+              <span className="counterRed-value">Revenue</span>
+              <Typography sx={{}}>This is the revenue status</Typography>
+            </div>
+          </div>
+        </div>
       </Box>
       {/* tables */}
       <Box
