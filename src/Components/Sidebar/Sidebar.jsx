@@ -55,7 +55,7 @@ function Sidebar() {
                 justifyContent: "center",
                 alignItems: "center",
                 pt: 2,
-                px: { xs: 1.5, sm: 4, md: 6.5 },
+                px: { xs: 1.5, sm: 4, md: 2 },
                 cursor: "pointer",
               }}
             >
@@ -75,7 +75,6 @@ function Sidebar() {
                   fontSize: "1.125rem",
                   display: { xs: "none", md: "block" },
                   fontWeight: "600",
-                  textAlign: "center",
                 }}
               >
                 Demo Agency

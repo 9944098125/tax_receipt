@@ -79,7 +79,7 @@ function Transactions() {
         </select>
       </Box>
 
-      <Box sx={{ p: 0, mt: 4 }}>
+      <Box sx={{ p: 0, mt: 0 }}>
         <Box sx={{ width: "100%" }}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
             <Tabs
@@ -88,17 +88,26 @@ function Transactions() {
               aria-label="basic tabs example"
             >
               <Tab
-                sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
+                sx={{
+                  fontSize: { xs: "8px", md: "16px" },
+                  fontWeight: "700",
+                }}
                 label="Customers"
                 {...a11yProps(0)}
               />
               <Tab
-                sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
+                sx={{
+                  fontSize: { xs: "8px", md: "16px" },
+                  fontWeight: "700",
+                }}
                 label="pdf Generated"
                 {...a11yProps(1)}
               />
               <Tab
-                sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
+                sx={{
+                  fontSize: { xs: "8px", md: "16px" },
+                  fontWeight: "700",
+                }}
                 label="Sent Mail"
                 {...a11yProps(2)}
               />

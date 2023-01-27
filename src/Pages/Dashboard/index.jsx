@@ -429,7 +429,7 @@ function Dashboard() {
                 color: "white",
                 p: 1.3,
                 backgroundImage:
-                  "linear-gradient(130deg, #b29b27 50%, #1565C0 50%)",
+                  "linear-gradient(130deg, #2196f3 50%, #e91e63 50%)",
                 borderRadius: "50%",
               }}
             />
@@ -544,7 +544,7 @@ function Dashboard() {
                 color: "white",
                 p: 1.3,
                 backgroundImage:
-                  "linear-gradient(130deg, #ec38bc 50%, #8bc34a 50%)",
+                  "linear-gradient(130deg, #ec38bc 50%, #7303c0 50%)",
                 borderRadius: "50%",
               }}
             />
@@ -591,12 +591,12 @@ function Dashboard() {
             <TableHead>
               <TableRow>
                 <TableCell>
-                  <Typography sx={{ color: "grey", fontWeight: "700" }}>
+                  <Typography sx={{ color: "#6b778c", fontWeight: "700" }}>
                     Client
                   </Typography>
                 </TableCell>
                 <TableCell align="right">
-                  <Typography sx={{ color: "grey", fontWeight: "700" }}>
+                  <Typography sx={{ color: "#6b778c", fontWeight: "700" }}>
                     Donations
                   </Typography>
                 </TableCell>
@@ -609,14 +609,18 @@ function Dashboard() {
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
                   <TableCell
-                    sx={{ color: "#00254d", fontWeight: "500" }}
+                    sx={{ color: "#00254d", fontWeight: "600" }}
                     component="th"
                     scope="row"
                   >
-                    {row.name}
+                    <Typography sx={{ color: "#00254d", fontSize: "14.5px" }}>
+                      {row.name}
+                    </Typography>
                   </TableCell>
-                  <TableCell sx={{ color: "#00254d" }} align="right">
-                    {row.amount}
+                  <TableCell align="right">
+                    <Typography sx={{ color: "#00254d", fontSize: "14.5px" }}>
+                      {row.amount}
+                    </Typography>
                   </TableCell>
                 </TableRow>
               ))}
@@ -628,12 +632,12 @@ function Dashboard() {
             <TableHead>
               <TableRow>
                 <TableCell>
-                  <Typography sx={{ color: "grey", fontWeight: "700" }}>
+                  <Typography sx={{ color: "#6b778c", fontWeight: "700" }}>
                     Clients
                   </Typography>
                 </TableCell>
                 <TableCell align="right">
-                  <Typography sx={{ color: "grey", fontWeight: "700" }}>
+                  <Typography sx={{ color: "#6b778c", fontWeight: "700" }}>
                     Donations
                   </Typography>
                 </TableCell>
@@ -645,15 +649,15 @@ function Dashboard() {
                   key={idx}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
-                  <TableCell
-                    sx={{ color: "#00254d", fontWeight: "500" }}
-                    component="th"
-                    scope="row"
-                  >
-                    {row.name}
+                  <TableCell component="th" scope="row">
+                    <Typography sx={{ color: "#00254d", fontSize: "14.5px" }}>
+                      {row.name}
+                    </Typography>
                   </TableCell>
-                  <TableCell sx={{ color: "#00254d" }} align="right">
-                    {row.amount}
+                  <TableCell align="right">
+                    <Typography sx={{ color: "#00254d", fontSize: "14.5px" }}>
+                      {row.amount}
+                    </Typography>
                   </TableCell>
                 </TableRow>
               ))}

@@ -83,17 +83,26 @@ function ClientManagement() {
               aria-label="basic tabs example"
             >
               <Tab
-                sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
+                sx={{
+                  fontSize: { xs: "8px", md: "16px" },
+                  fontWeight: "700",
+                }}
                 label="Pending"
                 {...a11yProps(0)}
               />
               <Tab
-                sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
+                sx={{
+                  fontSize: { xs: "8px", md: "16px" },
+                  fontWeight: "700",
+                }}
                 label="Active"
                 {...a11yProps(1)}
               />
               <Tab
-                sx={{ fontSize: { xs: "8px", md: "16px" }, fontWeight: "600" }}
+                sx={{
+                  fontSize: { xs: "8px", md: "16px" },
+                  fontWeight: "700",
+                }}
                 label="In Active"
                 {...a11yProps(2)}
               />

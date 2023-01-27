@@ -303,13 +303,17 @@
   display:none !important
 }
 /* for development */
-.css-f2n1q9-MuiButtonBase-root-MuiTab-root.Mui-selected {
-  color: rgb(112, 103, 103) !important;
-}
+ /* .css-f2n1q9-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: #6b778c !important;
+} */
 
 /* for deployed */
-.css-4qc760.Mui-selected {
-  color: rgb(112, 103, 103) !important;
+/* .css-4qc760.Mui-selected {
+  color: #6b778c !important;
+}  */
+
+.css-1fa7abl-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: #6b778c !important;
 }
 
 
