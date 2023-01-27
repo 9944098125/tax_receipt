@@ -344,7 +344,7 @@ export function ActiveTable() {
         }}
       >
         <DataGrid
-          style={{ color: "black" }}
+          style={{ color: "#00254d" }}
           rows={activeRows}
           columns={clientColumns.concat(actionColumn)}
           pageSize={5}
@@ -388,7 +388,7 @@ export function InactiveTable() {
         }}
       >
         <DataGrid
-          style={{ color: "black" }}
+          style={{ color: "#00254d" }}
           rows={inactiveRows}
           columns={clientColumns.concat(actionColumn)}
           pageSize={5}
