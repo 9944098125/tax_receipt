@@ -224,130 +224,132 @@ function Dashboard() {
       <Box
         sx={{
           display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
           alignItems: "center",
           flexWrap: "wrap",
           pt: 4,
           pb: 4,
           pl: 0,
+          gap: { xs: "20px", sm: "30px", md: "25px" },
         }}
       >
-        <div className="col-md-3 col-sm-6">
-          <div className="counter parent">
-            <div className="counter-icon">
-              <LibraryAddIcon
-                className="child"
-                sx={{
-                  height: "40px",
-                  width: "50px",
-                  color: "white",
-                }}
-              />
-            </div>
-            <div className="counter-content">
-              <h3>46</h3>
-              <span className="counter-value">Donations</span>
-              <Typography sx={{}}>This is the donations status</Typography>
-            </div>
+        <div className="counter parent">
+          <div className="counter-icon">
+            <LibraryAddIcon
+              className="child"
+              sx={{
+                height: "40px",
+                width: "50px",
+                color: "white",
+              }}
+            />
+          </div>
+          <div className="counter-content">
+            <h3>46</h3>
+            <span className="counter-value">Donations</span>
+            <Typography sx={{ fontSize: "12px" }}>
+              This is the donations status
+            </Typography>
           </div>
         </div>
 
-        <div className="col-md-3 col-sm-6">
-          <div className="counterP parent">
-            <div className="counterP-icon">
-              <BorderColorIcon
-                className="child"
-                sx={{
-                  height: "40px",
-                  width: "50px",
-                  color: "white",
-                }}
-              />
-            </div>
-            <div className="counterP-content">
-              <h3>35</h3>
-              <span className="counterP-value">Orders</span>
-              <Typography sx={{}}>This is the orders status</Typography>
-            </div>
+        <div className="counterP parent">
+          <div className="counterP-icon">
+            <BorderColorIcon
+              className="child"
+              sx={{
+                height: "40px",
+                width: "50px",
+                color: "white",
+              }}
+            />
+          </div>
+          <div className="counterP-content">
+            <h3>35</h3>
+            <span className="counterP-value">Orders</span>
+            <Typography sx={{ fontSize: "12px" }}>
+              This is the orders status
+            </Typography>
           </div>
         </div>
 
-        <div className="col-md-3 col-sm-6">
-          <div className="counterPink parent">
-            <div className="counterPink-icon">
-              <AssignmentIndIcon
-                className="child"
-                sx={{
-                  height: "40px",
-                  width: "50px",
-                  color: "white",
-                }}
-              />
-            </div>
-            <div className="counterPink-content">
-              <h3>54</h3>
-              <span className="counterPink-value">Clients</span>
-              <Typography sx={{}}>This is the clients status</Typography>
-            </div>
+        <div className="counterPink parent">
+          <div className="counterPink-icon">
+            <AssignmentIndIcon
+              className="child"
+              sx={{
+                height: "40px",
+                width: "50px",
+                color: "white",
+              }}
+            />
+          </div>
+          <div className="counterPink-content">
+            <h3>54</h3>
+            <span className="counterPink-value">Clients</span>
+            <Typography sx={{ fontSize: "12px" }}>
+              This is the clients status
+            </Typography>
           </div>
         </div>
 
-        <div className="col-md-3 col-sm-6">
-          <div className="counterAmber parent">
-            <div className="counterAmber-icon">
-              <PictureAsPdfIcon
-                className="child"
-                sx={{
-                  height: "40px",
-                  width: "50px",
-                  color: "white",
-                }}
-              />
-            </div>
-            <div className="counterAmber-content">
-              <h3>23</h3>
-              <span className="counterAmber-value">PDF</span>
-              <Typography sx={{}}>This is the pdf status</Typography>
-            </div>
+        <div className="counterAmber parent">
+          <div className="counterAmber-icon">
+            <PictureAsPdfIcon
+              className="child"
+              sx={{
+                height: "40px",
+                width: "50px",
+                color: "white",
+              }}
+            />
+          </div>
+          <div className="counterAmber-content">
+            <h3>23</h3>
+            <span className="counterAmber-value">PDF</span>
+            <Typography sx={{ fontSize: "12px" }}>
+              This is the pdf status
+            </Typography>
           </div>
         </div>
 
-        <div className="col-md-3 col-sm-6">
-          <div className="counterTeal parent">
-            <div className="counterTeal-icon">
-              <EmailIcon
-                className="child"
-                sx={{
-                  height: "40px",
-                  width: "50px",
-                  color: "white",
-                }}
-              />
-            </div>
-            <div className="counterTeal-content">
-              <h3>67</h3>
-              <span className="counterTeal-value">Emails</span>
-              <Typography sx={{}}>This is the emails status</Typography>
-            </div>
+        <div className="counterTeal parent">
+          <div className="counterTeal-icon">
+            <EmailIcon
+              className="child"
+              sx={{
+                height: "40px",
+                width: "50px",
+                color: "white",
+              }}
+            />
+          </div>
+          <div className="counterTeal-content">
+            <h3>67</h3>
+            <span className="counterTeal-value">Emails</span>
+            <Typography sx={{ fontSize: "12px" }}>
+              This is the emails status
+            </Typography>
           </div>
         </div>
 
-        <div className="col-md-3 col-sm-6">
-          <div className="counterRed parent">
-            <div className="counterRed-icon">
-              <CurrencyExchangeIcon
-                className="child"
-                sx={{
-                  height: "40px",
-                  width: "50px",
-                  color: "white",
-                }}
-              />
-            </div>
-            <div className="counterRed-content">
-              <h3>36</h3>
-              <span className="counterRed-value">Revenue</span>
-              <Typography sx={{}}>This is the revenue status</Typography>
-            </div>
+        <div className="counterRed parent">
+          <div className="counterRed-icon">
+            <CurrencyExchangeIcon
+              className="child"
+              sx={{
+                height: "40px",
+                width: "50px",
+                color: "white",
+              }}
+            />
+          </div>
+          <div className="counterRed-content">
+            <h3>36</h3>
+            <span className="counterRed-value">Revenue</span>
+            <Typography sx={{ fontSize: "12px" }}>
+              This is the revenue status
+            </Typography>
           </div>
         </div>
       </Box>

@@ -4,8 +4,8 @@
     margin-bottom:25px;
     background: #fff;
     text-align: center;
-    width: 200px;
-    min-height: 250px;
+    width: 180px;
+    min-height: 200px;
     padding: 10px 15px;
     border-radius: 30px;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
@@ -26,7 +26,7 @@
     background: #7CA936;
     font-size: 50px;
     line-height: 90px;
-    width: 120px;
+    width: 100px;
     height: 100px;
     margin: 0 auto 10px;
     border-radius: 10px 10px 0 0;
@@ -37,7 +37,7 @@
   .counter .counter-icon:before{
     content: "";
     background: #8AC248;
-    width: 120px;
+    width: 100px;
     height: 90px;
     border-radius: 10px 10px 0 0;
     transform: translateX(-50%);
@@ -48,7 +48,7 @@
     clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
   }
   .counter h3{
-    color: #2b2828;
+    color: #6b778c;
     font-size:17px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -57,7 +57,7 @@
   }
   .counter .counter-value{
     color: #7CA936;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     display: block;
   }
@@ -68,8 +68,8 @@
     margin-bottom:25px;
     background: #fff;
     text-align: center;
-    width: 200px;
-    min-height: 250px;
+    width: 180px;
+    min-height: 200px;
     padding: 10px 15px;
     border-radius: 30px;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
@@ -90,7 +90,7 @@
     background: #3d206e;
     font-size: 50px;
     line-height: 90px;
-    width: 120px;
+    width: 100px;
     height: 100px;
     margin: 0 auto 10px;
     border-radius: 10px 10px 0 0;
@@ -101,7 +101,7 @@
   .counterP .counterP-icon:before{
     content: "";
     background: #673ab7;
-    width: 120px;
+    width: 100px;
     height: 90px;
     border-radius: 10px 10px 0 0;
     transform: translateX(-50%);
@@ -112,7 +112,7 @@
     clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
   }
   .counterP h3{
-    color: #050505;
+    color: #6b778c;
     font-size:17px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -121,7 +121,7 @@
   }
   .counterP .counterP-value{
     color: #673ab7;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     display: block;
   }
@@ -132,8 +132,8 @@
     margin-bottom:25px;
     background: #fff;
     text-align: center;
-    width: 200px;
-    min-height: 250px;
+    width: 180px;
+    min-height: 200px;
     padding: 10px 15px;
     border-radius: 30px;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
@@ -154,7 +154,7 @@
     background: #81237d;
     font-size: 50px;
     line-height: 90px;
-    width: 120px;
+    width: 100px;
     height: 100px;
     margin: 0 auto 10px;
     border-radius: 10px 10px 0 0;
@@ -165,7 +165,7 @@
   .counterPink .counterPink-icon:before{
     content: "";
     background: #a811a8;
-    width: 120px;
+    width: 100px;
     height: 90px;
     border-radius: 10px 10px 0 0;
     transform: translateX(-50%);
@@ -176,7 +176,7 @@
     clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
   }
   .counterPink h3{
-    color: #333;
+    color: #6b778c;
     font-size:17px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -185,7 +185,7 @@
   }
   .counterPink .counterPink-value{
     color: #7e1194;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     display: block;
   }
@@ -196,8 +196,8 @@
     margin-bottom:25px;
     background: #fff;
     text-align: center;
-    width: 200px;
-    min-height: 250px;
+    width: 180px;
+    min-height: 200px;
     padding: 10px 15px;
     border-radius: 30px;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
@@ -218,7 +218,7 @@
     background: #9c7a13;
     font-size: 50px;
     line-height: 90px;
-    width: 120px;
+    width: 100px;
     height: 100px;
     margin: 0 auto 10px;
     border-radius: 10px 10px 0 0;
@@ -229,7 +229,7 @@
   .counterAmber .counterAmber-icon:before{
     content: "";
     background: #ffc107;
-    width: 120px;
+    width: 100px;
     height: 90px;
     border-radius: 10px 10px 0 0;
     transform: translateX(-50%);
@@ -240,7 +240,7 @@
     clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
   }
   .counterAmber h3{
-    color: #333;
+    color: #6b778c;
     font-size:17px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -249,7 +249,7 @@
   }
   .counterAmber .counterAmber-value{
     color: #ffc107;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     display: block;
   }
@@ -260,8 +260,8 @@
     margin-bottom:25px;
     background: #fff;
     text-align: center;
-    width: 200px;
-    min-height: 250px;
+    width: 180px;
+    min-height: 200px;
     padding: 10px 15px;
     border-radius: 30px;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
@@ -282,7 +282,7 @@
     background: #0e685f;
     font-size: 50px;
     line-height: 90px;
-    width: 120px;
+    width: 100px;
     height: 100px;
     margin: 0 auto 10px;
     border-radius: 10px 10px 0 0;
@@ -293,7 +293,7 @@
   .counterTeal .counterTeal-icon:before{
     content: "";
     background: #009688;
-    width: 120px;
+    width: 100px;
     height: 90px;
     border-radius: 10px 10px 0 0;
     transform: translateX(-50%);
@@ -304,7 +304,7 @@
     clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
   }
   .counterTeal h3{
-    color: #333;
+    color: #6b778c;
     font-size:17px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -313,7 +313,7 @@
   }
   .counterTeal .counterTeal-value{
     color: #009688;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     display: block;
   }
@@ -325,8 +325,8 @@
     margin-bottom:25px;
     background: #fff;
     text-align: center;
-    width: 200px;
-    min-height: 250px;
+    width: 180px;
+    min-height: 200px;
     padding: 10px 15px;
     border-radius: 30px;
     box-shadow: 0 8px 5px rgba(0, 0, 0, 0.2);
@@ -347,7 +347,7 @@
     background: #942720;
     font-size: 50px;
     line-height: 90px;
-    width: 120px;
+    width: 100px;
     height: 100px;
     margin: 0 auto 10px;
     border-radius: 10px 10px 0 0;
@@ -358,7 +358,7 @@
   .counterRed .counterRed-icon:before{
     content: "";
     background: #f44336;
-    width: 120px;
+    width: 100px;
     height: 90px;
     border-radius: 10px 10px 0 0;
     transform: translateX(-50%);
@@ -369,7 +369,7 @@
     clip-path: polygon(0% 0%, 100% 0, 100% 70%, 50% 100%, 0 70%);
   }
   .counterRed h3{
-    color: #333;
+    color: #6b778c;
     font-size:17px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -378,7 +378,7 @@
   }
   .counterRed .counterRed-value{
     color: #f44336;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     display: block;
   }
