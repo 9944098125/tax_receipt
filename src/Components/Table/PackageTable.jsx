@@ -18,6 +18,7 @@ import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { TableHead, Typography } from "@mui/material";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
+import EditPackageModal from "../EditModals/EditPackageModal";
 
 function createData(sno, name, customerLimit, pdfLimit, emailLimit, price) {
   return {
@@ -116,6 +117,7 @@ TablePaginationActions.propTypes = {
 function PackageTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
+  const [show, setShow] = React.useState(false);
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
@@ -128,6 +130,14 @@ function PackageTable() {
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
+  };
+
+  const showModal = () => {
+    setShow(true);
+  };
+
+  const closeModal = () => {
+    setShow(false);
   };
 
   return (
@@ -214,6 +224,7 @@ function PackageTable() {
                 <TableCell align="left">{row.emailLimit}</TableCell>
                 <TableCell component="th" scope="row">
                   <ModeEditIcon
+                    onClick={showModal}
                     sx={{
                       color: "primary.dark",
                       fontSize: "17px",
@@ -253,6 +264,7 @@ function PackageTable() {
         onRowsPerPageChange={handleChangeRowsPerPage}
         ActionsComponent={TablePaginationActions}
       />
+      {show && <EditPackageModal show={show} close={closeModal} />}
     </Fragment>
   );
 }

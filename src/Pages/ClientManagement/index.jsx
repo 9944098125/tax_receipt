@@ -112,10 +112,10 @@ function ClientManagement() {
             <PendingTable />
           </TabPanel>
           <TabPanel value={value} index={1}>
-            <ActiveTable status="Active" />
+            <ActiveTable />
           </TabPanel>
           <TabPanel value={value} index={2}>
-            <InactiveTable status="Inactive" />
+            <InactiveTable />
           </TabPanel>
         </Box>
       </Box>

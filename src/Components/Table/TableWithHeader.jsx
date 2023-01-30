@@ -4,6 +4,7 @@ import { DataGrid } from "@mui/x-data-grid";
 import { clientColumns } from "../../DatatableSource";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ModeEditOutlineIcon from "@mui/icons-material/ModeEditOutline";
+import EditClientModal from "../EditModals/EditClientModal";
 
 function createData(
   clientId,
@@ -29,248 +30,191 @@ function createData(
   };
 }
 
-const pendingRows = [
-  createData(
-    123,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    2342,
-    "SomeOne",
-    "Some company",
-    "someCompany@gmail.com",
-    2342342342,
-    "Pending",
-    45000,
-    "15/12/21",
-    "12/12/22"
-  ),
-  createData(
-    1245,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    1834,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    2378,
-    "SomeOne",
-    "Some company",
-    "someCompany@gmail.com",
-    2342342342,
-    "Pending",
-    45000,
-    "15/12/21",
-    "12/12/22"
-  ),
-  createData(
-    1205,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    1120,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    2560,
-    "SomeOne",
-    "Some company",
-    "someCompany@gmail.com",
-    2342342342,
-    "Pending",
-    45000,
-    "15/12/21",
-    "12/12/22"
-  ),
-  createData(
-    1340,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    11206,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    242300,
-    "SomeOne",
-    "Some company",
-    "someCompany@gmail.com",
-    2342342342,
-    "Pending",
-    45000,
-    "15/12/21",
-    "12/12/22"
-  ),
-  createData(
-    56732,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    134743,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    22342,
-    "SomeOne",
-    "Some company",
-    "someCompany@gmail.com",
-    2342342342,
-    "Pending",
-    45000,
-    "15/12/21",
-    "12/12/22"
-  ),
-  createData(
-    23486,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Pending",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-];
-
-const activeRows = [
-  createData(
-    123,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Active",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    2342,
-    "SomeOne",
-    "Some company",
-    "someCompany@gmail.com",
-    2342342342,
-    "Active",
-    45000,
-    "15/12/21",
-    "12/12/22"
-  ),
-  createData(
-    1245,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Active",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-];
-
-const inactiveRows = [
-  createData(
-    123,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Inactive",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-  createData(
-    2342,
-    "SomeOne",
-    "Some company",
-    "someCompany@gmail.com",
-    2342342342,
-    "Inactive",
-    45000,
-    "15/12/21",
-    "12/12/22"
-  ),
-  createData(
-    1245,
-    "Abhik",
-    "Teknotrait",
-    "tekis@org.com",
-    934534534533,
-    "Inactive",
-    35000,
-    "12/05/22",
-    "12/12/22"
-  ),
-];
-
 export function PendingTable() {
-  const deleteRow = () => {};
+  const pendingRows = [
+    createData(
+      123,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Pending",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+    createData(
+      2342,
+      "SomeOne",
+      "Some company",
+      "someCompany@gmail.com",
+      2342342342,
+      "Pending",
+      45000,
+      "15/12/21",
+      "12/12/22"
+    ),
+    createData(
+      1245,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Pending",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+    createData(
+      1834,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Pending",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+    createData(
+      2378,
+      "SomeOne",
+      "Some company",
+      "someCompany@gmail.com",
+      2342342342,
+      "Pending",
+      45000,
+      "15/12/21",
+      "12/12/22"
+    ),
+    createData(
+      1205,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Pending",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+    createData(
+      1120,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Pending",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+    createData(
+      2560,
+      "SomeOne",
+      "Some company",
+      "someCompany@gmail.com",
+      2342342342,
+      "Pending",
+      45000,
+      "15/12/21",
+      "12/12/22"
+    ),
+    createData(
+      1340,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Pending",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+    createData(
+      11206,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Pending",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+    createData(
+      242300,
+      "SomeOne",
+      "Some company",
+      "someCompany@gmail.com",
+      2342342342,
+      "Pending",
+      45000,
+      "15/12/21",
+      "12/12/22"
+    ),
+    createData(
+      56732,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Pending",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+    createData(
+      134743,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Pending",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+    createData(
+      22342,
+      "SomeOne",
+      "Some company",
+      "someCompany@gmail.com",
+      2342342342,
+      "Pending",
+      45000,
+      "15/12/21",
+      "12/12/22"
+    ),
+    createData(
+      23486,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Pending",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+  ];
+
+  const [data, setData] = React.useState(pendingRows);
+
+  const deleteRow = (id) => {
+    setData(data.filter((row) => row.clientId !== id));
+  };
+
+  const [show, setShow] = React.useState(false);
+
+  const showModal = () => {
+    setShow(true);
+  };
+
+  const closeModal = () => {
+    setShow(false);
+  };
+
   const actionColumn = [
     {
       field: "action",
@@ -279,7 +223,10 @@ export function PendingTable() {
       renderCell: (params) => {
         return (
           <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <ModeEditOutlineIcon sx={{ cursor: "pointer" }} />
+            <ModeEditOutlineIcon
+              onClick={showModal}
+              sx={{ cursor: "pointer" }}
+            />
             <DeleteIcon
               onClick={() => deleteRow(params.row.clientId)}
               sx={{ color: "red", cursor: "pointer" }}
@@ -301,7 +248,7 @@ export function PendingTable() {
       >
         <DataGrid
           style={{ color: "#00254d" }}
-          rows={pendingRows}
+          rows={data}
           columns={clientColumns.concat(actionColumn)}
           pageSize={5}
           rowsPerPageOptions={[5]}
@@ -309,12 +256,63 @@ export function PendingTable() {
           getRowId={(row) => row.clientId}
         />
       </div>
+      {show && <EditClientModal show={show} close={closeModal} />}
     </Fragment>
   );
 }
 
 export function ActiveTable() {
-  const deleteRow = () => {};
+  const activeRows = [
+    createData(
+      123,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Active",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+    createData(
+      2342,
+      "SomeOne",
+      "Some company",
+      "someCompany@gmail.com",
+      2342342342,
+      "Active",
+      45000,
+      "15/12/21",
+      "12/12/22"
+    ),
+    createData(
+      1245,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Active",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+  ];
+  const [data, setData] = React.useState(activeRows);
+
+  const deleteRow = (id) => {
+    setData(data.filter((row) => row.clientId !== id));
+  };
+
+  const [show, setShow] = React.useState(false);
+
+  const showModal = () => {
+    setShow(true);
+  };
+
+  const closeModal = () => {
+    setShow(false);
+  };
+
   const actionColumn = [
     {
       field: "action",
@@ -323,7 +321,10 @@ export function ActiveTable() {
       renderCell: (params) => {
         return (
           <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <ModeEditOutlineIcon sx={{ cursor: "pointer" }} />
+            <ModeEditOutlineIcon
+              onClick={showModal}
+              sx={{ cursor: "pointer" }}
+            />
             <DeleteIcon
               onClick={() => deleteRow(params.row.clientId)}
               sx={{ color: "red", cursor: "pointer" }}
@@ -345,7 +346,7 @@ export function ActiveTable() {
       >
         <DataGrid
           style={{ color: "#00254d" }}
-          rows={activeRows}
+          rows={data}
           columns={clientColumns.concat(actionColumn)}
           pageSize={5}
           rowsPerPageOptions={[5]}
@@ -353,12 +354,63 @@ export function ActiveTable() {
           getRowId={(row) => row.clientId}
         />
       </div>
+      {show && <EditClientModal show={show} close={closeModal} />}
     </Fragment>
   );
 }
 
 export function InactiveTable() {
-  const deleteRow = () => {};
+  const inactiveRows = [
+    createData(
+      123,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Inactive",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+    createData(
+      2342,
+      "SomeOne",
+      "Some company",
+      "someCompany@gmail.com",
+      2342342342,
+      "Inactive",
+      45000,
+      "15/12/21",
+      "12/12/22"
+    ),
+    createData(
+      1245,
+      "Abhik",
+      "Teknotrait",
+      "tekis@org.com",
+      934534534533,
+      "Inactive",
+      35000,
+      "12/05/22",
+      "12/12/22"
+    ),
+  ];
+  const [data, setData] = React.useState(inactiveRows);
+
+  const deleteRow = (id) => {
+    setData(data.filter((row) => row.clientId !== id));
+  };
+
+  const [show, setShow] = React.useState(false);
+
+  const showModal = () => {
+    setShow(true);
+  };
+
+  const closeModal = () => {
+    setShow(false);
+  };
+
   const actionColumn = [
     {
       field: "action",
@@ -367,7 +419,10 @@ export function InactiveTable() {
       renderCell: (params) => {
         return (
           <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
-            <ModeEditOutlineIcon sx={{ cursor: "pointer" }} />
+            <ModeEditOutlineIcon
+              onClick={showModal}
+              sx={{ cursor: "pointer" }}
+            />
             <DeleteIcon
               onClick={() => deleteRow(params.row.clientId)}
               sx={{ color: "red", cursor: "pointer" }}
@@ -389,7 +444,7 @@ export function InactiveTable() {
       >
         <DataGrid
           style={{ color: "#00254d" }}
-          rows={inactiveRows}
+          rows={data}
           columns={clientColumns.concat(actionColumn)}
           pageSize={5}
           rowsPerPageOptions={[5]}
@@ -397,6 +452,7 @@ export function InactiveTable() {
           getRowId={(row) => row.clientId}
         />
       </div>
+      {show && <EditClientModal show={show} close={closeModal} />}
     </Fragment>
   );
 }
