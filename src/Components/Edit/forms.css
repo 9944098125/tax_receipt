@@ -1,0 +1,35 @@
+.edit-fields {
+    line-height: 1.75rem;
+  outline: none !important;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  color: #536f94 !important;
+  border-width: 1px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  --tw-border-opacity: 0;
+  --tw-bg-opacity: 1;
+}
+@media screen and (min-width:1024px) {
+  .edit-fields {
+    width: 365px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .edit-fields {
+    width: 225px;
+  }
+}
+
+@media screen and (max-width:425px) {
+  .edit-fields {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width:325px) {
+  .edit-fields {
+    width: 200px;
+  }
+}
