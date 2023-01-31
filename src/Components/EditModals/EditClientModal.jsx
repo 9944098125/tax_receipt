@@ -77,13 +77,14 @@ function EditClientModal({ show, close }) {
               }}
             >
               <Tabs
+                sx={{ p: 0 }}
                 value={value}
                 onChange={handleChange}
                 aria-label="basic tabs example"
               >
                 <Tab
                   sx={{
-                    fontSize: { xs: "8px", md: "16px" },
+                    fontSize: { xs: "5px", md: "16px" },
                     fontWeight: "700",
                   }}
                   label="Edit client"
@@ -91,7 +92,7 @@ function EditClientModal({ show, close }) {
                 />
                 <Tab
                   sx={{
-                    fontSize: { xs: "8px", md: "16px" },
+                    fontSize: { xs: "5px", md: "16px" },
                     fontWeight: "700",
                   }}
                   label="Assign package"
@@ -100,7 +101,7 @@ function EditClientModal({ show, close }) {
 
                 <Tab
                   sx={{
-                    fontSize: { xs: "8px", md: "16px" },
+                    fontSize: { xs: "5px", md: "16px" },
                     fontWeight: "700",
                   }}
                   label="Password settings"
@@ -108,7 +109,7 @@ function EditClientModal({ show, close }) {
                 />
                 <Tab
                   sx={{
-                    fontSize: "16px",
+                    fontSize: { xs: "5px", ms: "16px" },
                     fontWeight: "700",
                   }}
                   label="Add more"
