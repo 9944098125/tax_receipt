@@ -77,7 +77,6 @@ function EditClientModal({ show, close }) {
               }}
             >
               <Tabs
-                sx={{ display: { xs: "none", sm: "block" } }}
                 value={value}
                 onChange={handleChange}
                 aria-label="basic tabs example"
@@ -117,7 +116,6 @@ function EditClientModal({ show, close }) {
                 />
               </Tabs>
             </Box>
-
             <TabPanel value={value} index={0}>
               <EditClient />
             </TabPanel>
