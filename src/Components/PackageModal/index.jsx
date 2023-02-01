@@ -15,6 +15,9 @@ const style = {
   p: 4,
   borderRadius: "8px",
   width: { xs: "90vw", md: "40vw" },
+  maxHeight: { xs: "90vh", sm: "95vh" },
+  overflowY: "scroll",
+  overflowX: "hidden",
 };
 
 function PackageModal({ show, close }) {
@@ -59,12 +62,12 @@ function PackageModal({ show, close }) {
     <Fragment>
       <Box sx={{}}>
         <Modal
+          id="packageModal"
           open={show}
           onClose={close}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
           hideBackdrop
-          disableScrollLock
         >
           <Box sx={style}>
             <Box

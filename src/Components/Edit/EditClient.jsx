@@ -2,15 +2,16 @@ import React, { Fragment, useState } from "react";
 import { Formik, Form, Field } from "formik";
 import "./forms.css";
 import { Box, Typography } from "@mui/material";
+import states from "./states.json";
 
-function EditClient() {
+function EditClient({ showEditor }) {
   const [values] = useState({
-    name: "",
-    org: "",
+    name: showEditor.dataWithId.clientName,
+    org: showEditor.dataWithId.organization,
     state: "",
-    mobileNo: "",
+    mobileNo: showEditor.dataWithId.mobileNo,
     gst: "",
-    email: "",
+    email: showEditor.dataWithId.email,
   });
   // ES5 function
   function validate(values) {
@@ -185,6 +186,7 @@ function EditClient() {
                     State
                   </Typography>
                   <Field
+                    as="select"
                     type="text"
                     className={
                       touched.state && errors.state
@@ -192,8 +194,14 @@ function EditClient() {
                         : "edit-fields form-control"
                     }
                     name="state"
-                    placeholder="Edit The State"
-                  />
+                  >
+                    <option value="">--state--</option>
+                    {states.map((each, idx) => (
+                      <option value={each} key={idx}>
+                        {each}
+                      </option>
+                    ))}
+                  </Field>
                   {errors.state && touched.state && (
                     <Typography sx={{ color: "red", fontSize: "13px" }}>
                       {errors.state}
@@ -228,7 +236,7 @@ function EditClient() {
                 </Box>
               </Box>
               <button className="primary-button" type="submit">
-                Edit
+                Submit
               </button>
             </Form>
           )}

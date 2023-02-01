@@ -1,5 +1,5 @@
 .edit-fields {
-    line-height: 1.75rem;
+  line-height: 1.75rem;
   outline: none !important;
   border-radius: 4px;
   font-size: 1.125rem;
@@ -12,24 +12,59 @@
 }
 @media screen and (min-width:1024px) {
   .edit-fields {
-    width: 365px;
+    min-width: 365px;
   }
 }
 
 @media screen and (max-width:768px) {
   .edit-fields {
-    width: 225px;
+    min-width: 225px;
   }
 }
 
 @media screen and (max-width:425px) {
   .edit-fields {
-    width: 300px;
+    min-width: 300px;
   }
 }
 
 @media screen and (max-width:325px) {
   .edit-fields {
-    width: 200px;
+    min-width: 200px;
+  }
+}
+.password-fields {
+  line-height: 1.75rem;
+  outline: none !important;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  color: #536f94 !important;
+  border-width: 1px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  --tw-border-opacity: 0;
+  --tw-bg-opacity: 1;
+}
+@media screen and (min-width:1024px) {
+  .password-fields {
+    min-width: 350px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .password-fields {
+    min-width: 210px;
+  }
+}
+
+@media screen and (max-width:425px) {
+  .password-fields {
+    min-width: 280px;
+  }
+}
+
+@media screen and (max-width:325px) {
+  .password-fields {
+    min-width: 180px;
   }
 }

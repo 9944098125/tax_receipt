@@ -307,3 +307,16 @@
 .css-12htcsr {
   color: #00254d !important;
 }
+
+#packageModal ::-webkit-scrollbar {
+  display: none;
+}
+
+#editModal ::-webkit-scrollbar {
+  display: none;
+}
+
+/* for development of edit modal tabs  */
+.css-1oa5w5x-MuiButtonBase-root-MuiTab-root.Mui-selected {
+  color: #566379 !important;
+}

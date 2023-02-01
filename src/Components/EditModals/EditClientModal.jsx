@@ -5,6 +5,9 @@ import PropTypes from "prop-types";
 import { Box, Modal } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import EditClient from "../Edit/EditClient";
+import PasswordSettings from "../Edit/PasswordSettings";
+import AssignPackage from "../Edit/AssignPackage";
+import AddMore from "../Edit/AddMore";
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -49,12 +52,11 @@ const style = {
   p: 4,
   display: "flex",
   justifyContent: "space-between",
-  maxHeight: { xs: "90vh", sm: "80vh" },
-  overflowY: "scroll",
+  // maxHeight: { xs: "90vh", sm: "80vh" },
   overflowX: "hidden",
 };
 
-function EditClientModal({ show, close }) {
+function EditClientModal({ show, close, showEditor }) {
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -63,7 +65,7 @@ function EditClientModal({ show, close }) {
 
   return (
     <Fragment>
-      <Modal open={show} onClose={close} hideBackdrop disableScrollLock="true">
+      <Modal id="editModal" open={show} onClose={close} hideBackdrop>
         <Box sx={style}>
           <Box
             sx={{
@@ -77,14 +79,14 @@ function EditClientModal({ show, close }) {
               }}
             >
               <Tabs
-                sx={{ p: 0 }}
+                variant="scrollable"
                 value={value}
                 onChange={handleChange}
                 aria-label="basic tabs example"
               >
                 <Tab
                   sx={{
-                    fontSize: { xs: "5px", md: "16px" },
+                    fontSize: { xs: "10px", md: "16px" },
                     fontWeight: "700",
                   }}
                   label="Edit client"
@@ -92,43 +94,49 @@ function EditClientModal({ show, close }) {
                 />
                 <Tab
                   sx={{
-                    fontSize: { xs: "5px", md: "16px" },
-                    fontWeight: "700",
-                  }}
-                  label="Assign package"
-                  {...a11yProps(1)}
-                />
-
-                <Tab
-                  sx={{
-                    fontSize: { xs: "5px", md: "16px" },
+                    fontSize: { xs: "10px", md: "16px" },
                     fontWeight: "700",
                   }}
                   label="Password settings"
+                  {...a11yProps(1)}
+                />
+                <Tab
+                  sx={{
+                    fontSize: { xs: "10px", md: "16px" },
+                    fontWeight: "700",
+                  }}
+                  label="Add more"
                   {...a11yProps(2)}
                 />
                 <Tab
                   sx={{
-                    fontSize: { xs: "5px", ms: "16px" },
+                    fontSize: { xs: "10px", md: "16px" },
                     fontWeight: "700",
                   }}
-                  label="Add more"
+                  label="Assign package"
                   {...a11yProps(3)}
                 />
               </Tabs>
             </Box>
-            <TabPanel value={value} index={0}>
-              <EditClient />
-            </TabPanel>
-            <TabPanel value={value} index={1}>
-              Assign package
-            </TabPanel>
-            <TabPanel value={value} index={2}>
-              Password settings
-            </TabPanel>
-            <TabPanel value={value} index={3}>
-              Add more
-            </TabPanel>
+            <Box
+              sx={{
+                maxHeight: { xs: "300px", sm: "400px", md: "500px" },
+                overflowY: "scroll",
+              }}
+            >
+              <TabPanel value={value} index={0}>
+                <EditClient showEditor={showEditor} />
+              </TabPanel>
+              <TabPanel value={value} index={1}>
+                <PasswordSettings />
+              </TabPanel>
+              <TabPanel value={value} index={2}>
+                <AddMore />
+              </TabPanel>
+              <TabPanel value={value} index={3}>
+                <AssignPackage />
+              </TabPanel>
+            </Box>
           </Box>
           <CloseIcon sx={{ cursor: "pointer" }} onClick={close} />
         </Box>
