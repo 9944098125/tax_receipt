@@ -17,16 +17,16 @@ const style = {
   overflowX: "hidden",
 };
 
-function EditClientModal({ show, close, showEditor, title }) {
+function EditCustomerModal({ show, close, showEditor, title }) {
   const [value, onChange] = useState(new Date());
   const [values] = useState({
-    name: showEditor.dataWithId.customerName,
-    email: showEditor.dataWithId.email,
-    mobileNo: showEditor.dataWithId.mobileNo,
-    date: showEditor.dataWithId.date,
-    amount: showEditor.dataWithId.amount,
+    name: showEditor ? showEditor.dataWithId.customerName : "",
+    email: showEditor ? showEditor.dataWithId.email : "",
+    mobileNo: showEditor ? showEditor.dataWithId.mobileNo : "",
+    date: showEditor ? showEditor.dataWithId.date : "",
+    amount: showEditor ? showEditor.dataWithId.amount : "",
     paymentId: "",
-    paymentMode: showEditor.dataWithId.payment,
+    paymentMode: showEditor ? showEditor.dataWithId.payment : "",
   });
   // ES5 function
   function validate(values) {
@@ -35,7 +35,7 @@ function EditClientModal({ show, close, showEditor, title }) {
     return errors;
   }
   // arrow function
-  const callEditClientApi = (values) => {
+  const callEditCustomerApi = (values) => {
     console.log("values", values);
   };
 
@@ -67,7 +67,7 @@ function EditClientModal({ show, close, showEditor, title }) {
             <Formik
               initialValues={values}
               validate={(values) => validate(values)}
-              onSubmit={(values) => callEditClientApi(values)}
+              onSubmit={(values) => callEditCustomerApi(values)}
             >
               {({ errors, touched }) => (
                 <Form>
@@ -150,7 +150,7 @@ function EditClientModal({ show, close, showEditor, title }) {
                           fontWeight: "700",
                         }}
                       >
-                        MobileNo
+                        Mobile Number
                       </Typography>
                       <Field
                         type="text"
@@ -160,7 +160,7 @@ function EditClientModal({ show, close, showEditor, title }) {
                             : "edit-fields form-control"
                         }
                         name="mobileNo"
-                        placeholder="Edit Customer mobileNo"
+                        placeholder="Edit Customer mobile number"
                       />
                       {errors.mobileNo && touched.mobileNo && (
                         <Typography sx={{ color: "red", fontSize: "13px" }}>
@@ -232,50 +232,10 @@ function EditClientModal({ show, close, showEditor, title }) {
                           fontWeight: "700",
                         }}
                       >
-                        Payment Mode
+                        Payment Id
                       </Typography>
                       <Field
                         as="select"
-                        type="text"
-                        placeholder="Edit The Payment Mode"
-                        name="paymentMode"
-                        className={
-                          touched.paymentMode && errors.paymentMode
-                            ? "is-invalid form-control edit-fields"
-                            : "edit-fields form-control"
-                        }
-                      >
-                        <option value="cash">Cash</option>
-                        <option value="cheque">Cheque</option>
-                        <option value="online">Online</option>
-                      </Field>
-                      {errors.paymentMode && touched.paymentMode && (
-                        <Typography sx={{ color: "red", fontSize: "13px" }}>
-                          {errors.paymentMode}
-                        </Typography>
-                      )}
-                    </Box>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      flexDirection: { xs: "column", sm: "row" },
-                      alignItems: "center",
-                      gap: "25px",
-                      mb: 3,
-                    }}
-                  >
-                    <Box sx={{}} className="form-group">
-                      <Typography
-                        sx={{
-                          color: "primary.main",
-                          fontSize: "15px",
-                          fontWeight: "700",
-                        }}
-                      >
-                        Payment ID
-                      </Typography>
-                      <Field
                         type="text"
                         placeholder="Edit The Payment ID"
                         name="paymentId"
@@ -284,7 +244,11 @@ function EditClientModal({ show, close, showEditor, title }) {
                             ? "is-invalid form-control edit-fields"
                             : "edit-fields form-control"
                         }
-                      />
+                      >
+                        <option value="cash">Cash</option>
+                        <option value="cheque">Cheque</option>
+                        <option value="online">Online</option>
+                      </Field>
                       {errors.paymentId && touched.paymentId && (
                         <Typography sx={{ color: "red", fontSize: "13px" }}>
                           {errors.paymentId}
@@ -292,6 +256,44 @@ function EditClientModal({ show, close, showEditor, title }) {
                       )}
                     </Box>
                   </Box>
+                  {showEditor && (
+                    <Box
+                      sx={{
+                        display: "flex",
+                        flexDirection: { xs: "column", sm: "row" },
+                        alignItems: "center",
+                        gap: "25px",
+                        mb: 3,
+                      }}
+                    >
+                      <Box sx={{}} className="form-group">
+                        <Typography
+                          sx={{
+                            color: "primary.main",
+                            fontSize: "15px",
+                            fontWeight: "700",
+                          }}
+                        >
+                          Payment Mode
+                        </Typography>
+                        <Field
+                          type="text"
+                          placeholder="Edit The Payment Mode"
+                          name="paymentMode"
+                          className={
+                            touched.paymentMode && errors.paymentMode
+                              ? "is-invalid form-control edit-fields"
+                              : "edit-fields form-control"
+                          }
+                        />
+                        {errors.paymentMode && touched.paymentMode && (
+                          <Typography sx={{ color: "red", fontSize: "13px" }}>
+                            {errors.paymentMode}
+                          </Typography>
+                        )}
+                      </Box>
+                    </Box>
+                  )}
                   <button className="primary-button" type="submit">
                     Submit
                   </button>
@@ -305,4 +307,4 @@ function EditClientModal({ show, close, showEditor, title }) {
   );
 }
 
-export default EditClientModal;
+export default EditCustomerModal;

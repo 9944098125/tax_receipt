@@ -34,7 +34,7 @@ export default function CustomerTable() {
     createData(
       "123675",
       "23/03/21",
-      "Abhik",
+      "Sravan",
       "tekis@org.com",
       "934534534533",
       "online",
@@ -44,7 +44,7 @@ export default function CustomerTable() {
     createData(
       "3675",
       "23/03/21",
-      "Abhik",
+      "Varma",
       "tekis@org.com",
       "934534534533",
       "cash",
@@ -54,7 +54,7 @@ export default function CustomerTable() {
     createData(
       "365",
       "23/03/21",
-      "Abhik",
+      "Vamsi",
       "tekis@org.com",
       "934534534533",
       "cash",
@@ -64,7 +64,7 @@ export default function CustomerTable() {
     createData(
       "12375",
       "23/03/21",
-      "Abhik",
+      "Raghav",
       "tekis@org.com",
       "934534534533",
       "online",
