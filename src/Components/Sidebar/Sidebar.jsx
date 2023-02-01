@@ -13,12 +13,14 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
 import { Link } from "react-router-dom";
 
 function Sidebar() {
+  const user = {
+    isAdmin: false,
+  };
   const navigate = useNavigate();
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
@@ -81,259 +83,605 @@ function Sidebar() {
               </Typography>
             </Box>
           </Link>
-          <Box
-            sx={{
-              mt: 2,
-              pl: 2,
-              alignSelf: "flex-start",
-              display: { xs: "none", md: "block" },
-            }}
-          >
-            <Typography
-              sx={{
-                color: "#ffffff59",
-                fontSize: "0.875rem",
-                fontWeight: "600",
-              }}
-            >
-              ACTIVITY
-            </Typography>
-          </Box>
-          <Box sx={{ p: 1, pt: 1 }}>
-            <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          {user.isAdmin ? (
+            <>
               <Box
                 sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                  cursor: "pointer",
-                  p: 0.8,
-                  py: 1,
-                  "&:hover": {
-                    backgroundColor: "primary.light",
-                    borderRadius: "4px",
-                  },
+                  mt: 2,
+                  pl: 2,
+                  alignSelf: "flex-start",
+                  display: { xs: "none", md: "block" },
                 }}
               >
-                <CottageIcon
-                  sx={{
-                    color: "#ffffff55",
-                    fontSize: "20px",
-                    ml: { xs: -0.7, sm: 1.6, md: "none" },
-                  }}
-                />
                 <Typography
-                  sx={{
-                    display: {
-                      xs: "none",
-                      md: "block",
-                    },
-                    fontSize: "15px",
-                    color: "#e6f2ff",
-                    fontWeight: "500",
-                  }}
-                >
-                  Dashboard
-                </Typography>
-              </Box>
-            </Link>
-            <Link
-              to="/clientManagement"
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                  cursor: "pointer",
-                  p: 0.8,
-                  py: 1,
-                  "&:hover": {
-                    backgroundColor: "primary.light",
-                    borderRadius: "4px",
-                  },
-                }}
-              >
-                <PersonIcon
                   sx={{
                     color: "#ffffff59",
-                    fontSize: "20px",
-                    ml: { xs: -0.7, sm: 1.6, md: "none" },
-                  }}
-                />
-                <Typography
-                  sx={{
-                    display: {
-                      xs: "none",
-                      md: "block",
-                    },
-                    fontSize: "15px",
-                    color: "#e6f2ff",
-                    fontWeight: "500",
+                    fontSize: "0.875rem",
+                    fontWeight: "600",
                   }}
                 >
-                  Client Management
+                  ACTIVITY
                 </Typography>
               </Box>
-            </Link>
-            <Link
-              to="/packageManagement"
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
+              <Box sx={{ p: 1, pt: 1 }}>
+                <Link
+                  to="/"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      cursor: "pointer",
+                      p: 0.8,
+                      py: 1,
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        borderRadius: "4px",
+                      },
+                    }}
+                  >
+                    <CottageIcon
+                      sx={{
+                        color: "#ffffff55",
+                        fontSize: "20px",
+                        ml: { xs: -0.7, sm: 1.6, md: "none" },
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
+                        fontSize: "15px",
+                        color: "#e6f2ff",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Dashboard
+                    </Typography>
+                  </Box>
+                </Link>
+                <Link
+                  to="/clientManagement"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      cursor: "pointer",
+                      p: 0.8,
+                      py: 1,
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        borderRadius: "4px",
+                      },
+                    }}
+                  >
+                    <PersonIcon
+                      sx={{
+                        color: "#ffffff59",
+                        fontSize: "20px",
+                        ml: { xs: -0.7, sm: 1.6, md: "none" },
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
+                        fontSize: "15px",
+                        color: "#e6f2ff",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Client Management
+                    </Typography>
+                  </Box>
+                </Link>
+                <Link
+                  to="/packageManagement"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      cursor: "pointer",
+                      p: 0.8,
+                      py: 1,
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        borderRadius: "4px",
+                      },
+                    }}
+                  >
+                    <Inventory2Icon
+                      sx={{
+                        color: "#ffffff59",
+                        fontSize: "20px",
+                        ml: { xs: -0.7, sm: 1.6, md: "none" },
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
+                        fontSize: "15px",
+                        color: "#e6f2ff",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Package Management
+                    </Typography>
+                  </Box>
+                </Link>
+                <Link
+                  to="/orders"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      cursor: "pointer",
+                      p: 0.8,
+                      py: 1,
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        borderRadius: "4px",
+                      },
+                    }}
+                  >
+                    <FilterFramesIcon
+                      sx={{
+                        color: "#ffffff59",
+                        fontSize: "20px",
+                        ml: { xs: -0.7, sm: 1.6, md: "none" },
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
+                        fontSize: "15px",
+                        color: "#e6f2ff",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Orders
+                    </Typography>
+                  </Box>
+                </Link>
+                <Link
+                  to="/transactions"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      cursor: "pointer",
+                      p: 0.8,
+                      py: 1,
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        borderRadius: "4px",
+                      },
+                    }}
+                  >
+                    <PaidIcon
+                      sx={{
+                        color: "#ffffff59",
+                        fontSize: "20px",
+                        ml: { xs: -0.7, sm: 1.6, md: "none" },
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
+                        fontSize: "15px",
+                        color: "#e6f2ff",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Transactions
+                    </Typography>
+                  </Box>
+                </Link>
+                <Box
+                  onClick={logout}
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    cursor: "pointer",
+                    p: 0.8,
+                    py: 1,
+                    "&:hover": {
+                      backgroundColor: "primary.light",
+                      borderRadius: "4px",
+                    },
+                  }}
+                >
+                  <ExitToAppIcon
+                    sx={{
+                      color: "#ffffff59",
+                      fontSize: "20px",
+                      ml: { xs: -0.7, sm: 1.6, md: "none" },
+                    }}
+                  />
+                  <Typography
+                    sx={{
+                      display: {
+                        xs: "none",
+                        md: "block",
+                      },
+                      fontSize: "15px",
+                      color: "#e6f2ff",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Logout
+                  </Typography>
+                </Box>
+              </Box>
+            </>
+          ) : (
+            <>
               <Box
                 sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                  cursor: "pointer",
-                  p: 0.8,
-                  py: 1,
-                  "&:hover": {
-                    backgroundColor: "primary.light",
-                    borderRadius: "4px",
-                  },
+                  mt: 2,
+                  pl: 2,
+                  alignSelf: "flex-start",
+                  display: { xs: "none", md: "block" },
                 }}
               >
-                <Inventory2Icon
-                  sx={{
-                    color: "#ffffff59",
-                    fontSize: "20px",
-                    ml: { xs: -0.7, sm: 1.6, md: "none" },
-                  }}
-                />
                 <Typography
                   sx={{
-                    display: {
-                      xs: "none",
-                      md: "block",
-                    },
-                    fontSize: "15px",
-                    color: "#e6f2ff",
-                    fontWeight: "500",
-                  }}
-                >
-                  Package Management
-                </Typography>
-              </Box>
-            </Link>
-            <Link
-              to="/orders"
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                  cursor: "pointer",
-                  p: 0.8,
-                  py: 1,
-                  "&:hover": {
-                    backgroundColor: "primary.light",
-                    borderRadius: "4px",
-                  },
-                }}
-              >
-                <FilterFramesIcon
-                  sx={{
                     color: "#ffffff59",
-                    fontSize: "20px",
-                    ml: { xs: -0.7, sm: 1.6, md: "none" },
-                  }}
-                />
-                <Typography
-                  sx={{
-                    display: {
-                      xs: "none",
-                      md: "block",
-                    },
-                    fontSize: "15px",
-                    color: "#e6f2ff",
-                    fontWeight: "500",
+                    fontSize: "0.875rem",
+                    fontWeight: "600",
                   }}
                 >
-                  Orders
+                  ACTIVITY
                 </Typography>
               </Box>
-            </Link>
-            <Link
-              to="/transactions"
-              style={{ textDecoration: "none", color: "inherit" }}
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 1,
-                  cursor: "pointer",
-                  p: 0.8,
-                  py: 1,
-                  "&:hover": {
-                    backgroundColor: "primary.light",
-                    borderRadius: "4px",
-                  },
-                }}
-              >
-                <PaidIcon
+              <Box sx={{ p: 1, pt: 1 }}>
+                <Link
+                  to="/"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      cursor: "pointer",
+                      p: 0.8,
+                      py: 1,
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        borderRadius: "4px",
+                      },
+                    }}
+                  >
+                    <CottageIcon
+                      sx={{
+                        color: "#ffffff55",
+                        fontSize: "20px",
+                        ml: { xs: -0.7, sm: 1.6, md: "none" },
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
+                        fontSize: "15px",
+                        color: "#e6f2ff",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Dashboard
+                    </Typography>
+                  </Box>
+                </Link>
+                <Link
+                  to="/user/reportManagement"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      cursor: "pointer",
+                      p: 0.8,
+                      py: 1,
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        borderRadius: "4px",
+                      },
+                    }}
+                  >
+                    <PersonIcon
+                      sx={{
+                        color: "#ffffff59",
+                        fontSize: "20px",
+                        ml: { xs: -0.7, sm: 1.6, md: "none" },
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
+                        fontSize: "15px",
+                        color: "#e6f2ff",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Report Management
+                    </Typography>
+                  </Box>
+                </Link>
+                <Link
+                  to="/user/emailSettings"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      cursor: "pointer",
+                      p: 0.8,
+                      py: 1,
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        borderRadius: "4px",
+                      },
+                    }}
+                  >
+                    <Inventory2Icon
+                      sx={{
+                        color: "#ffffff59",
+                        fontSize: "20px",
+                        ml: { xs: -0.7, sm: 1.6, md: "none" },
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
+                        fontSize: "15px",
+                        color: "#e6f2ff",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Email Settings
+                    </Typography>
+                  </Box>
+                </Link>
+                <Link
+                  to="/user/subscriptions"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      cursor: "pointer",
+                      p: 0.8,
+                      py: 1,
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        borderRadius: "4px",
+                      },
+                    }}
+                  >
+                    <FilterFramesIcon
+                      sx={{
+                        color: "#ffffff59",
+                        fontSize: "20px",
+                        ml: { xs: -0.7, sm: 1.6, md: "none" },
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
+                        fontSize: "15px",
+                        color: "#e6f2ff",
+                        fontWeight: "500",
+                      }}
+                    >
+                      My Subscriptions
+                    </Typography>
+                  </Box>
+                </Link>
+                <Link
+                  to="/user/payments"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      cursor: "pointer",
+                      p: 0.8,
+                      py: 1,
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        borderRadius: "4px",
+                      },
+                    }}
+                  >
+                    <PaidIcon
+                      sx={{
+                        color: "#ffffff59",
+                        fontSize: "20px",
+                        ml: { xs: -0.7, sm: 1.6, md: "none" },
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
+                        fontSize: "15px",
+                        color: "#e6f2ff",
+                        fontWeight: "500",
+                      }}
+                    >
+                      My Payments
+                    </Typography>
+                  </Box>
+                </Link>
+                <Link
+                  to="/user/profile"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      cursor: "pointer",
+                      p: 0.8,
+                      py: 1,
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        borderRadius: "4px",
+                      },
+                    }}
+                  >
+                    <PaidIcon
+                      sx={{
+                        color: "#ffffff59",
+                        fontSize: "20px",
+                        ml: { xs: -0.7, sm: 1.6, md: "none" },
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
+                        fontSize: "15px",
+                        color: "#e6f2ff",
+                        fontWeight: "500",
+                      }}
+                    >
+                      My Profile
+                    </Typography>
+                  </Box>
+                </Link>
+                <Link
+                  to="/user/transactions"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  <Box
+                    sx={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 1,
+                      cursor: "pointer",
+                      p: 0.8,
+                      py: 1,
+                      "&:hover": {
+                        backgroundColor: "primary.light",
+                        borderRadius: "4px",
+                      },
+                    }}
+                  >
+                    <PaidIcon
+                      sx={{
+                        color: "#ffffff59",
+                        fontSize: "20px",
+                        ml: { xs: -0.7, sm: 1.6, md: "none" },
+                      }}
+                    />
+                    <Typography
+                      sx={{
+                        display: {
+                          xs: "none",
+                          md: "block",
+                        },
+                        fontSize: "15px",
+                        color: "#e6f2ff",
+                        fontWeight: "500",
+                      }}
+                    >
+                      Transactions
+                    </Typography>
+                  </Box>
+                </Link>
+                <Box
+                  onClick={logout}
                   sx={{
-                    color: "#ffffff59",
-                    fontSize: "20px",
-                    ml: { xs: -0.7, sm: 1.6, md: "none" },
-                  }}
-                />
-                <Typography
-                  sx={{
-                    display: {
-                      xs: "none",
-                      md: "block",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                    cursor: "pointer",
+                    p: 0.8,
+                    py: 1,
+                    "&:hover": {
+                      backgroundColor: "primary.light",
+                      borderRadius: "4px",
                     },
-                    fontSize: "15px",
-                    color: "#e6f2ff",
-                    fontWeight: "500",
                   }}
                 >
-                  Transactions
-                </Typography>
+                  <ExitToAppIcon
+                    sx={{
+                      color: "#ffffff59",
+                      fontSize: "20px",
+                      ml: { xs: -0.7, sm: 1.6, md: "none" },
+                    }}
+                  />
+                  <Typography
+                    sx={{
+                      display: {
+                        xs: "none",
+                        md: "block",
+                      },
+                      fontSize: "15px",
+                      color: "#e6f2ff",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Logout
+                  </Typography>
+                </Box>
               </Box>
-            </Link>
-            <Box
-              onClick={logout}
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                gap: 1,
-                cursor: "pointer",
-                p: 0.8,
-                py: 1,
-                "&:hover": {
-                  backgroundColor: "primary.light",
-                  borderRadius: "4px",
-                },
-              }}
-            >
-              <ExitToAppIcon
-                sx={{
-                  color: "#ffffff59",
-                  fontSize: "20px",
-                  ml: { xs: -0.7, sm: 1.6, md: "none" },
-                }}
-              />
-              <Typography
-                sx={{
-                  display: {
-                    xs: "none",
-                    md: "block",
-                  },
-                  fontSize: "15px",
-                  color: "#e6f2ff",
-                  fontWeight: "500",
-                }}
-              >
-                Logout
-              </Typography>
-            </Box>
-          </Box>
+            </>
+          )}
         </Box>
         {/* Navbar and main outlet */}
         <Box
