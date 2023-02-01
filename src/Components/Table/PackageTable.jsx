@@ -18,7 +18,7 @@ import ModeEditIcon from "@mui/icons-material/ModeEdit";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { TableHead, Typography } from "@mui/material";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
-import EditPackageModal from "../EditModals/EditPackageModal";
+import PackageModal from "../PackageModal";
 
 function createData(sno, name, customerLimit, pdfLimit, emailLimit, price) {
   return {
@@ -264,7 +264,9 @@ function PackageTable() {
         onRowsPerPageChange={handleChangeRowsPerPage}
         ActionsComponent={TablePaginationActions}
       />
-      {show && <EditPackageModal show={show} close={closeModal} />}
+      {show && (
+        <PackageModal title="Edit Package" show={show} close={closeModal} />
+      )}
     </Fragment>
   );
 }
