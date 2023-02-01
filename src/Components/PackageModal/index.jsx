@@ -20,13 +20,13 @@ const style = {
   overflowX: "hidden",
 };
 
-function PackageModal({ show, close, title }) {
+function PackageModal({ show, close, title, showEditor }) {
   const [formValues] = useState({
-    name: "",
-    customerLimit: "",
-    emailLimit: "",
-    pdfLimit: "",
-    price: "",
+    name: showEditor ? showEditor.dataWithId.name : "",
+    customerLimit: showEditor ? showEditor.dataWithId.customerLimit : "",
+    emailLimit: showEditor ? showEditor.dataWithId.emailLimit : "",
+    pdfLimit: showEditor ? showEditor.dataWithId.pdfLimit : "",
+    price: showEditor ? showEditor.dataWithId.price : "",
   });
 
   function validate(values) {

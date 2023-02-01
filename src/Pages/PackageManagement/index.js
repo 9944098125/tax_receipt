@@ -54,7 +54,11 @@ function PackageManagement() {
           <AddCircleIcon sx={{ mr: 2, height: "15px", width: "15px" }} />
           Add New Package
         </button>
-        <PackageModal show={showModal} close={closeModal} />
+        <PackageModal
+          title="Add New Package"
+          show={showModal}
+          close={closeModal}
+        />
       </Box>
       <PackageTable />
     </Fragment>

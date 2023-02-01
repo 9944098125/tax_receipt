@@ -33,16 +33,16 @@ function createData(sno, name, customerLimit, pdfLimit, emailLimit, price) {
 
 const rows = [
   createData(1, "Premium", 12, 10, 14, 15000),
-  createData(1, "Premium", 12, 10, 14, 15000),
-  createData(1, "Premium", 12, 10, 14, 15000),
-  createData(1, "Premium", 12, 10, 14, 15000),
-  createData(1, "Premium", 12, 10, 14, 15000),
+  createData(2, "Premium", 12, 10, 14, 15000),
+  createData(3, "Premium", 12, 10, 14, 15000),
+  createData(4, "Premium", 12, 10, 14, 15000),
+  createData(5, "Premium", 12, 10, 14, 15000),
 
-  createData(1, "Premium", 12, 10, 14, 15000),
-  createData(1, "Premium", 12, 10, 14, 15000),
-  createData(1, "Premium", 12, 10, 14, 15000),
-  createData(1, "Premium", 12, 10, 14, 15000),
-  createData(1, "Premium", 12, 10, 14, 15000),
+  createData(6, "Premium", 12, 10, 14, 15000),
+  createData(7, "Premium", 12, 10, 14, 15000),
+  createData(8, "Premium", 12, 10, 14, 15000),
+  createData(9, "Premium", 12, 10, 14, 15000),
+  createData(10, "Premium", 12, 10, 14, 15000),
 ];
 
 function TablePaginationActions(props) {
@@ -115,9 +115,31 @@ TablePaginationActions.propTypes = {
 };
 
 function PackageTable() {
+  const oldData = {
+    name: "",
+    emailLimit: "",
+    pdfLimit: "",
+    customerLimit: "",
+    price: "",
+  };
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
   const [show, setShow] = React.useState(false);
+
+  const [showEditor, setShowEditor] = React.useState({
+    id: "",
+    boolean: false,
+    dataWithId: { ...oldData },
+  });
+
+  function updateRow(row) {
+    setShowEditor({
+      id: row.id,
+      boolean: !showEditor.boolean,
+      dataWithId: { ...row },
+    });
+    console.log("package row: ", row);
+  }
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
@@ -132,8 +154,9 @@ function PackageTable() {
     setPage(0);
   };
 
-  const showModal = () => {
+  const showModal = (row) => {
     setShow(true);
+    updateRow(row);
   };
 
   const closeModal = () => {
@@ -224,7 +247,7 @@ function PackageTable() {
                 <TableCell align="left">{row.emailLimit}</TableCell>
                 <TableCell component="th" scope="row">
                   <ModeEditIcon
-                    onClick={showModal}
+                    onClick={() => showModal(row)}
                     sx={{
                       color: "primary.dark",
                       fontSize: "17px",
@@ -265,7 +288,12 @@ function PackageTable() {
         ActionsComponent={TablePaginationActions}
       />
       {show && (
-        <PackageModal title="Edit Package" show={show} close={closeModal} />
+        <PackageModal
+          title="Edit Package"
+          show={show}
+          close={closeModal}
+          showEditor={showEditor}
+        />
       )}
     </Fragment>
   );
