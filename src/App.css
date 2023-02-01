@@ -320,3 +320,8 @@
 .css-1oa5w5x-MuiButtonBase-root-MuiTab-root.Mui-selected {
   color: #566379 !important;
 }
+
+/* for deployed version */
+.css-10v7wgy.Mui-selected {
+  color: #566379 !important;
+}

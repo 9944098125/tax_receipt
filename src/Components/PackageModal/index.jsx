@@ -20,8 +20,8 @@ const style = {
   overflowX: "hidden",
 };
 
-function PackageModal({ show, close }) {
-  const [formValues, setFormValues] = useState({
+function PackageModal({ show, close, title }) {
+  const [formValues] = useState({
     name: "",
     customerLimit: "",
     emailLimit: "",
@@ -86,7 +86,7 @@ function PackageModal({ show, close }) {
                   fontWeight: "700",
                 }}
               >
-                Add New Package
+                {title}
               </Typography>
               <CloseIcon sx={{ cursor: "pointer" }} onClick={close} />
             </Box>
