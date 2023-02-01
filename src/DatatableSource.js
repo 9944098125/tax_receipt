@@ -82,3 +82,43 @@ export const clientColumns = [
     width: 80,
   },
 ];
+
+export const customerColumns = [
+  { field: "receiptNo", headerName: "Receipt No", width: 20 },
+  {
+    field: "date",
+    headerName: "Date",
+    width: 80,
+  },
+  {
+    field: "customerName",
+    headerName: "Customer Name",
+    width: 120,
+  },
+
+  {
+    field: "email",
+    headerName: "Email Address",
+    width: 170,
+  },
+  {
+    field: "mobileNo",
+    headerName: "Mobile Number",
+    width: 120,
+  },
+  {
+    field: "payment",
+    headerName: "Payment",
+    width: 100,
+  },
+  {
+    field: "amount",
+    headerName: "Amount",
+    width: 80,
+  },
+  {
+    field: "status",
+    headerName: "Status",
+    width: 100,
+  },
+];

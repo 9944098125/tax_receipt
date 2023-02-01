@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from "react";
-import DatePicker from "react-date-picker";
 import { Typography, Box } from "@mui/material";
 import PaidIcon from "@mui/icons-material/Paid";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
@@ -34,8 +33,6 @@ import {
 
 function Dashboard() {
   DocumentTitle("Dashboard | Tax Receit");
-  const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(new Date());
 
   const [dates, setDates] = useState([
     {

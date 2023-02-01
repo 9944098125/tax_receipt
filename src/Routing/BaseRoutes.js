@@ -16,6 +16,7 @@ import Profile from "../Pages/UserPages/Profile";
 import Payments from "../Pages/UserPages/Payments";
 import Subscriptions from "../Pages/UserPages/Subscriptions";
 import EmailSettings from "../Pages/UserPages/EmailSettings";
+import CustomerManagement from "../Pages/UserPages/CustomerManagement";
 
 const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ const router = createBrowserRouter([
       {
         path: "/user/transactions",
         element: <UserTransactions />,
+      },
+      {
+        path: "/user/customerManagement",
+        element: <CustomerManagement />,
       },
     ],
   },

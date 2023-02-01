@@ -14,6 +14,10 @@ import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
+import MarkEmailReadIcon from "@mui/icons-material/MarkEmailRead";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import MultipleStopIcon from "@mui/icons-material/MultipleStop";
 
 import { Link } from "react-router-dom";
 
@@ -50,41 +54,41 @@ function Sidebar() {
             // p: "8px 12px",
           }}
         >
-          <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                pt: 2,
-                px: { xs: 1.5, sm: 4, md: 2 },
-                cursor: "pointer",
-              }}
-            >
-              <Typography
-                sx={{
-                  color: "#e6f2ff",
-                  fontSize: "20px",
-                  fontWeight: "600",
-                  display: { xs: "block", md: "none" },
-                }}
-              >
-                D
-              </Typography>
-              <Typography
-                sx={{
-                  color: "#e6f2ff",
-                  fontSize: "1.125rem",
-                  display: { xs: "none", md: "block" },
-                  fontWeight: "600",
-                }}
-              >
-                Demo Agency
-              </Typography>
-            </Box>
-          </Link>
           {user.isAdmin ? (
             <>
+              <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    pt: 2,
+                    px: { xs: 1.5, sm: 4, md: 2 },
+                    cursor: "pointer",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      color: "#e6f2ff",
+                      fontSize: "20px",
+                      fontWeight: "600",
+                      display: { xs: "block", md: "none" },
+                    }}
+                  >
+                    D
+                  </Typography>
+                  <Typography
+                    sx={{
+                      color: "#e6f2ff",
+                      fontSize: "1.125rem",
+                      display: { xs: "none", md: "block" },
+                      fontWeight: "600",
+                    }}
+                  >
+                    Demo Agency
+                  </Typography>
+                </Box>
+              </Link>
               <Box
                 sx={{
                   mt: 2,
@@ -344,6 +348,39 @@ function Sidebar() {
             </>
           ) : (
             <>
+              <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+                <Box
+                  sx={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    pt: 2,
+                    px: { xs: 1.5, sm: 4, md: 2 },
+                    cursor: "pointer",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      color: "#e6f2ff",
+                      fontSize: "20px",
+                      fontWeight: "600",
+                      display: { xs: "block", md: "none" },
+                    }}
+                  >
+                    U
+                  </Typography>
+                  <Typography
+                    sx={{
+                      color: "#e6f2ff",
+                      fontSize: "1.125rem",
+                      display: { xs: "none", md: "block" },
+                      fontWeight: "600",
+                    }}
+                  >
+                    Demo User Name
+                  </Typography>
+                </Box>
+              </Link>
               <Box
                 sx={{
                   mt: 2,
@@ -384,7 +421,7 @@ function Sidebar() {
                     <CottageIcon
                       sx={{
                         color: "#ffffff55",
-                        fontSize: "20px",
+                        fontSize: "25px",
                         ml: { xs: -0.7, sm: 1.6, md: "none" },
                       }}
                     />
@@ -394,7 +431,7 @@ function Sidebar() {
                           xs: "none",
                           md: "block",
                         },
-                        fontSize: "15px",
+                        fontSize: "16px",
                         color: "#e6f2ff",
                         fontWeight: "500",
                       }}
@@ -421,10 +458,10 @@ function Sidebar() {
                       },
                     }}
                   >
-                    <PersonIcon
+                    <ReportGmailerrorredIcon
                       sx={{
                         color: "#ffffff59",
-                        fontSize: "20px",
+                        fontSize: "25px",
                         ml: { xs: -0.7, sm: 1.6, md: "none" },
                       }}
                     />
@@ -434,7 +471,7 @@ function Sidebar() {
                           xs: "none",
                           md: "block",
                         },
-                        fontSize: "15px",
+                        fontSize: "16px",
                         color: "#e6f2ff",
                         fontWeight: "500",
                       }}
@@ -461,10 +498,10 @@ function Sidebar() {
                       },
                     }}
                   >
-                    <Inventory2Icon
+                    <MarkEmailReadIcon
                       sx={{
                         color: "#ffffff59",
-                        fontSize: "20px",
+                        fontSize: "25px",
                         ml: { xs: -0.7, sm: 1.6, md: "none" },
                       }}
                     />
@@ -474,7 +511,7 @@ function Sidebar() {
                           xs: "none",
                           md: "block",
                         },
-                        fontSize: "15px",
+                        fontSize: "16px",
                         color: "#e6f2ff",
                         fontWeight: "500",
                       }}
@@ -504,7 +541,7 @@ function Sidebar() {
                     <FilterFramesIcon
                       sx={{
                         color: "#ffffff59",
-                        fontSize: "20px",
+                        fontSize: "25px",
                         ml: { xs: -0.7, sm: 1.6, md: "none" },
                       }}
                     />
@@ -514,7 +551,7 @@ function Sidebar() {
                           xs: "none",
                           md: "block",
                         },
-                        fontSize: "15px",
+                        fontSize: "16px",
                         color: "#e6f2ff",
                         fontWeight: "500",
                       }}
@@ -544,7 +581,7 @@ function Sidebar() {
                     <PaidIcon
                       sx={{
                         color: "#ffffff59",
-                        fontSize: "20px",
+                        fontSize: "25px",
                         ml: { xs: -0.7, sm: 1.6, md: "none" },
                       }}
                     />
@@ -554,7 +591,7 @@ function Sidebar() {
                           xs: "none",
                           md: "block",
                         },
-                        fontSize: "15px",
+                        fontSize: "16px",
                         color: "#e6f2ff",
                         fontWeight: "500",
                       }}
@@ -581,10 +618,10 @@ function Sidebar() {
                       },
                     }}
                   >
-                    <PaidIcon
+                    <AccountCircleIcon
                       sx={{
                         color: "#ffffff59",
-                        fontSize: "20px",
+                        fontSize: "25px",
                         ml: { xs: -0.7, sm: 1.6, md: "none" },
                       }}
                     />
@@ -594,7 +631,7 @@ function Sidebar() {
                           xs: "none",
                           md: "block",
                         },
-                        fontSize: "15px",
+                        fontSize: "16px",
                         color: "#e6f2ff",
                         fontWeight: "500",
                       }}
@@ -621,10 +658,10 @@ function Sidebar() {
                       },
                     }}
                   >
-                    <PaidIcon
+                    <MultipleStopIcon
                       sx={{
                         color: "#ffffff59",
-                        fontSize: "20px",
+                        fontSize: "25px",
                         ml: { xs: -0.7, sm: 1.6, md: "none" },
                       }}
                     />
@@ -634,7 +671,7 @@ function Sidebar() {
                           xs: "none",
                           md: "block",
                         },
-                        fontSize: "15px",
+                        fontSize: "16px",
                         color: "#e6f2ff",
                         fontWeight: "500",
                       }}
@@ -661,7 +698,7 @@ function Sidebar() {
                   <ExitToAppIcon
                     sx={{
                       color: "#ffffff59",
-                      fontSize: "20px",
+                      fontSize: "25px",
                       ml: { xs: -0.7, sm: 1.6, md: "none" },
                     }}
                   />
@@ -671,7 +708,7 @@ function Sidebar() {
                         xs: "none",
                         md: "block",
                       },
-                      fontSize: "15px",
+                      fontSize: "16px",
                       color: "#e6f2ff",
                       fontWeight: "500",
                     }}
