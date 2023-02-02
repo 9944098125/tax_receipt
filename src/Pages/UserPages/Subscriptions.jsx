@@ -349,7 +349,14 @@ function Subscriptions() {
         </Box>
       </Box>
 
-      <Box sx={{ display: "flex", alignItems: "center", gap: 3 }}>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
+          alignItems: "center",
+          gap: 3,
+        }}
+      >
         <input
           placeholder="Enter Coupon Code"
           className="edit-fields form-control"

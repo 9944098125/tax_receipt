@@ -514,7 +514,14 @@ function EditAccount() {
                   )}
                 </Box>
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: 4 }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: { xs: "column", sm: "row" },
+                  alignItems: "center",
+                  gap: 4,
+                }}
+              >
                 <button type="submit" className="alternate-button">
                   Submit
                 </button>

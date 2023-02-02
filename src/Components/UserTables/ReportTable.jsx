@@ -281,7 +281,7 @@ function ReportTable() {
         page={page}
         SelectProps={{
           inputProps: {
-            "aria-label": "rows per page",
+            "aria-label": "number of entries: ",
           },
           native: true,
         }}

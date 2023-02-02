@@ -40,7 +40,7 @@ function ReportManagement() {
         sx={{
           height: "100px",
           display: "flex",
-          justifyContent: "flex-end",
+          justifyContent: { xs: "none", sm: "flex-end" },
           pr: 2,
           pb: 2,
         }}
