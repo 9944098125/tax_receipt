@@ -39,11 +39,17 @@
     margin-left: 5px;
     font-family: "Poppins", sans-serif !important;
   }
+  .emailSettingsBtn {
+    width: 235px !important;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .login-fields {
     width: 280px;
+  }
+  .emailSettingsBtn {
+    width: 200px !important;
   }
 }
 
@@ -328,4 +334,104 @@
 
 .react-date-picker__wrapper {
   border: none !important;
+}
+
+.emailSettingsBtn {
+  background-color: rgb(124 112 255 / 1);
+  line-height: 2.75rem;
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 20px;
+  border: none;
+  font-size: 1.125rem;
+  width: 370px;
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+}
+
+.alternate-button {
+  background-color: rgb(124 112 255 / 1);
+  line-height: 2.75rem;
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  font-size: 1.125rem;
+  width: 100%;
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  padding: 2px 10px 2px 10px;
+}
+
+.alternate-button-2 {
+  background-color: rgb(255, 0, 64);
+  line-height: 2.75rem;
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  font-size: 1.125rem;
+  width: 100%;
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  padding: 2px 10px 2px 10px;
+}
+
+.updatePasswordFields {
+  width:900px;
+  line-height: 1.75rem;
+  outline: none !important;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  color: #536f94 !important;
+  border-width: 1px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  --tw-border-opacity: 0;
+  --tw-bg-opacity: 1;
+}
+
+.alternate-button-3 {
+  width:900px;
+  background-color: rgb(124 112 255 / 1);
+  line-height: 2.75rem;
+  border-radius: 4px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  font-size: 1.125rem;
+  transform: translate(0, 0) rotate(0) skewX(0) skewY(0) scaleX(1) scaleY(1);
+  padding: 2px 10px 2px 10px;
+}
+
+@media screen and (min-width:1024px) {
+  .updatePasswordFields {
+    width:700px;
+  }
+  .alternate-button-3 {
+    width:700px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .updatePasswordFields {
+    width:500px !important;
+  }
+  .alternate-button-3 {
+    width:500px;
+  }
+}
+@media screen and (max-width:425px) {
+  .updatePasswordFields {
+    width:350px !important;
+  }
+  .alternate-button-3 {
+    width:350px;
+  }
+}
+@media screen and (max-width:326px) {
+  .updatePasswordFields {
+    width:200px !important;
+  }
+  .alternate-button-3 {
+    width:200px;
+  }
 }

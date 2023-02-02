@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
-import { Box, Typography } from "@mui/material";
-import Modal from "@mui/material/Modal";
+import { Box, Typography, Modal } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
+import Dropzone from "react-dropzone";
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 
 const style = {
   position: "absolute",
@@ -13,7 +14,7 @@ const style = {
   boxShadow: 24,
   p: 4,
   borderRadius: "8px",
-  width: { xs: "90vw", md: "40vw" },
+  width: { xs: "70vw", md: "30vw" },
   maxHeight: { xs: "90vh", sm: "95vh" },
   overflowY: "scroll",
   overflowX: "hidden",
@@ -21,18 +22,53 @@ const style = {
 
 export default function CSVModal({ showCSV, closeCSV }) {
   const [CSV, setCSV] = React.useState("");
+
+  const onDrop = (file) => {};
+
   return (
     <Fragment>
-      <Modal show={showCSV} onClose={closeCSV} hideBackdrop>
+      <Modal id="editModal" open={showCSV} onClose={closeCSV} hideBackdrop>
         <Box sx={style}>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Typography sx={{ color: "primary.main", fontSize: "22px" }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+            }}
+          >
+            <Typography
+              sx={{
+                color: "primary.main",
+                fontSize: "22px",
+                fontWeight: "700",
+              }}
+            >
               Import CSV
             </Typography>
-            <CloseIcon onClick={closeCSV} />
+            <CloseIcon onClick={closeCSV} sx={{ cursor: "pointer" }} />
           </Box>
-          <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <input type="file" onChange={(e) => setCSV(e.target.files[0])} />
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              mt: 5,
+            }}
+          >
+            <Dropzone onDrop={onDrop}>
+              {({ getRootProps, getInputProps }) => (
+                <div
+                  style={{ curosr: "pointer", width: "50%" }}
+                  className="d-flex flex-column align-items-center"
+                  {...getRootProps()}
+                >
+                  <input {...getInputProps()} />
+                  <p>Drag 'n' drop some files here, or click to select files</p>
+                  <CloudDownloadIcon
+                    sx={{ fontSize: "55px", cursor: "pointer" }}
+                  />
+                </div>
+              )}
+            </Dropzone>
           </Box>
         </Box>
       </Modal>

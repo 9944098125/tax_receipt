@@ -14,34 +14,112 @@ import FirstPageIcon from "@mui/icons-material/FirstPage";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import LastPageIcon from "@mui/icons-material/LastPage";
-import ModeEditIcon from "@mui/icons-material/ModeEdit";
-import DeleteIcon from "@mui/icons-material/Delete";
 import { TableHead } from "@mui/material";
 import ReportModal from "../ReportModal/ReportModal";
-import FolderCopyIcon from "@mui/icons-material/FolderCopy";
-import { Link } from "react-router-dom";
-import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 
-function createData(sno, name, date, customerCount, paymentMode) {
+function createData(
+  sno,
+  transactionId,
+  date,
+  packageName,
+  startDate,
+  expiryDate,
+  amount
+) {
   return {
     sno,
-    name,
+    transactionId,
     date,
-    customerCount,
-    paymentMode,
+    packageName,
+    startDate,
+    expiryDate,
+    amount,
   };
 }
 
 const rows = [
-  createData("1", "report 1", "12/04/22", "5", "online"),
-  createData("2", "report 2", "1/04/22", "7", "cash"),
-  createData("3", "report 3", "17/04/22", "51", "online"),
-  createData("4", "report 4", "14/04/22", "50", "online"),
-  createData("5", "report 5", "13/04/22", "15", "cheque"),
-  createData("6", "report 6", "19/04/22", "25", "cash"),
-  createData("7", "report 7", "17/04/22", "55", "online"),
-  createData("8", "report 8", "11/04/22", "65", "cash"),
-  createData("9", "report 9", "1/04/22", "58", "online"),
+  createData(
+    "1",
+    "124561",
+    "22/04/22",
+    "premium",
+    "12/02/21",
+    "12/02/23",
+    "50000"
+  ),
+  createData(
+    "2",
+    "124562",
+    "2/04/22",
+    "higher",
+    "31/01/21",
+    "23/01/22",
+    "40000"
+  ),
+  createData(
+    "3",
+    "124563",
+    "27/04/22",
+    "basic",
+    "12/02/21",
+    "12/02/23",
+    "50000"
+  ),
+  createData(
+    "4",
+    "124564",
+    "24/04/22",
+    "premium",
+    "12/02/21",
+    "12/02/23",
+    "50000"
+  ),
+  createData(
+    "5",
+    "124565",
+    "23/04/22",
+    "basic",
+    "21/12/21",
+    "21/12/22",
+    "20000"
+  ),
+  createData(
+    "6",
+    "124566",
+    "29/04/22",
+    "midLevel",
+    "31/01/21",
+    "23/01/22",
+    "40000"
+  ),
+  createData(
+    "7",
+    "124567",
+    "27/04/22",
+    "midLevel",
+    "12/02/21",
+    "12/02/23",
+    "50000"
+  ),
+  createData(
+    "8",
+    "124568",
+    "21/04/22",
+    "premium",
+    "31/01/21",
+    "23/01/22",
+    "40000"
+  ),
+  createData(
+    "9",
+    "124569",
+    "2/04/22",
+    "higher",
+    "12/02/21",
+    "12/02/23",
+    "50000"
+  ),
 ];
 
 function TablePaginationActions(props) {
@@ -113,33 +191,9 @@ TablePaginationActions.propTypes = {
   rowsPerPage: PropTypes.number.isRequired,
 };
 
-function ReportTable() {
-  const oldData = {
-    sno: "",
-    name: "",
-    date: "",
-    customerCount: "",
-    paymentMode: "",
-  };
-
+function PaymentsTable() {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
-  const [show, setShow] = React.useState(false);
-
-  const [showEditor, setShowEditor] = React.useState({
-    id: "",
-    boolean: false,
-    dataWithId: { ...oldData },
-  });
-
-  function updateRow(row) {
-    setShowEditor({
-      id: row.sno,
-      boolean: !showEditor.boolean,
-      dataWithId: { ...row },
-    });
-    console.log("report row: ", row);
-  }
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
@@ -152,15 +206,6 @@ function ReportTable() {
   const handleChangeRowsPerPage = (event) => {
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
-  };
-
-  const showModal = (row) => {
-    setShow(true);
-    updateRow(row);
-  };
-
-  const closeModal = () => {
-    setShow(false);
   };
 
   return (
@@ -185,7 +230,7 @@ function ReportTable() {
                   color: "#6b778c",
                 }}
               >
-                Report Name
+                Transaction ID
               </TableCell>
               <TableCell
                 sx={{
@@ -194,7 +239,7 @@ function ReportTable() {
                   color: "#6b778c",
                 }}
               >
-                Customer Count
+                Date
               </TableCell>
               <TableCell
                 sx={{
@@ -203,7 +248,7 @@ function ReportTable() {
                   color: "#6b778c",
                 }}
               >
-                Payment Mode
+                Package Name
               </TableCell>
               <TableCell
                 sx={{
@@ -212,7 +257,34 @@ function ReportTable() {
                   color: "#6b778c",
                 }}
               >
-                Actions
+                Start date
+              </TableCell>
+              <TableCell
+                sx={{
+                  fontWeight: "700",
+                  fontSize: "12px",
+                  color: "#6b778c",
+                }}
+              >
+                Expiry date
+              </TableCell>
+              <TableCell
+                sx={{
+                  fontWeight: "700",
+                  fontSize: "12px",
+                  color: "#6b778c",
+                }}
+              >
+                Amount
+              </TableCell>
+              <TableCell
+                sx={{
+                  fontWeight: "700",
+                  fontSize: "12px",
+                  color: "#6b778c",
+                }}
+              >
+                Action
               </TableCell>
             </TableRow>
           </TableHead>
@@ -227,39 +299,18 @@ function ReportTable() {
                 </TableCell>
                 <TableCell align="left">
                   <Box sx={{ display: "flex", alignItems: "center" }}>
-                    {row.name} (<CalendarMonthIcon sx={{ fontSize: "15px" }} />
-                    {row.date})
+                    {row.transactionId}
                   </Box>
                 </TableCell>
                 <TableCell component="th" scope="row">
-                  {row.customerCount}
+                  {row.date}
                 </TableCell>
-                <TableCell align="left">{row.paymentMode}</TableCell>
+                <TableCell align="left">{row.packageName}</TableCell>
+                <TableCell align="left">{row.startDate}</TableCell>
+                <TableCell align="left">{row.expiryDate}</TableCell>
+                <TableCell align="left">{row.amount}</TableCell>
                 <TableCell component="th" scope="row">
-                  <ModeEditIcon
-                    onClick={() => showModal(row)}
-                    sx={{
-                      color: "primary.dark",
-                      fontSize: "17px",
-                      cursor: "pointer",
-                      mr: 1,
-                    }}
-                  />
-                  <DeleteIcon
-                    sx={{ color: "red", fontSize: "17px", cursor: "pointer" }}
-                  />
-                  <Link
-                    to="/user/customerManagement"
-                    style={{ textDecoration: "none", color: "inherit" }}
-                  >
-                    <FolderCopyIcon
-                      sx={{
-                        color: "primary.main",
-                        fontSize: "17px",
-                        cursor: "pointer",
-                      }}
-                    />
-                  </Link>
+                  <RemoveRedEyeIcon sx={{ color: "primary.main" }} />
                 </TableCell>
               </TableRow>
             ))}
@@ -289,16 +340,8 @@ function ReportTable() {
         onRowsPerPageChange={handleChangeRowsPerPage}
         ActionsComponent={TablePaginationActions}
       />
-      {show && (
-        <ReportModal
-          title="Edit Report"
-          show={show}
-          close={closeModal}
-          showEditor={showEditor}
-        />
-      )}
     </Fragment>
   );
 }
 
-export default ReportTable;
+export default PaymentsTable;

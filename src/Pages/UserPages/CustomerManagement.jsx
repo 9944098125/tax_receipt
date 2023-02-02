@@ -5,6 +5,7 @@ import CustomerTable from "../../Components/UserTables/CustomerManagementDatatab
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import EditCustomerModal from "../../Components/EditModals/EditCustomerModal";
 import CSVModal from "../../Components/EditModals/CSVModal";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 function CustomerManagement() {
   const [showCSVModal, setShowCSVModal] = useState(false);
@@ -20,6 +21,7 @@ function CustomerManagement() {
 
   const openShowCSVModal = () => {
     setShowCSVModal(true);
+    console.log("clicked");
   };
 
   const closeCSVModal = () => {
@@ -73,13 +75,28 @@ function CustomerManagement() {
             gap: 2,
           }}
         >
-          <button onClick={openShowCSVModal} className="packageBtn">
-            Import CSV
-          </button>
-          <CSVModal showCSV={showCSVModal} closeCSV={closeCSVModal} />
+          <div>
+            <button onClick={openShowCSVModal} className="packageBtn">
+              Import CSV
+            </button>
+            <CSVModal showCSV={showCSVModal} closeCSV={closeCSVModal} />
+          </div>
           <button className="packageBtn">Generate PDF</button>
           <button className="packageBtn">Sent Mail</button>
         </Box>
+      </Box>
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "flex-end",
+          height: "60px",
+        }}
+      >
+        <button style={{ width: "100px" }} className="register-button">
+          <DeleteIcon sx={{ color: "white" }} />
+          Delete
+        </button>
       </Box>
       <CustomerTable />
     </Fragment>

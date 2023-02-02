@@ -81,6 +81,7 @@ function ClientManagement() {
               value={value}
               onChange={handleChange}
               aria-label="basic tabs example"
+              variant="scrollable"
             >
               <Tab
                 sx={{
@@ -122,7 +123,7 @@ function ClientManagement() {
       <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
         <button className="delete-btn">
           <DeleteIcon />
-          Delete All
+          Delete
         </button>
       </Box>
     </Fragment>

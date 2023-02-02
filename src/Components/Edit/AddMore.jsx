@@ -2,6 +2,8 @@ import React, { Fragment } from "react";
 import { Formik, Form, Field } from "formik";
 import { Box, Typography } from "@mui/material";
 import "./forms.css";
+import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
+import Dropzone from "react-dropzone";
 
 function AddMore() {
   const [values] = React.useState({
@@ -13,6 +15,12 @@ function AddMore() {
   const [stampFile, setStampFile] = React.useState("");
   const [waterMark, setWaterMark] = React.useState("");
   const [logo, setLogo] = React.useState("");
+
+  const onDropStamp = () => {};
+
+  const onDropLogo = () => {};
+
+  const onDropWaterMark = () => {};
 
   function validate(values) {
     let errors = {};
@@ -119,10 +127,20 @@ function AddMore() {
                   >
                     Stamp
                   </Typography>
-                  <input
-                    type="file"
-                    onChange={(e) => setStampFile(e.target.files[0])}
-                  />
+                  <Dropzone onDrop={onDropStamp}>
+                    {({ getRootProps, getInputProps }) => (
+                      <div
+                        className="d-flex align-items-center edit-fields form-control"
+                        {...getRootProps()}
+                      >
+                        <input {...getInputProps()} />
+                        <p>Drag 'n' drop (or) select files by clicking here</p>
+                        <CloudDownloadIcon
+                          sx={{ fontSize: "25px", cursor: "pointer", mt: -2 }}
+                        />
+                      </div>
+                    )}
+                  </Dropzone>
                 </Box>
                 <Box sx={{ width: "200px" }} className="form-group">
                   <Typography
@@ -134,10 +152,20 @@ function AddMore() {
                   >
                     Logo
                   </Typography>
-                  <input
-                    type="file"
-                    onChange={(e) => setLogo(e.target.files[0])}
-                  />
+                  <Dropzone onDrop={onDropLogo}>
+                    {({ getRootProps, getInputProps }) => (
+                      <div
+                        className="d-flex align-items-center edit-fields form-control"
+                        {...getRootProps()}
+                      >
+                        <input {...getInputProps()} />
+                        <p>Drag 'n' drop (or) select files by clicking here</p>
+                        <CloudDownloadIcon
+                          sx={{ fontSize: "25px", cursor: "pointer", mt: -2 }}
+                        />
+                      </div>
+                    )}
+                  </Dropzone>
                 </Box>
               </Box>
               <Box
@@ -159,10 +187,20 @@ function AddMore() {
                   >
                     Water Mark
                   </Typography>
-                  <input
-                    type="file"
-                    onChange={(e) => setWaterMark(e.target.files[0])}
-                  />
+                  <Dropzone onDrop={onDropWaterMark}>
+                    {({ getRootProps, getInputProps }) => (
+                      <div
+                        className="d-flex align-items-center edit-fields form-control"
+                        {...getRootProps()}
+                      >
+                        <input {...getInputProps()} />
+                        <p>Drag 'n' drop (or) select files by clicking here</p>
+                        <CloudDownloadIcon
+                          sx={{ fontSize: "25px", cursor: "pointer", mt: -2 }}
+                        />
+                      </div>
+                    )}
+                  </Dropzone>
                 </Box>
                 <Box sx={{}} className="form-group">
                   <Typography
@@ -175,6 +213,7 @@ function AddMore() {
                     Address
                   </Typography>
                   <Field
+                    as="textfield"
                     type="text"
                     name="address"
                     placeholder="Enter Client Address"
