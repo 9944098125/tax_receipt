@@ -24,13 +24,13 @@
 
 @media screen and (max-width:425px) {
   .edit-fields {
-    min-width: 300px;
+    min-width: 250px;
   }
 }
 
 @media screen and (max-width:326px) {
   .edit-fields {
-    min-width: 270px;
+    min-width: 200px !important;
   }
 }
 
@@ -65,12 +65,12 @@
 
 @media screen and (max-width:425px) {
   .password-fields {
-    min-width: 280px;
+    width: 250px !important;
   }
 }
 
 @media screen and (max-width:325px) {
   .password-fields {
-    min-width: 180px;
+    width: 200px !important;
   }
 }
