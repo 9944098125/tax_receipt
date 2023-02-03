@@ -33,12 +33,6 @@
     min-width: 200px !important;
   }
 }
-
-@media screen and (max-width:325px) {
-  .edit-fields {
-    min-width: 200px;
-  }
-}
 .password-fields {
   line-height: 1.75rem;
   outline: none !important;

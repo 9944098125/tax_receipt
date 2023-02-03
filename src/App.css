@@ -376,7 +376,7 @@
 }
 
 .updatePasswordFields {
-  width:900px;
+  max-width: 800px;
   line-height: 1.75rem;
   outline: none !important;
   border-radius: 4px;
@@ -413,7 +413,7 @@
 
 @media screen and (max-width:768px) {
   .updatePasswordFields {
-    width:500px !important;
+    width:400px;
   }
   .alternate-button-3 {
     width:500px;
@@ -421,7 +421,7 @@
 }
 @media screen and (max-width:425px) {
   .updatePasswordFields {
-    width:350px !important;
+    width:250px;
   }
   .alternate-button-3 {
     width:350px;
@@ -429,7 +429,7 @@
 }
 @media screen and (max-width:326px) {
   .updatePasswordFields {
-    width:200px !important;
+    max-width:200px !important;
   }
   .alternate-button-3 {
     width:200px;

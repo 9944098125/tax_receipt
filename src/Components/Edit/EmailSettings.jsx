@@ -51,7 +51,10 @@ function EmailSettings() {
         >
           {({ errors, touched }) => (
             <Form>
-              <Box sx={{ mb: 3 }} className="form-group">
+              <Box
+                sx={{ mb: 3, px: { xs: 2, md: "none" } }}
+                className="form-group"
+              >
                 <Typography
                   sx={{ color: "@00254d", fontWeight: "700", fontSize: "16px" }}
                 >
@@ -74,7 +77,10 @@ function EmailSettings() {
                 )}
               </Box>
 
-              <Box sx={{ mb: 3 }} className="form-group">
+              <Box
+                sx={{ mb: 3, px: { xs: 2, md: "none" } }}
+                className="form-group"
+              >
                 <Typography
                   sx={{ color: "@00254d", fontWeight: "700", fontSize: "16px" }}
                 >
