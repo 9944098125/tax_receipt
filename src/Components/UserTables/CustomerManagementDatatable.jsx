@@ -33,7 +33,7 @@ export default function CustomerTable() {
   const rows = [
     createData(
       "123675",
-      "23/03/21",
+      new Date(),
       "Sravan",
       "tekis@org.com",
       "934534534533",
@@ -43,7 +43,7 @@ export default function CustomerTable() {
     ),
     createData(
       "3675",
-      "23/03/21",
+      new Date(),
       "Varma",
       "tekis@org.com",
       "934534534533",
@@ -53,7 +53,7 @@ export default function CustomerTable() {
     ),
     createData(
       "365",
-      "23/03/21",
+      new Date(),
       "Vamsi",
       "tekis@org.com",
       "934534534533",
@@ -63,7 +63,7 @@ export default function CustomerTable() {
     ),
     createData(
       "12375",
-      "23/03/21",
+      new Date(),
       "Raghav",
       "tekis@org.com",
       "934534534533",

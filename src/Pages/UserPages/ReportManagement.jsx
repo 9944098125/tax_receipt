@@ -4,8 +4,10 @@ import HomeIcon from "@mui/icons-material/Home";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import ReportModal from "../../Components/ReportModal/ReportModal";
 import ReportTable from "../../Components/UserTables/ReportTable";
+import DocumentTitle from "../../Components/DocumentTitle";
 
 function ReportManagement() {
+  DocumentTitle("Report Management | Tax Receit");
   const [showModal, setShowModal] = useState(false);
 
   function openShowModal() {

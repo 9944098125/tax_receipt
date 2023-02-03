@@ -2,8 +2,10 @@ import React, { Fragment } from "react";
 import { Box, Typography } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import PaymentsTable from "../../Components/UserTables/PaymentsTable";
+import DocumentTitle from "../../Components/DocumentTitle";
 
 function Payments() {
+  DocumentTitle("My Payments | Tax Receit");
   return (
     <Fragment>
       <Box

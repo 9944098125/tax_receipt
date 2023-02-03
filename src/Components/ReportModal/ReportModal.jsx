@@ -22,11 +22,12 @@ const style = {
 };
 
 function ReportModal({ title, show, close, showEditor }) {
-  const [value, onChange] = useState(new Date());
+  const [value, onChange] = useState(
+    showEditor ? showEditor.dataWithId.date : new Date()
+  );
   const [formValues] = useState({
     name: showEditor ? showEditor.dataWithId.name : "",
     paymentMode: showEditor ? showEditor.dataWithId.paymentMode : "",
-    date: showEditor ? showEditor.dataWithId.date : "",
   });
 
   function validate(values) {
@@ -36,7 +37,6 @@ function ReportModal({ title, show, close, showEditor }) {
     } else if (values.name.length <= 2) {
       errors.name = "Report Name required to be more than 2 characters";
     }
-    if (!value) errors.value = "Date is required";
     if (!values.paymentMode) errors.paymentMode = "Payment Mode is required";
 
     return errors;
@@ -128,19 +128,10 @@ function ReportModal({ title, show, close, showEditor }) {
                           Date
                         </Typography>
                         <DatePicker
-                          className={
-                            errors.value && touched.value
-                              ? "is-invalid form-control add-package-fields"
-                              : "form-control add-package-fields"
-                          }
+                          className="form-control add-package-fields"
                           value={value}
                           onChange={onChange}
                         />
-                        {errors.value && touched.value && (
-                          <Typography sx={{ color: "red", fontSize: "13px" }}>
-                            {errors.value}
-                          </Typography>
-                        )}
                       </Box>
                     </div>
                     <div className="form-group">
@@ -164,6 +155,7 @@ function ReportModal({ title, show, close, showEditor }) {
                           }
                           name="paymentMode"
                         >
+                          <option value="">--Payment Mode--</option>
                           <option value="online">Online</option>
                           <option value="cash">Cash</option>
                           <option value="cheque">Cheque</option>

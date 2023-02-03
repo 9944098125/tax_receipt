@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import EditAccount from "../../Components/Edit/EditAccount";
 import UpdatePassword from "../../Components/Edit/UpdatePassword";
 import EmailSettings from "../../Components/Edit/EmailSettings";
+import DocumentTitle from "../../Components/DocumentTitle";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -42,6 +43,7 @@ function a11yProps(index) {
 }
 
 function Profile() {
+  DocumentTitle("My Profile | Tax Receit");
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {

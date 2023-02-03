@@ -21,6 +21,7 @@ import ReportModal from "../ReportModal/ReportModal";
 import FolderCopyIcon from "@mui/icons-material/FolderCopy";
 import { Link } from "react-router-dom";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import { format } from "date-fns";
 
 function createData(sno, name, date, customerCount, paymentMode) {
   return {
@@ -33,15 +34,15 @@ function createData(sno, name, date, customerCount, paymentMode) {
 }
 
 const rows = [
-  createData("1", "report 1", "12/04/22", "5", "online"),
-  createData("2", "report 2", "1/04/22", "7", "cash"),
-  createData("3", "report 3", "17/04/22", "51", "online"),
-  createData("4", "report 4", "14/04/22", "50", "online"),
-  createData("5", "report 5", "13/04/22", "15", "cheque"),
-  createData("6", "report 6", "19/04/22", "25", "cash"),
-  createData("7", "report 7", "17/04/22", "55", "online"),
-  createData("8", "report 8", "11/04/22", "65", "cash"),
-  createData("9", "report 9", "1/04/22", "58", "online"),
+  createData("1", "report 1", new Date(), "5", "online"),
+  createData("2", "report 2", new Date(), "7", "cash"),
+  createData("3", "report 3", new Date(), "51", "online"),
+  createData("4", "report 4", new Date(), "50", "online"),
+  createData("5", "report 5", new Date(), "15", "cheque"),
+  createData("6", "report 6", new Date(), "25", "cash"),
+  createData("7", "report 7", new Date(), "55", "online"),
+  createData("8", "report 8", new Date(), "65", "cash"),
+  createData("9", "report 9", new Date(), "58", "online"),
 ];
 
 function TablePaginationActions(props) {
@@ -117,7 +118,7 @@ function ReportTable() {
   const oldData = {
     sno: "",
     name: "",
-    date: "",
+    date: new Date(),
     customerCount: "",
     paymentMode: "",
   };
@@ -228,7 +229,7 @@ function ReportTable() {
                 <TableCell align="left">
                   <Box sx={{ display: "flex", alignItems: "center" }}>
                     {row.name} (<CalendarMonthIcon sx={{ fontSize: "15px" }} />
-                    {row.date})
+                    {row.date.toLocaleString()})
                   </Box>
                 </TableCell>
                 <TableCell component="th" scope="row">

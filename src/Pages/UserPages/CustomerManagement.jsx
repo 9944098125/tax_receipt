@@ -6,8 +6,10 @@ import AddCircleIcon from "@mui/icons-material/AddCircle";
 import EditCustomerModal from "../../Components/EditModals/EditCustomerModal";
 import CSVModal from "../../Components/EditModals/CSVModal";
 import DeleteIcon from "@mui/icons-material/Delete";
+import DocumentTitle from "../../Components/DocumentTitle";
 
 function CustomerManagement() {
+  DocumentTitle("Customer Management | Tax Receit");
   const [showCSVModal, setShowCSVModal] = useState(false);
   const [showModal, setShowModal] = useState(false);
 

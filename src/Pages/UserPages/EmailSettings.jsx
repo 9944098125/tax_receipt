@@ -3,8 +3,10 @@ import { Box, Typography } from "@mui/material";
 import HomeIcon from "@mui/icons-material/Home";
 import { Field, Form, Formik } from "formik";
 import BeenhereIcon from "@mui/icons-material/Beenhere";
+import DocumentTitle from "../../Components/DocumentTitle";
 
 function EmailSettings() {
+  DocumentTitle("Email Settings | Tax Receit");
   const [values, setValues] = useState({
     cc: "",
     bcc: "",

@@ -10,8 +10,10 @@ import "../Dashboard/cardsStyles.css";
 import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 import EmailIcon from "@mui/icons-material/Email";
+import DocumentTitle from "../../Components/DocumentTitle";
 
 function UserDashboard() {
+  DocumentTitle("Dashboard | Tax Receit");
   const [dates, setDates] = useState([
     {
       startDate: new Date(),

@@ -18,12 +18,13 @@ const style = {
 };
 
 function EditCustomerModal({ show, close, showEditor, title }) {
-  const [value, onChange] = useState(new Date());
+  const [value, onChange] = useState(
+    showEditor ? showEditor.dataWithId.date : new Date()
+  );
   const [values] = useState({
     name: showEditor ? showEditor.dataWithId.customerName : "",
     email: showEditor ? showEditor.dataWithId.email : "",
     mobileNo: showEditor ? showEditor.dataWithId.mobileNo : "",
-    date: showEditor ? showEditor.dataWithId.date : "",
     amount: showEditor ? showEditor.dataWithId.amount : "",
     paymentId: "",
     paymentMode: showEditor ? showEditor.dataWithId.payment : "",

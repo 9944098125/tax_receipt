@@ -6,8 +6,10 @@ import StarIcon from "@mui/icons-material/Star";
 import AdbIcon from "@mui/icons-material/Adb";
 import BrightnessMediumIcon from "@mui/icons-material/BrightnessMedium";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
+import DocumentTitle from "../../Components/DocumentTitle";
 
 function Subscriptions() {
+  DocumentTitle("My Subscriptions | Tax Receit");
   const [select] = React.useState("");
   return (
     <Fragment>
