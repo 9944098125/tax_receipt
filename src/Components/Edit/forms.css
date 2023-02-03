@@ -28,6 +28,12 @@
   }
 }
 
+@media screen and (max-width:326px) {
+  .edit-fields {
+    min-width: 270px;
+  }
+}
+
 @media screen and (max-width:325px) {
   .edit-fields {
     min-width: 200px;
