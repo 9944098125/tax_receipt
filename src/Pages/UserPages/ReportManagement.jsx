@@ -57,7 +57,9 @@ function ReportManagement() {
           close={closeModal}
         />
       </Box>
-      <ReportTable />
+      <Box sx={{}}>
+        <ReportTable />
+      </Box>
     </Fragment>
   );
 }

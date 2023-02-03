@@ -53,7 +53,7 @@ function CustomerManagement() {
       <Box
         sx={{
           display: "flex",
-          flexDirection: { xs: "column", sm: "row" },
+          flexDirection: { xs: "column", md: "row" },
           justifyContent: { xs: "center", md: "space-between" },
         }}
       >
@@ -71,8 +71,9 @@ function CustomerManagement() {
         <Box
           sx={{
             height: "80px",
-            mb: 5,
+            mb: { xs: 10, sm: 5 },
             display: "flex",
+            flexDirection: { xs: "column", sm: "row" },
             alignItems: "center",
             gap: 2,
           }}
@@ -93,6 +94,7 @@ function CustomerManagement() {
           alignItems: "center",
           justifyContent: "flex-end",
           height: "60px",
+          mt: { xs: 5, sm: 1 },
         }}
       >
         <button style={{ width: "100px" }} className="register-button">

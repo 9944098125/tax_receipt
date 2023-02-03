@@ -13,8 +13,9 @@ const style = {
   backgroundColor: "white",
   boxShadow: 24,
   p: 4,
-  // maxHeight: { xs: "90vh", sm: "80vh" },
+  maxHeight: { xs: "80vh", sm: "70vh", md: "60vh" },
   overflowX: "hidden",
+  overflowY: "scroll",
 };
 
 function EditCustomerModal({ show, close, showEditor, title }) {

@@ -274,22 +274,32 @@ function ReportTable() {
         </Table>
       </TableContainer>
 
-      <TablePagination
-        rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
-        colSpan={3}
-        count={rows.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        SelectProps={{
-          inputProps: {
-            "aria-label": "number of entries: ",
-          },
-          native: true,
+      <Box
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          px: 1,
+          mt: 2,
         }}
-        onPageChange={handleChangePage}
-        onRowsPerPageChange={handleChangeRowsPerPage}
-        ActionsComponent={TablePaginationActions}
-      />
+      >
+        <TablePagination
+          rowsPerPageOptions={[5, 10, 25, { label: "All", value: -1 }]}
+          colSpan={3}
+          count={rows.length}
+          rowsPerPage={rowsPerPage}
+          page={page}
+          SelectProps={{
+            inputProps: {
+              "aria-label": "number of entries: ",
+            },
+            native: true,
+          }}
+          onPageChange={handleChangePage}
+          onRowsPerPageChange={handleChangeRowsPerPage}
+          ActionsComponent={TablePaginationActions}
+        />
+      </Box>
       {show && (
         <ReportModal
           title="Edit Report"

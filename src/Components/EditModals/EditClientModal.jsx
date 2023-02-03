@@ -52,7 +52,8 @@ const style = {
   p: 4,
   display: "flex",
   justifyContent: "space-between",
-  // maxHeight: { xs: "90vh", sm: "80vh" },
+  maxHeight: { xs: "80vh", sm: "70vh", ms: "60vh" },
+  overflowY: "scroll",
   overflowX: "hidden",
 };
 
