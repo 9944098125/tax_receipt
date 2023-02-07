@@ -44,6 +44,7 @@ function Sidebar() {
       <Box sx={{ display: "flex", height: "100vh" }}>
         {/* sidebar links */}
         <Box
+          className="sidebar"
           sx={{
             backgroundColor: "primary.main",
             width: { xs: "15vw", sm: "12vw", md: "17vw" },

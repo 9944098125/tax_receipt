@@ -435,3 +435,9 @@
     width:200px;
   }
 }
+
+@media screen and (min-width:1024px) {
+  .sidebar {
+    width: 18.5vw !important;
+  }
+}
